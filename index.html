@@ -6,8 +6,12 @@
 body{font-family:Segoe UI,Arial,sans-serif;margin:0;padding:24px 24px 90px;background:#16161a;color:#e6e6e6}
 h1{font-size:20px;margin:0 0 4px}
 .sub{color:#9a9aa5;font-size:13px;margin-bottom:14px}
-.filters{display:flex;gap:10px;align-items:center;margin-bottom:12px;font-size:14px}
+.filters{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-bottom:12px;font-size:14px}
 .filters .lbl{color:#9a9aa5}
+.fgroup{display:flex;gap:8px;align-items:center}
+.filters select,.filters button{background:#26262e;color:#e6e6e6;border:1px solid #3a3a44;border-radius:6px;padding:6px 10px;font-size:14px}
+.filters button{cursor:pointer}
+.filters button:disabled{opacity:.45;cursor:default}
 .pill{display:inline-flex;align-items:center;gap:6px;background:#26262e;border:1px solid #3a3a44;padding:6px 12px;border-radius:999px;cursor:pointer}
 .pill input{display:none}
 .pill.on{background:#3b5bdb;border-color:#3b5bdb}
@@ -20,20 +24,25 @@ h1{font-size:20px;margin:0 0 4px}
 table{border-collapse:collapse;width:100%;font-size:13px}
 th,td{border-bottom:1px solid #2c2c35;padding:7px 8px;text-align:left;vertical-align:top}
 th{position:sticky;top:0;background:#1f1f26;z-index:2}
-th.sortable{cursor:pointer}
+th.sortable{cursor:pointer;user-select:none;white-space:nowrap}
+th.sortable:hover{color:#8ab4ff}
+th.sortable .ar{color:#8ab4ff;font-size:10px;margin-left:4px}
 tr:hover td{background:#1b1b22}
 tr.sel td{background:#1d2540}
 td.chk{width:28px}
 td.sk{width:54px;white-space:nowrap}
 td.rc{width:300px}
-.vl{display:grid;grid-template-columns:230px minmax(220px,1fr) 120px;gap:12px;padding:1px 0}
+.vl{height:22px;line-height:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+td.vn{width:230px;max-width:230px}td.vloc{width:300px;max-width:300px}td.vf{width:120px}
 .vl a{color:#8ab4ff;text-decoration:none}
 .vl a:hover{text-decoration:underline}
 .vl a.ow{color:#d6a8ff}
-.vl .loc{color:#b6b6c2}
+.vl.loc{color:#b6b6c2}
+td.il{width:50px}
+.rar.Uncommon{color:#1eff00}.rar.Rare{color:#4a90ff}.rar.Epic{color:#c77dff}
 .rc a{color:#8ab4ff;text-decoration:none}.rc a.ow{color:#d6a8ff}.rc a:hover{text-decoration:underline}
 td.dc{width:260px}.de .pr{display:inline-block;min-width:44px;color:#9be3a5}
-.fac{font-size:12px;padding:1px 8px;border-radius:999px;justify-self:start;border:1px solid #3a3a44}
+.fac{font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid #3a3a44}
 .fac.Alliance{background:#12365f;border-color:#1c6fd1}
 .fac.Horde{background:#4d1717;border-color:#b32727}
 .fac.Both{background:#24402a;border-color:#2e8b47}
@@ -59,20 +68,14 @@ td.dc{width:260px}.de .pr{display:inline-block;min-width:44px;color:#9be3a5}
 <h1>Vendor-sold recipes, Classic</h1>
 <div class="sub">Sources: OctoWow DB + Wowhead Classic. One row per recipe. All vendors that sell it listed one per line.</div>
 
-<div class="filters">
-  <span class="lbl">Show vendors for:</span>
-  <label class="pill on" data-f="all"><input type="radio" name="f" checked>All</label>
-  <label class="pill A" data-f="A"><input type="radio" name="f">Alliance</label>
-  <label class="pill H" data-f="H"><input type="radio" name="f">Horde</label>
-  <span class="lbl">Neutral vendors show under both.</span>
-</div>
+<div class="filters" id="filters"></div>
 <div class="tabs" id="tabs"></div>
 <div id="panels"></div>
 
 <div class="notes">
 Vendor and recipe links go to Wowhead Classic. Purple links = only exists on OctoWow, so it links there.<br>
 Faction: Alliance / Horde = friendly to that side. Neutral = neither side hostile. Reputation requirements are not included in either source.<br>
-Disenchant column (Tailoring, Leatherworking, Blacksmithing, Engineering): derived from the crafted item's quality and item level (the ilvl stat, not the required level) using the WoWWiki disenchanting tables. Percentages are the chance per disenchant; "&times;" is the quantity range. Soulbound or special items that cannot be disenchanted in-game are not flagged. "-" = crafted item unknown.<br>
+Disenchant columns (Tailoring, Leatherworking, Blacksmithing, Engineering): iLvl and rarity of the crafted item; mats derived from the crafted item's quality and item level (the ilvl stat, not the required level) using the WoWWiki disenchanting tables. Percentages are the chance per disenchant; "&times;" is the quantity range. Soulbound or special items that cannot be disenchanted in-game are not flagged. "-" = crafted item unknown.<br>
 Routes are estimates. The map positions, flight paths, boat and zeppelin times in this page are a hand-built model, not game data.
 </div>
 
@@ -91,36 +94,142 @@ const DATA={"vendors":{"1304":{"A":true,"src":"wh","u":"https://www.wowhead.com/
 /* ---------- table UI ---------- */
 const PROFS=[['tailoring','Tailoring'],['leatherworking','Leatherworking'],['enchanting','Enchanting'],['alchemy','Alchemy'],['blacksmithing','Blacksmithing'],['engineering','Engineering'],['cooking','Cooking'],['firstaid','First Aid'],['jewelcrafting','Jewelcrafting']];
 const DE_PROFS=['tailoring','leatherworking','blacksmithing','engineering'];
-let filter='all', activeTab='tailoring';
+let activeTab='tailoring';
 const selected=new Set();
 const sortState={};
 const rowIndex={};
-PROFS.forEach(([p])=>DATA.rows[p].forEach(r=>{rowIndex[p+':'+r.id]=r;r.p=p;}));
+const RARITY={Uncommon:2,Rare:3,Epic:4};
+const zoneOf=l=>l.replace(/\s+[\d.]+,\s*[\d.]+$/,'');
+Object.keys(DATA.vendors).forEach(id=>{const v=DATA.vendors[id];v.z=v.loc==='No location listed'?[]:v.loc.split('; ').map(zoneOf);});
+PROFS.forEach(([p])=>DATA.rows[p].forEach(r=>{
+  rowIndex[p+':'+r.id]=r;r.p=p;
+  const m=r.d&&/^ilvl (\d+) (\w+)/.exec(r.d.l);
+  r.il=m?+m[1]:null;r.rar=m?m[2]:null;
+}));
+const ZONE_LIST=(()=>{const z={};Object.keys(DATA.vendors).forEach(id=>DATA.vendors[id].z.forEach(n=>z[n]=1));return Object.keys(z).sort();})();
+const MAT_LIST=(()=>{const z={};PROFS.forEach(([p])=>DATA.rows[p].forEach(r=>r.d&&r.d.m.forEach(m=>z[m[0]]=1)));return Object.keys(z).sort();})();
+
+/* ---------- filter registry ----------
+   To add a filter, append one entry:
+     id        key in filterState
+     label     text shown before the control
+     type      'pills' or 'select'
+     def       default (cleared) value
+     options   () => [[value,label],...]   (select: the "all" option is added from allLabel)
+     vendor    (vendor,val) => bool   optional, hides non-matching vendors (rows with none left are hidden)
+     row       (row,val) => bool      optional, hides non-matching recipes
+     appliesTo (profession) => bool   optional, limits the row test to some tabs
+     onChange  (val) => void          optional side effect
+   "Clear all filters" resets every registered filter to its default, so new entries are covered automatically. */
+const FILTERS=[
+  {id:'faction',label:'Show vendors for:',type:'pills',def:'all',
+   options:()=>[['all','All'],['A','Alliance'],['H','Horde']],hint:'Neutral vendors show under both.',
+   vendor:(v,val)=>val==='all'||(val==='A'?v.A:v.H),
+   onChange:val=>{if(val!=='all')document.getElementById('rfac').value=val;fillStarts();}},
+  {id:'zone',label:'Zone:',type:'select',def:'',allLabel:'All zones',
+   options:()=>ZONE_LIST.map(z=>[z,z]),
+   vendor:(v,val)=>!val||v.z.indexOf(val)>=0},
+  {id:'mat',label:'Disenchants into:',type:'select',def:'',allLabel:'Any material',
+   options:()=>MAT_LIST.map(m=>[m,m]),
+   appliesTo:p=>DE_PROFS.indexOf(p)>=0,
+   row:(r,val)=>!val||!!(r.d&&r.d.m.some(m=>m[0]===val))}
+];
+const filterState={};
+FILTERS.forEach(f=>filterState[f.id]=f.def);
+const filtersActive=()=>FILTERS.some(f=>filterState[f.id]!==f.def);
 
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function facClass(f){return f==='Both friendly'?'Both':f==='Hostile to both'?'Hostile':f;}
-function vendorOk(v,f){return f==='all'||(f==='A'?v.A:v.H);}
-function visibleVendors(r){return r.v.filter(id=>vendorOk(DATA.vendors[id],filter));}
+function vendorOk(v){return FILTERS.every(f=>!f.vendor||f.vendor(v,filterState[f.id]));}
+function rowOk(r){return FILTERS.every(f=>!f.row||(f.appliesTo&&!f.appliesTo(r.p))||f.row(r,filterState[f.id]));}
+function visibleVendors(r){return r.v.filter(id=>vendorOk(DATA.vendors[id]));}
+function visibleRows(p){return DATA.rows[p].filter(rowOk).map(r=>[r,visibleVendors(r)]).filter(x=>x[1].length);}
 
-function deCell(d){
+function renderFilters(){
+  document.getElementById('filters').innerHTML=FILTERS.map(f=>{
+    let c;
+    if(f.type==='pills')c=f.options().map(o=>'<label class="pill '+esc(o[0])+'" data-f="'+f.id+'" data-v="'+esc(o[0])+'">'+esc(o[1])+'</label>').join('');
+    else c='<select data-f="'+f.id+'"><option value="'+esc(f.def)+'">'+esc(f.allLabel)+'</option>'+f.options().map(o=>'<option value="'+esc(o[0])+'">'+esc(o[1])+'</option>').join('')+'</select>';
+    return '<div class="fgroup"><span class="lbl">'+esc(f.label)+'</span>'+c+(f.hint?'<span class="lbl">'+esc(f.hint)+'</span>':'')+'</div>';
+  }).join('')+'<button id="clrf">Clear all filters</button>';
+  syncFilters();
+}
+function syncFilters(){
+  FILTERS.forEach(f=>{
+    document.querySelectorAll('#filters [data-f="'+f.id+'"]').forEach(el=>{
+      if(el.tagName==='SELECT')el.value=filterState[f.id];
+      else el.classList.toggle('on',el.dataset.v===filterState[f.id]);
+    });
+  });
+  document.getElementById('clrf').disabled=!filtersActive();
+}
+function setFilter(id,val){
+  const f=FILTERS.filter(x=>x.id===id)[0];
+  filterState[id]=val;
+  if(f.onChange)f.onChange(val);
+  syncFilters();renderAll();
+}
+function clearFilters(){
+  FILTERS.forEach(f=>filterState[f.id]=f.def);
+  syncFilters();renderAll();
+}
+
+/* ---------- table columns ----------
+   get(row,vendors) = sort value (null sorts last). vs = vendor order inside each cell when sorting by that column. */
+const vfirst=(vs,k)=>vs.length?vs.map(id=>DATA.vendors[id][k]).sort((a,b)=>a.localeCompare(b))[0]:null;
+const vcmp=k=>(a,b)=>DATA.vendors[a][k].localeCompare(DATA.vendors[b][k]);
+// Disenchant mats from lowest to highest value: ordered by the item level where each first drops in the WoWWiki table
+// (dust < essence < shard within the same step). A recipe sorts by its best mat that drops at 5% or more (ignores the 0.5% Nexus Crystal on rares).
+const MAT_ORDER=['Strange Dust','Lesser Magic Essence','Greater Magic Essence','Small Glimmering Shard','Lesser Astral Essence',
+  'Soul Dust','Greater Astral Essence','Large Glimmering Shard','Lesser Mystic Essence','Small Glowing Shard',
+  'Vision Dust','Greater Mystic Essence','Large Glowing Shard','Lesser Nether Essence','Small Radiant Shard',
+  'Dream Dust','Greater Nether Essence','Large Radiant Shard','Lesser Eternal Essence','Small Brilliant Shard',
+  'Illusion Dust','Greater Eternal Essence','Large Brilliant Shard','Arcane Dust','Lesser Planar Essence','Small Prismatic Shard','Nexus Crystal'];
+const matRank=n=>{const i=MAT_ORDER.indexOf(n);return i<0?MAT_ORDER.length:i;};
+const COLS=[
+  {k:'s',t:'Skill',get:r=>r.s||0},
+  {k:'n',t:'Recipe',get:r=>r.n},
+  {k:'vn',t:'Vendor',get:(r,vs)=>vfirst(vs,'n'),vs:vcmp('n')},
+  {k:'vl',t:'Location',get:(r,vs)=>vfirst(vs,'loc'),vs:vcmp('loc')},
+  {k:'vf',t:'Faction',get:(r,vs)=>vfirst(vs,'fac'),vs:vcmp('fac')},
+  {k:'il',t:'iLvl',de:1,get:r=>r.il},
+  {k:'rar',t:'Rarity',de:1,get:r=>r.rar?RARITY[r.rar]:null},
+  {k:'dm',t:'Likely disenchant mats (chance per disenchant)',de:1,get:r=>r.d&&r.d.m.length?Math.max.apply(null,r.d.m.filter(m=>+m[1]>=5).map(m=>matRank(m[0]))):null}
+];
+const colsFor=p=>COLS.filter(c=>!c.de||DE_PROFS.indexOf(p)>=0);
+
+function deCell(r){
+  const d=r.d;
   if(!d)return '<span class="t">-</span>';
-  if(!d.m.length)return '<span class="t">'+esc(d.l)+'</span>';
-  return '<div class="t">'+esc(d.l)+'</div>'+d.m.map(m=>'<div class="de"><span class="pr">'+esc(m[1])+'%</span> '+esc(m[0])+' <span class="t">&times;'+esc(m[2])+'</span></div>').join('');
+  if(!d.m.length)return '<span class="t">'+esc(r.il===null?d.l:'Not in disenchant table')+'</span>';
+  return d.m.map(m=>'<div class="de"><span class="pr">'+esc(m[1])+'%</span> '+esc(m[0])+' <span class="t">&times;'+esc(m[2])+'</span></div>').join('');
 }
-function vendorLine(id){
-  const v=DATA.vendors[id];
-  return '<div class="vl"><a href="'+esc(v.u)+'" target="_blank" rel="noopener" class="'+v.src+'">'+esc(v.n)+'</a>'+
-    '<span class="loc">'+esc(v.loc)+'</span><span class="fac '+facClass(v.fac)+'">'+esc(v.fac)+'</span></div>';
-}
+function vcol(vs,fn){return vs.map(id=>fn(DATA.vendors[id])).join('');}
 
 function renderPanel(p){
   const st=sortState[p]||{k:'s',asc:true};
-  const rows=DATA.rows[p].map(r=>[r,visibleVendors(r)]).filter(x=>x[1].length);
-  rows.sort((a,b)=>{const x=a[0][st.k],y=b[0][st.k];const c=(typeof x==='number')?x-y:String(x).localeCompare(String(y));return (st.asc?c:-c)||a[0].s-b[0].s;});
-  let h='<table><thead><tr><th></th><th class="sortable" data-k="s">Skill</th><th class="sortable" data-k="n">Recipe</th><th>Vendors (name &middot; location &middot; faction)</th>'+(DE_PROFS.indexOf(p)>=0?'<th>Likely disenchant mats (chance per disenchant)</th>':'')+'</tr></thead><tbody>';
+  const cols=colsFor(p), col=COLS.filter(c=>c.k===st.k)[0]||COLS[0];
+  const rows=visibleRows(p);
+  rows.forEach(x=>{
+    if(col.vs)x[1].sort((a,b)=>st.asc?col.vs(a,b):col.vs(b,a));
+    x.push(col.get(x[0],x[1]));
+  });
+  rows.sort((a,b)=>{
+    const x=a[2],y=b[2];
+    if(x===null||y===null)return x===y?a[0].s-b[0].s:(x===null?1:-1); // empty values always last
+    const c=(typeof x==='number')?x-y:String(x).localeCompare(String(y));
+    return (st.asc?c:-c)||a[0].s-b[0].s;
+  });
+  let h='<table><thead><tr><th></th>'+cols.map(c=>'<th class="sortable" data-k="'+c.k+'">'+esc(c.t)+(st.k===c.k?'<span class="ar">'+(st.asc?'&#9650;':'&#9660;')+'</span>':'')+'</th>').join('')+'</tr></thead><tbody>';
   rows.forEach(([r,vs])=>{
     const key=p+':'+r.id;
-    h+='<tr class="'+(selected.has(key)?'sel':'')+'"><td class="chk"><input type="checkbox" data-k="'+key+'"'+(selected.has(key)?' checked':'')+'></td><td class="sk">'+(r.s||'?')+'</td><td class="rc"><a href="'+esc(r.u)+'" target="_blank" rel="noopener" class="'+r.w+'">'+esc(r.n)+'</a></td><td>'+vs.map(vendorLine).join('')+'</td>'+(DE_PROFS.indexOf(p)>=0?'<td class="dc">'+deCell(r.d)+'</td>':'')+'</tr>';
+    h+='<tr class="'+(selected.has(key)?'sel':'')+'"><td class="chk"><input type="checkbox" data-k="'+key+'"'+(selected.has(key)?' checked':'')+'></td>'+
+      '<td class="sk">'+(r.s||'?')+'</td>'+
+      '<td class="rc"><a href="'+esc(r.u)+'" target="_blank" rel="noopener" class="'+r.w+'">'+esc(r.n)+'</a></td>'+
+      '<td class="vn">'+vcol(vs,v=>'<div class="vl"><a href="'+esc(v.u)+'" target="_blank" rel="noopener" class="'+v.src+'">'+esc(v.n)+'</a></div>')+'</td>'+
+      '<td class="vloc">'+vcol(vs,v=>'<div class="vl loc" title="'+esc(v.loc)+'">'+esc(v.loc)+'</div>')+'</td>'+
+      '<td class="vf">'+vcol(vs,v=>'<div class="vl"><span class="fac '+facClass(v.fac)+'">'+esc(v.fac)+'</span></div>')+'</td>'+
+      (DE_PROFS.indexOf(p)>=0?'<td class="il">'+(r.il===null?'<span class="t">-</span>':r.il)+'</td><td>'+(r.rar?'<span class="rar '+r.rar+'">'+r.rar+'</span>':'<span class="t">-</span>')+'</td><td class="dc">'+deCell(r)+'</td>':'')+'</tr>';
   });
   h+='</tbody></table>';
   document.getElementById('panel-'+p).innerHTML=h;
@@ -128,14 +237,13 @@ function renderPanel(p){
 function renderAll(){
   PROFS.forEach(([p])=>renderPanel(p));
   PROFS.forEach(([p,t])=>{
-    const n=DATA.rows[p].filter(r=>visibleVendors(r).length).length;
-    document.querySelector('.tab[data-t="'+p+'"]').textContent=t+' ('+n+')';
+    document.querySelector('.tab[data-t="'+p+'"]').textContent=t+' ('+visibleRows(p).length+')';
   });
 }
 function initUI(){
   document.getElementById('tabs').innerHTML=PROFS.map(([p,t])=>'<button class="tab'+(p===activeTab?' active':'')+'" data-t="'+p+'"></button>').join('');
   document.getElementById('panels').innerHTML=PROFS.map(([p])=>'<section class="panel'+(p===activeTab?' active':'')+'" id="panel-'+p+'"></section>').join('');
-  renderAll();
+  renderFilters();renderAll();
   document.getElementById('tabs').addEventListener('click',e=>{
     const b=e.target.closest('.tab');if(!b)return;activeTab=b.dataset.t;
     document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
@@ -151,12 +259,13 @@ function initUI(){
     c.closest('tr').classList.toggle('sel',c.checked);
     updateBar();
   });
-  document.querySelectorAll('.filters .pill').forEach(l=>l.addEventListener('click',()=>{
-    filter=l.dataset.f;
-    document.querySelectorAll('.filters .pill').forEach(x=>x.classList.toggle('on',x===l));
-    if(filter!=='all')document.getElementById('rfac').value=filter;
-    fillStarts();renderAll();
-  }));
+  document.getElementById('filters').addEventListener('click',e=>{
+    const l=e.target.closest('.pill');if(l){setFilter(l.dataset.f,l.dataset.v);return;}
+    if(e.target.id==='clrf')clearFilters();
+  });
+  document.getElementById('filters').addEventListener('change',e=>{
+    const s=e.target.closest('select');if(s)setFilter(s.dataset.f,s.value);
+  });
   document.getElementById('clr').onclick=()=>{selected.clear();renderAll();updateBar();};
   document.getElementById('rfac').onchange=fillStarts;
   document.getElementById('mk').onclick=createRoute;
