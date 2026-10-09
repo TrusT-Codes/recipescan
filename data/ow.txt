@@ -1,0 +1,283 @@
+V|66|Tharynn Bouden|[1,-1]|Elwynn Forrest 41.85,67.16
+V|777|Amy Davenport|[1,-1]|Redridge Mountains 29.121,47.3099
+V|843|Gina MacGregor|[1,-1]|Westfall 57.6477,54.0436
+V|989|Banalash|[-1,1]|Swamp O fSorrows 44.73,56.58
+V|1250|Drake Lindgren|[1,-1]|Elwynn Forrest 83.31,66.68
+V|1318|Jessara Cordell|[1,-1]|Stormwind City 42.8463,64.3882
+V|1347|Alexandra Bolero|[1,-1]|Stormwind City 43.29,73.98
+V|1454|Jennabink Powerseam|[1,-1]|Wetlands 8.111,55.84
+V|1474|Rann Flamespinner|[1,-1]|Loch Modan 35.94,45.85
+V|1669|Defias Profiteer|[1,1]|Westfall 43.4763,66.7295
+V|2381|Micha Yance|[1,-1]|Hilsbrad Foothills 48.93,54.98
+V|2393|Christoph Jeffcoat|[-1,1]|Alterac Mountains 61.0475,80.6784
+V|2394|Mallen Swain|[-1,1]|Alterac Mountains 60.6189,82.8749
+V|2663|Narkk|[1,1]|Stranglethorn Vale 28.1423,74.4035
+V|2668|Danielle Zipstitch|[1,-1]|Duskwood 75.86,45.52
+V|2669|Sheri Zipstitch|[1,-1]|Duskwood 75.6419,45.5176
+V|2670|Xizk Goodstitch|[0,0]|Stranglethorn Vale 28.7221,76.8717
+V|2672|Cowardly Crosby|[1,1]|Stranglethorn Vale 27.014,82.4663
+V|2679|Wenna Silkbeard|[1,-1]|Wetlands 25.59,25.8
+V|2697|Clyde Ranthal|[1,-1]|Redridge Mountains 27.65,46.48
+V|2698|George Candarte|[-1,1]|Arathi Highlands 28.0647,11.7363
+V|2699|Rikqiz|[0,0]|Stranglethorn Vale 28.5,76.05
+V|2810|Hammon Karwn|[1,-1]|Arathi Highlands 46.4814,47.4029
+V|2816|Androd Fadran|[1,-1]|Arathi Highlands 45.0647,46.8196
+V|2819|Tunkk|[-1,1]|Arathi Highlands 74.8147,34.5696
+V|2821|Keena|[-1,1]|Arathi Highlands 74.0647,32.6946
+V|2846|Blixrez Goodstitch|[0,0]|Stranglethorn Vale 28.25,77.53
+V|3005|Mahu|[-1,1]|Mulgore 38.7138,25.9877
+V|3012|Nata Dawnstrider|[-1,1]|Mulgore 38.9473,24.7031
+V|3346|Kithas|[-1,1]|Ogrimmar 53.8567,38.0449
+V|3364|Borya|[-1,1]|Ogrimmar 63.05,51.51
+V|3366|Tamar|[-1,1]|Ogrimmar 62.9826,45.5282
+V|3485|Wrahk|[-1,1]|The Barrens 52.2426,31.6818
+V|3499|Ranik|[0,0]|The Barrens 61.92,38.7
+V|3522|Constance Brisboise|[-1,1]|Tirisfal Glades 52.6103,55.7842
+V|3537|Zixil|[0,0]|Alterac Mountains 53.4761,81.6963; Hilsbrad Foothills 50.8022,49.7345
+V|3556|Andrew Hilbert|[-1,1]|Silverpine Forrest 43.24,40.67
+V|3683|Kiknikle|[0,0]|The Barrens 41.7821,38.6827
+V|3954|Dalria|[1,-1]|Ashenvale 35.1156,52.1345
+V|3958|Lardan|[1,-1]|Ashenvale 34.7861,49.8451
+V|4168|Elynna|[1,-1]|Teldrassil 30.6497,51.4261
+V|4186|Mavralyn|[1,-1]|Darkshore 37.0026,41.2061
+V|4189|Valdaron|[1,-1]|Darkshore 38.1629,40.6107
+V|4225|Saenorion|[1,-1]|Teldrassil 30.4533,51.5735
+V|4228|Vaean|[1,-1]|Teldrassil 29.3928,50.0118
+V|4229|Mythrin'dir|[1,-1]|Teldrassil 29.8838,50.6306
+V|4561|Daniel Bartlett|[-1,1]|Undercity 64.1244,37.4857
+V|4577|Millie Gregorian|[-1,1]|Undercity 70.5869,30.2995
+V|4589|Joseph Moore|[-1,1]|Undercity 70.0658,58.5759
+V|4617|Thaddeus Webb|[-1,1]|Undercity 62.4566,61.0754
+V|4877|Jandia|[-1,1]|Thousand Needles 46.197,51.4886
+V|4883|Krak|[-1,1]|Dustwallow Marsh 36.381,30.8191
+V|4897|Helenia Olden|[1,-1]|Dustwallow Marsh 66.42,51.45
+V|5128|Bombus Finespindle|[1,-1]|Ironforge 39.51,34.45
+V|5158|Tilli Thistlefuzz|[1,-1]|Ironforge 61.0159,43.9264
+V|5565|Jillian Tanner|[1,-1]|Stormwind City 67.1,49.44
+V|5757|Lilly|[-1,1]|Silverpine Forrest 43.0238,50.8454
+V|5758|Leo Sarn|[-1,1]|Silverpine Forrest 53.9048,82.2025
+V|5783|Kalldan Felmoon|[1,1]|The Barrens 45.8873,35.6929
+V|5944|Yonada|[-1,1]|The Barrens 44.9992,59.3302
+V|6567|Ghok'kah|[-1,1]|Dustwallow Marsh 35.1429,30.8191
+V|6568|Vizzklick|[0,0]|Tanaris 51.0036,27.3478
+V|6574|Jun'ha|[-1,1]|Arathi Highlands 72.6758,36.4446
+V|6576|Brienna Starglow|[1,-1]|Feralas 88.9449,45.9352
+V|6731|Harlown Darkweave|[1,-1]|Ashenvale 18.24,60.04
+V|7852|Pratt McGrubben|[1,-1]|Feralas 30.6427,42.6978
+V|7854|Jangdor Swiftstrider|[-1,1]|Feralas 74.4413,42.892
+V|7940|Darnall|[0,0]|Moonglade 51.45,33.3
+V|8160|Nioma|[1,-1]|Hinterlands 13.2727,43.3897
+V|8681|Outfitter Eric|[1,-1]|Ironforge 43.31,29.14
+V|9499|Plugger Spazzring|[0,0]|BRD (Dungeon) 16.09,40.8
+V|9636|Kireena|[-1,1]|Desolace 50.99,53.54
+V|10856|Argent Quartermaster Hasana|[0,0]|Western Plaguelands 26.64,55.21
+V|10857|Argent Quartermaster Lightspark|[0,0]|Western Plaguelands 42.83,83.74
+V|11189|Qia|[0,0]|Winterspring 61.2018,37.2112
+V|11536|Quartermaster Miranda Breechlock|[0,0]|Eastern Plaguelands 81.6,60.01
+V|11557|Meilosh|[-1,-1]|Felwood 65.68,2.826
+V|12022|Lorelae Wintersong|[0,0]|Moonglade 48.21,40.18
+V|12043|Kulwia|[-1,1]|Stonetalon Mountains 45.3959,59.3526
+V|12246|Super-Seller 680|[1,1]|Desolace 40.51,79.32
+V|12941|Jase Farlane|[0,0]|Eastern Plaguelands 80.592,57.6077
+V|12942|Leonard Porter|[1,-1]|Western Plaguelands 43.06,84.34
+V|12943|Werg Thickblade|[-1,1]|Western Plaguelands 26.6667,56.8489
+V|12944|Lokhtos Darkbargainer|[0,0]|BRD (Dungeon) 16.82,39.2
+V|12956|Zannok Hidepiercer|[1,1]|Ungoro Crater 23.0089,16.3513
+V|12957|Blimo Gadgetspring|[1,-1]|Aszhara 45.198,90.8738
+V|12958|Gigget Zipcoil|[1,1]|Hinterlands 34.44,38.6
+V|12959|Nergal|[1,1]|Ungoro Crater 43.2522,7.7161
+V|14371|Shen'dralar Provisioner|[0,0]|Dire Maul (Dungeon) 0,0
+V|14921|Rin'wosho the Trader|[0,0]|Stranglethorn Vale 15.07,15.99
+V|15179|Mishta|[0,0]|Silithus 49.8804,36.3194
+V|15293|Aendel Windspear|[0,0]|Silithus 50.713,33.4781
+V|15419|Kania|[0,0]|Silithus 51.9761,39.6772
+V|15909|Fariel Starsong|[1,1]|Moonglade 53.751,35.3776
+V|60456|Belgrush Daggerfist|[-1,-1]|Stranglethorn Vale 41.9954,79.2224
+V|60771|Sarkensh|[-1,1]|Burning Steppes 92.9389,22.7834
+V|61002|Orman Granitemantle|[1,-1]|The Barrens 33.7985,10.3386
+V|61005|Begwynn Blackmallet|[1,-1]|The Barrens 34.4597,10.6494
+V|61107|Klazz|[1,1]|Tanaris 92.1486,65.9565
+V|61272|Samantha Stewards|[1,-1]|Azeroth 42.4234,40.8052
+V|61288|Savenna Mosscage|[-1,1]|Azeroth 42.1251,37.3791
+V|61524|Relthan Highmoon|[1,1]|Winterspring 49.0469,63.8732
+V|61574|'Stickypaws'|[1,1]|Azeroth 41.51,37.45
+V|61721|Daxx Rightblast|[0,0]|
+V|61813|Elenia Everdawn|[1,-1]|Azeroth 53.83,13.23
+V|62083|Saeldor Dawnspark|[1,-1]|Azeroth 53.4149,14.3378
+V|62085|Lyrei Silverbrook|[1,-1]|Azeroth 54.1933,12.8677
+V|62090|Elwion Windseeker|[1,-1]|Azeroth 53.5314,12.8591
+V|62091|Ravondir Valgwyn|[1,-1]|Azeroth 53.72,13.33
+V|62094|Calaire Solarguard|[1,-1]|Eastern Plaguelands 6.8869,8.8329
+V|62141|Alison Swift|[1,-1]|Azeroth 41.0058,63.024
+V|62408|Gormand Belchbrew|[1,-1]|Azeroth 59.77,53.17
+V|62427|Tal'garr|[-1,1]|Azeroth 60.3894,48.791
+V|63090|Argnuhl|[-1,1]|Winterspring 69.44,4.528
+V|80947|Alyssa Stormbolt|[1,-1]|Hinterlands 14.18,44.64
+V|91247|Karey Gozzleratch|[0,0]|
+V|91983|Randal Portman|[-1,1]|Tirisfal Glades 4.6103,61.3278
+V|92020|Howard Gray|[1,-1]|Deadwind Pass 56.99,31.1
+V|92170|Isidora|[0,0]|Azeroth 37.2018,88.7329
+V|92177|Garto'ogg|[-1,1]|Azeroth 38.9149,91.865
+V|92195|Otor Nar'gakk|[-1,1]|
+V|92200|Bhatra|[-1,1]|Aszhara 53.3624,10.9034
+V|92221|Hal'dah Plainsguard|[-1,1]|The Barrens 50.8808,29.3284
+I|leatherworking|16|2Pattern: Harness of the High Thane|300|80947
+I|tailoring|4355|5Pattern: Icy Cloak|200|2381,92020,6567
+I|leatherworking|5083|4Pattern: Kodo Hide Bag|40|92221
+I|tailoring|5771|5Pattern: Red Linen Bag|70|4189,3005,843,61721,3556
+I|tailoring|5772|5Pattern: Red Woolen Bag|115|3537,5944,3485,4189,1474,4577,3005,3683,1454,3364,777,62141
+I|leatherworking|5786|5Pattern: Murloc Scale Belt|90|4186,843,61721,3556
+I|leatherworking|5787|5Pattern: Murloc Scale Breastplate|95|4186,843,61721,3556
+I|leatherworking|5788|4Pattern: Thick Murloc Armor|170|2381,92020,2393,2846
+I|leatherworking|5789|4Pattern: Murloc Scale Bracers|190|4897,2846
+I|leatherworking|5973|5Pattern: Barbaric Leggings|170|62427,3958,61107,2821,4877,2810,62408
+I|tailoring|6270|5Pattern: Blue Linen Vest|55|3485,4189,66,61813,3522,3364
+I|tailoring|6272|5Pattern: Blue Linen Robe|70|3485,3499,61002,62085,91247,4168,1250,61721,3556
+I|tailoring|6273|5Pattern: Green Woolen Robe|90|1669
+I|tailoring|6274|5Pattern: Blue Overalls|100|5944,2394,843,3364,1347
+I|tailoring|6275|5Pattern: Greater Adept's Robe|115|2669,1474,3499,4577,62085,91247,1454,4168,62141
+I|enchanting|6342|4Formula: Enchant Chest - Minor Mana|20|4228,5158,4617,62083,3012,5757,5758,3346,15419,1318
+I|enchanting|6346|4Formula: Enchant Chest - Lesser Mana|80|5757,3346
+I|enchanting|6349|5Formula: Enchant 2H Weapon - Lesser Intellect|100|5158,3012,5758,3346
+I|enchanting|6377|4Formula: Enchant Boots - Minor Agility|125|3537,3012
+I|tailoring|6401|5Pattern: Dark Silk Shirt|155|12246,2669,2394
+I|leatherworking|6474|5Pattern: Deviate Scale Cloak|90|5783
+I|leatherworking|6475|5Pattern: Deviate Scale Gloves|105|5783
+I|tailoring|7087|5Pattern: Crimson Silk Cloak|180|2670,12246
+I|tailoring|7088|5Pattern: Crimson Silk Robe|205|6568
+I|tailoring|7089|5Pattern: Azure Silk Cloak|175|6574,6576
+I|tailoring|7093|4Pattern: Boots of Darkness|140|3537
+I|tailoring|7114|5Pattern: Azure Silk Gloves|145|2679,9636
+I|leatherworking|7289|5Pattern: Black Whelp Cloak|100|2697,61005
+I|leatherworking|7290|5Pattern: Red Whelp Gloves|120|2679
+I|leatherworking|7361|4Pattern: Herbalist's Gloves|135|6731
+I|leatherworking|7362|5Pattern: Earthen Leather Shoulders|135|3537
+I|leatherworking|7451|4Pattern: Green Whelp Bracers|190|4225,7852,4589,7854,62090
+I|leatherworking|7613|5Pattern: Green Leather Armor|155|2679,2698
+I|leatherworking|8384|3Pattern: Comfortable Leather Hat|200|61272
+I|leatherworking|8385|5Pattern: Turtle Scale Gloves|205|7852,7854
+I|leatherworking|8388|4Pattern: Nightscape Cloak|230|3366,4225,3005,4589,5565,62090,5128
+I|leatherworking|8409|4Pattern: Nightscape Shoulders|210|8160,7854
+I|tailoring|10311|5Pattern: Orange Martial Shirt|220|3005,62085,91247,4168
+I|tailoring|10314|5Pattern: Lavender Mageweave Shirt|230|8681,3364
+I|tailoring|10317|5Pattern: Pink Mageweave Shirt|235|8681,3364
+I|tailoring|10318|5Pattern: Admiral's Hat|240|2672
+I|tailoring|10321|5Pattern: Tuxedo Shirt|240|8681,4577
+I|tailoring|10323|5Pattern: Tuxedo Pants|245|8681,4577
+I|tailoring|10325|5Pattern: White Wedding Dress|250|3005,1347
+I|tailoring|10326|5Pattern: Tuxedo Jacket|250|8681,4577
+I|tailoring|10728|5Pattern: Black Swashbuckler's Shirt|200|2663
+I|enchanting|11039|4Formula: Enchant Cloak - Minor Agility|110|12043,3954
+I|enchanting|11101|4Formula: Enchant Bracer - Lesser Strength|140|12043,3954
+I|enchanting|11163|4Formula: Enchant Bracer - Lesser Deflection|170|2381,2821,92020
+I|enchanting|11223|4Formula: Enchant Bracer - Deflection|235|62091,4229,62094,989
+I|leatherworking|13287|4Pattern: Raptor Hide Harness|165|2819
+I|leatherworking|13288|4Pattern: Raptor Hide Belt|165|2816
+I|tailoring|14468|5Pattern: Runecloth Bag|260|11189
+I|tailoring|14469|5Pattern: Runecloth Robe|260|7940
+I|tailoring|14472|5Pattern: Runecloth Cloak|265|7940
+I|tailoring|14481|5Pattern: Runecloth Gloves|275|11189
+I|tailoring|14483|5Pattern: Felcloth Pants|275|12022,63090
+I|tailoring|14488|5Pattern: Runecloth Boots|280|7940
+I|tailoring|14526|5Pattern: Mooncloth|250|11189
+I|tailoring|14627|5Pattern: Bright Yellow Shirt|135|2668
+I|tailoring|14630|5Pattern: Enchanter's Cowl|165|2670,12246
+I|leatherworking|14635|5Pattern: Gem-studded Leather Belt|185|2699
+I|leatherworking|15724|5Pattern: Heavy Scorpid Bracers|275|12956
+I|leatherworking|15725|5Pattern: Wicked Leather Gauntlets|260|12943,12942
+I|leatherworking|15729|5Pattern: Chimeric Gloves|265|12957
+I|leatherworking|15734|5Pattern: Living Shoulders|270|7852,7854
+I|leatherworking|15735|5Pattern: Ironfeather Shoulders|270|60771,92195,12958
+I|leatherworking|15740|5Pattern: Frostsaber Boots|275|11189
+I|leatherworking|15741|5Pattern: Stormshroud Pants|275|12943,91983,12942
+I|leatherworking|15751|5Pattern: Blue Dragonscale Breastplate|285|12957,92200
+I|leatherworking|15756|5Pattern: Runic Leather Headband|290|61524,12941
+I|leatherworking|15758|5Pattern: Devilsaur Gauntlets|290|61288,12959,92177,92200,60456
+I|leatherworking|15759|5Pattern: Black Dragonscale Breastplate|290|9499
+I|leatherworking|15762|5Pattern: Heavy Scorpid Helm|295|12956
+I|enchanting|16217|5Formula: Enchant Shield - Greater Stamina|265|62091,4229,4561,62094
+I|enchanting|16221|5Formula: Enchant Chest - Major Health|275|11189
+I|enchanting|16224|5Formula: Enchant Cloak - Superior Defense|285|12022,63090
+I|enchanting|16243|5Formula: Runed Arcanite Rod|290|12022,63090
+I|tailoring|17017|5Pattern: Flarecore Mantle|300|12944
+I|tailoring|17018|5Pattern: Flarecore Gloves|300|12944
+I|leatherworking|17022|5Pattern: Corehound Boots|300|12944
+I|leatherworking|17023|5Pattern: Molten Helm|300|12944
+I|leatherworking|17025|5Pattern: Black Dragonscale Boots|300|12944
+I|leatherworking|18239|5Pattern: Shadowskin Gloves|200|2699
+I|tailoring|18487|5Pattern: Mooncloth Robe|300|14371
+I|leatherworking|18731|5Pattern: Heavy Leather Ball|150|3366,5128
+I|leatherworking|18949|5Pattern: Barbaric Bracers|155|4225,4589,62090
+I|tailoring|19215|5Pattern: Wisdom of the Timbermaw|290|11557
+I|tailoring|19216|5Pattern: Argent Boots|290|11536,10857,10856
+I|tailoring|19217|5Pattern: Argent Shoulders|300|11536,10857,10856
+I|tailoring|19218|5Pattern: Mantle of the Timbermaw|300|11557
+I|tailoring|19219|5Pattern: Flarecore Robe|300|12944
+I|tailoring|19220|5Pattern: Flarecore Leggings|300|12944
+I|leatherworking|19326|5Pattern: Might of the Timbermaw|290|11557
+I|leatherworking|19327|5Pattern: Timbermaw Brawlers|300|11557
+I|leatherworking|19328|5Pattern: Dawn Treaders|290|11536,10857,10856
+I|leatherworking|19329|5Pattern: Golden Mantle of the Dawn|300|11536,10857,10856
+I|leatherworking|19330|5Pattern: Lava Belt|300|12944
+I|leatherworking|19331|5Pattern: Chromatic Gauntlets|300|12944
+I|leatherworking|19332|5Pattern: Corehound Belt|300|12944
+I|leatherworking|19333|5Pattern: Molten Belt|300|12944
+I|enchanting|19444|5Formula: Enchant Weapon - Strength|290|12944
+I|enchanting|19445|5Formula: Enchant Weapon - Agility|290|11557
+I|enchanting|19446|5Formula: Enchant Bracer - Mana Regeneration|290|11536,10857,10856
+I|enchanting|19447|5Formula: Enchant Bracer - Healing|300|11536,10857,10856
+I|enchanting|19448|5Formula: Enchant Weapon - Mighty Spirit|300|12944
+I|enchanting|19449|5Formula: Enchant Weapon - Mighty Intellect|300|12944
+I|tailoring|19764|5Pattern: Bloodvine Vest|300|14921
+I|tailoring|19765|5Pattern: Bloodvine Leggings|300|14921
+I|tailoring|19766|5Pattern: Bloodvine Boots|300|14921
+I|leatherworking|19769|5Pattern: Primal Batskin Jerkin|300|14921
+I|leatherworking|19770|5Pattern: Primal Batskin Gloves|300|14921
+I|leatherworking|19771|5Pattern: Primal Batskin Bracers|300|14921
+I|leatherworking|19772|5Pattern: Blood Tiger Breastplate|300|14921
+I|leatherworking|19773|5Pattern: Blood Tiger Shoulders|300|14921
+I|leatherworking|20253|5Pattern: Warbear Harness|275|11557
+I|leatherworking|20254|5Pattern: Warbear Woolies|285|11557
+I|leatherworking|20382|5Pattern: Dreamscale Breastplate|300|15293
+I|leatherworking|20506|5Pattern: Spitfire Bracers|300|15293
+I|leatherworking|20507|5Pattern: Spitfire Gauntlets|300|15293
+I|leatherworking|20508|5Pattern: Spitfire Breastplate|300|15293
+I|leatherworking|20509|5Pattern: Sandstalker Bracers|300|15293
+I|leatherworking|20510|5Pattern: Sandstalker Gauntlets|300|15293
+I|leatherworking|20511|5Pattern: Sandstalker Breastplate|300|15293
+I|leatherworking|20576|5Pattern: Black Whelp Tunic|100|777
+I|enchanting|20732|5Formula: Enchant Cloak - Greater Fire Resistance|300|15419
+I|enchanting|20733|5Formula: Enchant Cloak - Greater Nature Resistance|300|15419
+I|enchanting|20752|5Formula: Minor Mana Oil|150|4228,5158,4617,62083,3012,5757,5758,3346,15419,1318,92170
+I|enchanting|20753|5Formula: Lesser Wizard Oil|200|4228,5158,4617,62083,3012,5757,5758,3346,15419,1318,92170
+I|enchanting|20754|5Formula: Lesser Mana Oil|250|15419
+I|enchanting|20755|5Formula: Wizard Oil|275|15419,92170
+I|enchanting|20756|5Formula: Brilliant Wizard Oil|300|14921
+I|enchanting|20757|5Formula: Brilliant Mana Oil|300|14921
+I|enchanting|20758|5Formula: Minor Wizard Oil|45|4228,5158,4617,62083,3012,5757,5758,3346,15419,1318,92170
+I|tailoring|21358|5Pattern: Soul Pouch|260|6568
+I|tailoring|21722|4Pattern: Festival Dress|250|15909
+I|tailoring|21723|4Pattern: Festival Suit|250|15909
+I|tailoring|22307|5Pattern: Enchanted Mageweave Pouch|225|4228,5158,4617,62083,3012,5757,5758,3346,15419,1318,92170
+I|tailoring|22308|5Pattern: Enchanted Runecloth Bag|275|15419
+I|tailoring|22310|5Pattern: Cenarion Herb Bag|275|15179
+I|tailoring|22312|5Pattern: Satchel of Cenarius|300|15179
+I|enchanting|22392|5Formula: Enchant 2H Weapon - Agility|290|11557
+I|tailoring|22683|5Pattern: Gaea's Embrace|300|15179
+I|leatherworking|22769|5Pattern: Bramblewood Belt|300|15293
+I|leatherworking|22770|5Pattern: Bramblewood Boots|300|15293
+I|leatherworking|22771|5Pattern: Bramblewood Helm|300|15293
+I|tailoring|22772|5Pattern: Sylvan Shoulders|300|15179
+I|tailoring|22773|5Pattern: Sylvan Crown|300|15179
+I|tailoring|22774|5Pattern: Sylvan Vest|300|15179
+I|enchanting|55044|3Formula: Enchant Boots - Major Intellect|300|14371
+I|tailoring|55051|3Pattern: Astronomer Raiments|300|14371
+I|leatherworking|55053|3Pattern: Prismatic Scale Barbute|300|14371
+I|tailoring|55055|2Pattern: Spellwoven Nobility Drape|300|14371
+I|enchanting|61738|4Formula: Enchant Bracer - Vampirism|185|61574
+I|leatherworking|62003|5Pattern: Corehound Gloves|300|12944
+I|tailoring|62005|5Pattern: Flarecore Boots|300|12944
+I|leatherworking|62006|5Pattern: Chromatic Leggings|300|12944
+I|leatherworking|62007|5Pattern: Molten Leggings|300|12944
+I|leatherworking|83538|5Pattern: Red Dragonscale Leggings|295|2679,4883
+I|leatherworking|83546|5Pattern: Verdant Dreamer's Breastplate|300|15293

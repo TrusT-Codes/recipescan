@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Classic vendor recipes: Tailoring, Leatherworking, Enchanting</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,sans-serif;margin:0;padding:24px 24px 90px;background:#16161a;color:#e6e6e6}
+h1{font-size:20px;margin:0 0 4px}
+.sub{color:#9a9aa5;font-size:13px;margin-bottom:14px}
+.filters{display:flex;gap:10px;align-items:center;margin-bottom:12px;font-size:14px}
+.filters .lbl{color:#9a9aa5}
+.pill{display:inline-flex;align-items:center;gap:6px;background:#26262e;border:1px solid #3a3a44;padding:6px 12px;border-radius:999px;cursor:pointer}
+.pill input{display:none}
+.pill.on{background:#3b5bdb;border-color:#3b5bdb}
+.pill.A.on{background:#1c6fd1;border-color:#1c6fd1}
+.pill.H.on{background:#b32727;border-color:#b32727}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tab{background:#26262e;color:#e6e6e6;border:1px solid #3a3a44;padding:8px 14px;border-radius:6px;cursor:pointer;font-size:14px}
+.tab.active{background:#3b5bdb;border-color:#3b5bdb}
+.panel{display:none}.panel.active{display:block}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border-bottom:1px solid #2c2c35;padding:7px 8px;text-align:left;vertical-align:top}
+th{position:sticky;top:0;background:#1f1f26;z-index:2}
+th.sortable{cursor:pointer}
+tr:hover td{background:#1b1b22}
+tr.sel td{background:#1d2540}
+td.chk{width:28px}
+td.sk{width:54px;white-space:nowrap}
+td.rc{width:300px}
+.vl{display:grid;grid-template-columns:230px minmax(220px,1fr) 120px;gap:12px;padding:1px 0}
+.vl a{color:#8ab4ff;text-decoration:none}
+.vl a:hover{text-decoration:underline}
+.vl a.ow{color:#d6a8ff}
+.vl .loc{color:#b6b6c2}
+.fac{font-size:12px;padding:1px 8px;border-radius:999px;justify-self:start;border:1px solid #3a3a44}
+.fac.Alliance{background:#12365f;border-color:#1c6fd1}
+.fac.Horde{background:#4d1717;border-color:#b32727}
+.fac.Both{background:#24402a;border-color:#2e8b47}
+.fac.Neutral{background:#33333b}
+.fac.Hostile{background:#3a1f1f;border-color:#7a3a3a}
+.notes{margin-top:24px;color:#9a9aa5;font-size:12px;line-height:1.6}
+#routebar{position:fixed;left:0;right:0;bottom:0;background:#1f1f26;border-top:1px solid #3a3a44;padding:10px 24px;display:flex;gap:12px;align-items:center;z-index:10;font-size:14px}
+#routebar select,#routebar button{background:#26262e;color:#e6e6e6;border:1px solid #3a3a44;border-radius:6px;padding:6px 10px;font-size:14px}
+#routebar button.go{background:#3b5bdb;border-color:#3b5bdb;cursor:pointer}
+#routebar button.go:disabled{opacity:.45;cursor:default}
+#routebar button{cursor:pointer}
+#route{position:fixed;right:0;top:0;bottom:56px;width:min(560px,100%);background:#1a1a21;border-left:1px solid #3a3a44;padding:18px 20px;overflow:auto;display:none;z-index:20}
+#route h2{font-size:17px;margin:0 0 6px}
+#route .x{position:absolute;right:14px;top:12px;background:none;border:0;color:#9a9aa5;font-size:20px;cursor:pointer}
+#route ol{padding-left:20px;margin:10px 0}
+#route li{margin:0 0 9px;line-height:1.45}
+#route .t{color:#9a9aa5;font-size:12px}
+#route .stop{background:#202033;border-left:3px solid #3b5bdb;padding:6px 10px;border-radius:4px;list-style:none;margin-left:-20px}
+#route .warn{color:#e8b86b}
+#route a{color:#8ab4ff}
+.mode{font-size:11px;padding:1px 6px;border-radius:4px;background:#33333b;margin-right:6px}
+</style></head><body>
+<h1>Vendor-sold recipes, Classic</h1>
+<div class="sub">Sources: OctoWow DB + Wowhead Classic. One row per recipe. All vendors that sell it listed one per line.</div>
+
+<div class="filters">
+  <span class="lbl">Show vendors for:</span>
+  <label class="pill on" data-f="all"><input type="radio" name="f" checked>All</label>
+  <label class="pill A" data-f="A"><input type="radio" name="f">Alliance</label>
+  <label class="pill H" data-f="H"><input type="radio" name="f">Horde</label>
+  <span class="lbl">Neutral vendors show under both.</span>
+</div>
+<div class="tabs" id="tabs"></div>
+<div id="panels"></div>
+
+<div class="notes">
+Vendor links go to Wowhead Classic. Purple links = vendor only exists on OctoWow, so it links there.<br>
+Faction: Alliance / Horde = friendly to that side. Neutral = neither side hostile. Reputation requirements are not included in either source.<br>
+Disenchant column (tailoring only): mats the crafted item disenchants into, from Wowhead's disenchant lists. "-" = not listed.<br>
+Routes are estimates. The map positions, flight paths, boat and zeppelin times in this page are a hand-built model, not game data.
+</div>
+
+<div id="routebar">
+  <span id="selCount">0 recipes selected</span>
+  <label>Route as <select id="rfac"><option value="A">Alliance</option><option value="H">Horde</option></select></label>
+  <label>Start at <select id="rstart"></select></label>
+  <button class="go" id="mk" disabled>Create route</button>
+  <button id="clr">Clear selection</button>
+</div>
+<div id="route"><button class="x" id="rx">&times;</button><div id="routebody"></div></div>
+
+<script>
+const DATA=/*DATA*/null;
+
+/* ---------- table UI ---------- */
+const PROFS=[['tailoring','Tailoring'],['leatherworking','Leatherworking'],['enchanting','Enchanting']];
+let filter='all', activeTab='tailoring';
+const selected=new Set();
+const sortState={};
+const rowIndex={};
+PROFS.forEach(([p])=>DATA.rows[p].forEach(r=>{rowIndex[p+':'+r.id]=r;r.p=p;}));
+
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function facClass(f){return f==='Both friendly'?'Both':f==='Hostile to both'?'Hostile':f;}
+function vendorOk(v,f){return f==='all'||(f==='A'?v.A:v.H);}
+function visibleVendors(r){return r.v.filter(id=>vendorOk(DATA.vendors[id],filter));}
+
+function vendorLine(id){
+  const v=DATA.vendors[id];
+  return '<div class="vl"><a href="'+esc(v.u)+'" target="_blank" rel="noopener" class="'+v.src+'">'+esc(v.n)+'</a>'+
+    '<span class="loc">'+esc(v.loc)+'</span><span class="fac '+facClass(v.fac)+'">'+esc(v.fac)+'</span></div>';
+}
+
+function renderPanel(p){
+  const st=sortState[p]||{k:'s',asc:true};
+  const rows=DATA.rows[p].map(r=>[r,visibleVendors(r)]).filter(x=>x[1].length);
+  rows.sort((a,b)=>{const x=a[0][st.k],y=b[0][st.k];const c=(typeof x==='number')?x-y:String(x).localeCompare(String(y));return (st.asc?c:-c)||a[0].s-b[0].s;});
+  let h='<table><thead><tr><th></th><th class="sortable" data-k="s">Skill</th><th class="sortable" data-k="n">Recipe</th><th>Vendors (name &middot; location &middot; faction)</th>'+(p==='tailoring'?'<th>Likely disenchant mats</th>':'')+'</tr></thead><tbody>';
+  rows.forEach(([r,vs])=>{
+    const key=p+':'+r.id;
+    h+='<tr class="'+(selected.has(key)?'sel':'')+'"><td class="chk"><input type="checkbox" data-k="'+key+'"'+(selected.has(key)?' checked':'')+'></td><td class="sk">'+r.s+'</td><td class="rc">'+esc(r.n)+'</td><td>'+vs.map(vendorLine).join('')+'</td>'+(p==='tailoring'?'<td>'+esc(r.d)+'</td>':'')+'</tr>';
+  });
+  h+='</tbody></table>';
+  document.getElementById('panel-'+p).innerHTML=h;
+}
+function renderAll(){
+  PROFS.forEach(([p])=>renderPanel(p));
+  PROFS.forEach(([p,t])=>{
+    const n=DATA.rows[p].filter(r=>visibleVendors(r).length).length;
+    document.querySelector('.tab[data-t="'+p+'"]').textContent=t+' ('+n+')';
+  });
+}
+function initUI(){
+  document.getElementById('tabs').innerHTML=PROFS.map(([p,t])=>'<button class="tab'+(p===activeTab?' active':'')+'" data-t="'+p+'"></button>').join('');
+  document.getElementById('panels').innerHTML=PROFS.map(([p])=>'<section class="panel'+(p===activeTab?' active':'')+'" id="panel-'+p+'"></section>').join('');
+  renderAll();
+  document.getElementById('tabs').addEventListener('click',e=>{
+    const b=e.target.closest('.tab');if(!b)return;activeTab=b.dataset.t;
+    document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
+    document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id==='panel-'+activeTab));
+  });
+  document.getElementById('panels').addEventListener('click',e=>{
+    const th=e.target.closest('th.sortable');
+    if(th){const p=activeTab,k=th.dataset.k,st=sortState[p]||{k:'s',asc:true};sortState[p]={k:k,asc:st.k===k?!st.asc:true};renderPanel(p);return;}
+  });
+  document.getElementById('panels').addEventListener('change',e=>{
+    const c=e.target.closest('input[type=checkbox]');if(!c)return;
+    if(c.checked)selected.add(c.dataset.k);else selected.delete(c.dataset.k);
+    c.closest('tr').classList.toggle('sel',c.checked);
+    updateBar();
+  });
+  document.querySelectorAll('.filters .pill').forEach(l=>l.addEventListener('click',()=>{
+    filter=l.dataset.f;
+    document.querySelectorAll('.filters .pill').forEach(x=>x.classList.toggle('on',x===l));
+    if(filter!=='all')document.getElementById('rfac').value=filter;
+    fillStarts();renderAll();
+  }));
+  document.getElementById('clr').onclick=()=>{selected.clear();renderAll();updateBar();};
+  document.getElementById('rfac').onchange=fillStarts;
+  document.getElementById('mk').onclick=createRoute;
+  document.getElementById('rx').onclick=()=>{document.getElementById('route').style.display='none';};
+  fillStarts();updateBar();
+}
+function updateBar(){
+  const n=selected.size;
+  document.getElementById('selCount').textContent=n+' recipe'+(n===1?'':'s')+' selected';
+  document.getElementById('mk').disabled=!n;
+}
+
+/* ---------- travel model (hand-built approximation) ---------- */
+const RIDE=0.28, FLY=0.1, FLY_OVH=0.7, FP_RANGE=70;
+// zone: [landmass, centerX, centerY, width, height]   K = Kalimdor, KT = Teldrassil island, E = Eastern Kingdoms
+const ZONES={
+ 'Teldrassil':['KT',22,8,16,16],'Darnassus':['KT',24,6,8,8],
+ 'Darkshore':['K',26,30,12,38],'Ashenvale':['K',40,52,24,26],'Felwood':['K',48,28,16,30],'Moonglade':['K',60,20,8,8],
+ 'Winterspring':['K',72,18,18,24],'Azshara':['K',60,46,18,24],'Durotar':['K',70,60,20,20],'Orgrimmar':['K',62,56,6,6],
+ 'Stonetalon Mountains':['K',36,74,18,24],'The Barrens':['K',52,82,30,34],'Desolace':['K',28,94,18,24],
+ 'Mulgore':['K',46,106,18,16],'Thunder Bluff':['K',46,102,5,5],'Feralas':['K',24,118,24,26],'Thousand Needles':['K',46,124,22,18],
+ 'Dustwallow Marsh':['K',64,102,18,20],'Tanaris':['K',62,132,26,20],"Un'Goro Crater":['K',46,140,16,14],'Silithus':['K',38,150,16,16],
+ 'Dire Maul (Dungeon)':['K',32,114,4,4],
+ 'Tirisfal Glades':['E',36,10,16,16],'Undercity':['E',40,12,6,6],'Silverpine Forest':['E',30,26,18,22],
+ 'Hillsbrad Foothills':['E',46,38,18,18],'Alterac Mountains':['E',54,28,14,14],'Western Plaguelands':['E',56,10,18,16],
+ 'Eastern Plaguelands':['E',76,10,18,18],'Arathi Highlands':['E',62,40,18,18],'The Hinterlands':['E',76,38,16,18],
+ 'Wetlands':['E',50,52,18,14],'Loch Modan':['E',62,60,12,12],'Ironforge':['E',50,62,6,6],'Badlands':['E',72,68,14,14],
+ 'Searing Gorge':['E',62,70,12,10],'Burning Steppes':['E',64,82,14,14],'BRD (Dungeon)':['E',63,76,4,4],
+ 'Elwynn Forest':['E',48,98,16,14],'Stormwind City':['E',44,94,7,7],'Redridge Mountains':['E',62,98,14,12],
+ 'Duskwood':['E',50,110,16,12],'Deadwind Pass':['E',68,108,10,10],'Swamp of Sorrows':['E',82,106,14,14],
+ 'Blasted Lands':['E',74,124,14,14],'Westfall':['E',36,108,12,18],'Stranglethorn Vale':['E',48,134,20,30]
+};
+// flight points / ports: [id, name, zone, localX, localY, side(A/H/N)]
+const FPS=[
+ ['stormwind','Stormwind','Stormwind City',66,62,'A'],['lakeshire','Lakeshire','Redridge Mountains',30,59,'A'],
+ ['darkshire','Darkshire','Duskwood',77,44,'A'],['sentinel','Sentinel Hill','Westfall',56,53,'A'],
+ ['menethil','Menethil Harbor','Wetlands',9,59,'A'],['southshore','Southshore','Hillsbrad Foothills',49,52,'A'],
+ ['refuge','Refuge Pointe','Arathi Highlands',46,47,'A'],['ironforge','Ironforge','Ironforge',55,48,'A'],
+ ['thelsamar','Thelsamar','Loch Modan',33,46,'A'],['aerie','Aerie Peak','The Hinterlands',11,46,'A'],
+ ['morgan','Morgan\'s Vigil','Burning Steppes',84,68,'A'],['chillwind','Chillwind Camp','Western Plaguelands',43,85,'A'],
+ ['nethergarde','Nethergarde Keep','Blasted Lands',65,25,'A'],
+ ['thorium','Thorium Point','Searing Gorge',38,38,'N'],['lights','Light\'s Hope Chapel','Eastern Plaguelands',81,59,'N'],
+ ['bootybay','Booty Bay','Stranglethorn Vale',27,77,'N'],
+ ['undercity','Undercity','Undercity',63,48,'H'],['brill','Brill','Tirisfal Glades',59,52,'H'],
+ ['sepulcher','The Sepulcher','Silverpine Forest',45,41,'H'],['tarren','Tarren Mill','Hillsbrad Foothills',62,19,'H'],
+ ['hammerfall','Hammerfall','Arathi Highlands',73,33,'H'],['stonard','Stonard','Swamp of Sorrows',45,53,'H'],
+ ['gromgol','Grom\'gol Base Camp','Stranglethorn Vale',32,29,'H'],['kargath','Kargath','Badlands',3,47,'H'],
+ ['flamecrest','Flame Crest','Burning Steppes',65,24,'H'],['revantusk','Revantusk Village','The Hinterlands',78,81,'H'],
+ ['darnassus','Darnassus','Darnassus',58,16,'A'],['rutheran','Rut\'theran Village','Teldrassil',58,94,'A'],
+ ['auberdine','Auberdine','Darkshore',36,44,'A'],['astranaar','Astranaar','Ashenvale',34,48,'A'],
+ ['forestsong','Forest Song','Ashenvale',26,38,'A'],['stonepeak','Stonetalon Peak','Stonetalon Mountains',36,7,'A'],
+ ['nijel','Nijel\'s Point','Desolace',66,6,'A'],['feathermoon','Feathermoon Stronghold','Feralas',30,43,'A'],
+ ['thalanaar','Thalanaar','Thousand Needles',89,31,'A'],['theramore','Theramore Isle','Dustwallow Marsh',67,51,'A'],
+ ['talonbranch','Talonbranch Glade','Felwood',62,24,'A'],['talrendis','Talrendis Point','Azshara',22,52,'A'],
+ ['gadgetzan','Gadgetzan','Tanaris',51,29,'N'],['marshal','Marshal\'s Refuge','Un\'Goro Crater',45,5,'N'],
+ ['cenarion','Cenarion Hold','Silithus',49,37,'N'],['nighthaven','Nighthaven','Moonglade',48,40,'N'],
+ ['everlook','Everlook','Winterspring',61,37,'N'],
+ ['orgrimmar','Orgrimmar','Orgrimmar',45,63,'H'],['razorhill','Razor Hill','Durotar',52,43,'H'],
+ ['crossroads','The Crossroads','The Barrens',52,30,'H'],['ratchet','Ratchet','The Barrens',63,37,'N'],
+ ['taurajo','Camp Taurajo','The Barrens',45,59,'H'],['thunderbluff','Thunder Bluff','Thunder Bluff',47,50,'H'],
+ ['bloodhoof','Bloodhoof Village','Mulgore',47,58,'H'],['sunrock','Sun Rock Retreat','Stonetalon Mountains',46,60,'H'],
+ ['splintertree','Splintertree Post','Ashenvale',73,60,'H'],['zoramgar','Zoram\'gar Outpost','Ashenvale',12,34,'H'],
+ ['shadowprey','Shadowprey Village','Desolace',23,70,'H'],['freewind','Freewind Post','Thousand Needles',45,50,'H'],
+ ['mojache','Camp Mojache','Feralas',76,43,'H'],['brackenwall','Brackenwall Village','Dustwallow Marsh',36,31,'H'],
+ ['bloodvenom','Bloodvenom Post','Felwood',34,53,'H'],['valormok','Valormok','Azshara',22,49,'H'],
+ // zeppelin towers (not flight masters)
+ ['z_org','Orgrimmar Zeppelin Tower','Durotar',50,12,'H',1],['z_uc','Undercity Zeppelin Tower','Tirisfal Glades',60,59,'H',1],
+ ['z_gg','Grom\'gol Zeppelin Tower','Stranglethorn Vale',31,29,'H',1]
+];
+// transport links: [from, to, minutes, kind, label, side]
+const LINKS=[
+ ['z_org','z_uc',7,'zep','Zeppelin','H'],['z_org','z_gg',7,'zep','Zeppelin','H'],['z_uc','z_gg',7,'zep','Zeppelin','H'],
+ ['ratchet','bootybay',6,'boat','Boat','N'],
+ ['auberdine','rutheran',6,'boat','Boat','A'],['auberdine','menethil',8,'boat','Boat','A'],['menethil','theramore',8,'boat','Boat','A'],
+ ['stormwind','ironforge',3,'tram','Deeprun Tram','A']
+];
+const CAPITALS={A:'stormwind',H:'orgrimmar'};
+
+function wpos(zone,x,y){const z=ZONES[zone];if(!z)return null;return {lm:z[0],x:z[1]+(x-50)/100*z[3],y:z[2]+(y-50)/100*z[4]};}
+function vendorPos(id){const v=DATA.vendors[id];if(!v.pos)return null;return wpos(v.pos[0],v.pos[1],v.pos[2]);}
+function sideOk(s,f){return s==='N'||s===f;}
+
+function fillStarts(){
+  const f=document.getElementById('rfac').value, sel=document.getElementById('rstart');
+  const list=FPS.filter(p=>!p[6]&&sideOk(p[5],f)).sort((a,b)=>a[1].localeCompare(b[1]));
+  sel.innerHTML=list.map(p=>'<option value="'+p[0]+'"'+(p[0]===CAPITALS[f]?' selected':'')+'>'+esc(p[1])+'</option>').join('');
+}
+
+function buildGraph(f,extra){
+  const nodes=[];
+  FPS.forEach(p=>{if(!sideOk(p[5],f))return;const w=wpos(p[2],p[3],p[4]);nodes.push({id:p[0],name:p[1],lm:w.lm,x:w.x,y:w.y,fp:!p[6],zone:p[2]});});
+  extra.forEach(n=>nodes.push(n));
+  const idx={};nodes.forEach((n,i)=>idx[n.id]=i);
+  const adj=nodes.map(()=>[]);
+  function add(a,b,t,mode,label){adj[a].push({to:b,t:t,mode:mode,label:label});adj[b].push({to:a,t:t,mode:mode,label:label});}
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+    const a=nodes[i],b=nodes[j];if(a.lm!==b.lm)continue;
+    const d=Math.hypot(a.x-b.x,a.y-b.y);
+    add(i,j,d*RIDE,'ride','Ride');
+    if(a.fp&&b.fp&&d<=FP_RANGE)add(i,j,FLY_OVH+d*FLY,'fly','Fly');
+  }
+  LINKS.forEach(l=>{if(!sideOk(l[5],f))return;if(idx[l[0]]===undefined||idx[l[1]]===undefined)return;add(idx[l[0]],idx[l[1]],l[2],l[3],l[4]);});
+  return {nodes:nodes,adj:adj,idx:idx};
+}
+function dijkstra(G,src){
+  const n=G.nodes.length,dist=new Array(n).fill(Infinity),prev=new Array(n).fill(null),done=new Array(n).fill(false);
+  dist[src]=0;
+  for(let k=0;k<n;k++){
+    let u=-1,best=Infinity;for(let i=0;i<n;i++)if(!done[i]&&dist[i]<best){best=dist[i];u=i;}
+    if(u<0)break;done[u]=true;
+    G.adj[u].forEach(e=>{const nd=dist[u]+e.t;if(nd<dist[e.to]){dist[e.to]=nd;prev[e.to]={from:u,e:e};}});
+  }
+  return {dist:dist,prev:prev};
+}
+
+/* ---------- route planner ---------- */
+function createRoute(){
+  const f=document.getElementById('rfac').value, startId=document.getElementById('rstart').value;
+  const body=document.getElementById('routebody'), panel=document.getElementById('route');
+  const recs=[], skipped=[];
+  selected.forEach(k=>{
+    const r=rowIndex[k];if(!r)return;
+    const cands=r.v.filter(id=>{const v=DATA.vendors[id];return (f==='A'?v.A:v.H)&&vendorPos(id);});
+    if(cands.length)recs.push({r:r,cands:cands});else skipped.push(r);
+  });
+  panel.style.display='block';
+  if(!recs.length){body.innerHTML='<h2>No route</h2><p class="warn">None of the selected recipes has a vendor with a known map position for '+(f==='A'?'Alliance':'Horde')+'.</p>'+skippedHtml(skipped,f);return;}
+  const vset=[];recs.forEach(x=>x.cands.forEach(id=>{if(vset.indexOf(id)<0)vset.push(id);}));
+  const extra=vset.map(id=>{const p=vendorPos(id);return {id:'v'+id,name:DATA.vendors[id].n,lm:p.lm,x:p.x,y:p.y,fp:false,vendor:id};});
+  const G=buildGraph(f,extra);
+  const keyIdx=[G.idx[startId]].concat(vset.map(id=>G.idx['v'+id]));
+  const SP=keyIdx.map(i=>dijkstra(G,i));
+  const D=SP.map(sp=>keyIdx.map(j=>sp.dist[j]));
+  // vendors reachable from the start
+  const usable=[];for(let i=1;i<keyIdx.length;i++)if(isFinite(D[0][i]))usable.push(i);
+  const cover={};usable.forEach(i=>{const id=vset[i-1];cover[i]=recs.map((x,ri)=>x.cands.indexOf(id)>=0?ri:-1).filter(ri=>ri>=0);});
+  const coverable=new Set();usable.forEach(i=>cover[i].forEach(ri=>coverable.add(ri)));
+  recs.forEach((x,ri)=>{if(!coverable.has(ri))skipped.push(x.r);});
+  const need=coverable.size;
+  if(!need){body.innerHTML='<h2>No route</h2><p class="warn">No selected vendor is reachable from the chosen start with the modeled transport.</p>'+skippedHtml(skipped,f);return;}
+  const cost=order=>{let c=0,cur=0;order.forEach(v=>{c+=D[cur][v];cur=v;});return c;};
+  const covers=order=>{const s=new Set();order.forEach(v=>cover[v].forEach(r=>s.add(r)));return s.size;};
+  function greedy(first){
+    const order=[first],cov=new Set(cover[first]);let cur=first;
+    while(cov.size<need){
+      let bestV=-1,bestScore=Infinity;
+      usable.forEach(v=>{if(order.indexOf(v)>=0)return;const nw=cover[v].filter(r=>!cov.has(r)).length;if(!nw)return;const sc=D[cur][v]/nw;if(sc<bestScore){bestScore=sc;bestV=v;}});
+      if(bestV<0)break;order.push(bestV);cover[bestV].forEach(r=>cov.add(r));cur=bestV;
+    }
+    return order;
+  }
+  function improve(order){
+    let best=order.slice(),bc=cost(best),again=true;
+    while(again){
+      again=false;
+      for(let i=0;i<best.length&&!again;i++){ // drop a redundant stop
+        const t=best.slice(0,i).concat(best.slice(i+1));
+        if(t.length&&covers(t)===need){const c=cost(t);if(c<bc-1e-9){best=t;bc=c;again=true;}}
+      }
+      for(let i=0;i<best.length-1&&!again;i++)for(let j=i+1;j<best.length&&!again;j++){ // 2-opt
+        const t=best.slice(0,i).concat(best.slice(i,j+1).reverse(),best.slice(j+1));
+        const c=cost(t);if(c<bc-1e-9){best=t;bc=c;again=true;}
+      }
+    }
+    return best;
+  }
+  let bestOrder=null,bestCost=Infinity;
+  usable.forEach(first=>{const o=improve(greedy(first));if(covers(o)===need){const c=cost(o);if(c<bestCost){bestCost=c;bestOrder=o;}}});
+  if(!bestOrder){body.innerHTML='<h2>No route</h2><p class="warn">Could not cover the selected recipes.</p>'+skippedHtml(skipped,f);return;}
+  // assign each recipe to the first stop that sells it
+  const buys={};const assigned=new Set();
+  bestOrder.forEach(v=>{buys[v]=[];cover[v].forEach(ri=>{if(!assigned.has(ri)){assigned.add(ri);buys[v].push(recs[ri].r);}});});
+  // build step list
+  const startName=FPS.filter(p=>p[0]===startId)[0][1];
+  let html='<h2>Route ('+(f==='A'?'Alliance':'Horde')+')</h2><div class="t">Estimated total: ~'+Math.round(bestCost)+' min &middot; '+bestOrder.length+' vendor stop'+(bestOrder.length===1?'':'s')+'</div><ol>';
+  html+='<li class="stop">Start at <b>'+esc(startName)+'</b></li>';
+  let cur=0,total=0;
+  bestOrder.forEach(v=>{
+    const legs=legSteps(G,SP[cur],keyIdx[cur],keyIdx[v]);
+    legs.forEach(s=>{html+='<li>'+s+'</li>';});
+    total+=D[cur][v];
+    const vd=DATA.vendors[vset[v-1]];
+    html+='<li class="stop">Buy at <a href="'+esc(vd.u)+'" target="_blank" rel="noopener"><b>'+esc(vd.n)+'</b></a> &middot; '+esc(vd.loc)+'<div>'+buys[v].map(r=>esc(r.n)+' <span class="t">('+r.s+')</span>').join('<br>')+'</div><div class="t">elapsed ~'+Math.round(total)+' min</div></li>';
+    cur=v;
+  });
+  html+='</ol>'+skippedHtml(skipped,f)+'<div class="t">Model assumptions: 160% mount, all flight paths already known, no hearthstone or portals, no reputation checks.</div>';
+  body.innerHTML=html;
+}
+function skippedHtml(list,f){
+  if(!list.length)return '';
+  return '<p class="warn">Skipped (no vendor with a known map position or reachable for '+(f==='A'?'Alliance':'Horde')+'): '+list.map(r=>esc(r.n)).join(', ')+'</p>';
+}
+function legSteps(G,sp,src,dst){
+  const path=[];let n=dst;
+  while(n!==src){const p=sp.prev[n];if(!p)return [];path.unshift({from:p.from,to:n,e:p.e});n=p.from;}
+  const out=[];let i=0;
+  const nm=k=>G.nodes[k].name;
+  while(i<path.length){
+    const m=path[i].e.mode;let j=i;
+    while(j+1<path.length&&path[j+1].e.mode===m&&(m==='fly'||m==='ride'))j++;
+    const t=path.slice(i,j+1).reduce((a,s)=>a+s.e.t,0);
+    const chain=[nm(path[i].from)].concat(path.slice(i,j+1).map(s=>nm(s.to)));
+    if(m==='fly')out.push('<span class="mode">Fly</span>'+chain.map(esc).join(' &rarr; ')+' <span class="t">~'+Math.round(t)+' min</span>');
+    else if(m==='ride')out.push('<span class="mode">Ride</span>'+esc(chain[0])+' &rarr; '+esc(chain[chain.length-1])+' <span class="t">~'+Math.max(1,Math.round(t))+' min</span>');
+    else out.push('<span class="mode">'+esc(path[i].e.label)+'</span>'+esc(chain[0])+' &rarr; '+esc(chain[chain.length-1])+' <span class="t">~'+Math.round(t)+' min</span>');
+    i=j+1;
+  }
+  return out;
+}
+initUI();
+</script>
+</body></html>
