@@ -17,7 +17,7 @@ Open **Tailoring** (or any profession except Enchanting), expand all headers, th
 ```
 - **Expect:** `Tailoring <rows> <headers> <recipes> ||cff...||Hitem:<craftedItemId>:...`
 - **Confirms:** `GetTradeSkillLine` returns the English name, headers report type `"header"`, and the item link contains the crafted item ID.
-- **Result:** _pending_
+- **Result:** **Confirmed (2026-10-09):** `Tailoring 78 5 73 [Mageweave Bag]`. TradeSkill works, `GetTradeSkillLine` is English, headers are `"header"`. The printed link only showed `[Name]`, so the ID format is still open (see C9).
 
 ## C2: Collapsed headers hide recipes; `ExpandTradeSkillSubClass(0)` expands all
 With the same window, **collapse one or two headers** first, then:
@@ -26,7 +26,7 @@ With the same window, **collapse one or two headers** first, then:
 ```
 - **Expect:** first number smaller than the second, and the headers open again.
 - **Confirms:** the scan has to expand first, and index 0 means "all".
-- **Result:** _pending_
+- **Result:** **Confirmed:** `18 73` with 2 headers collapsed. Collapsed headers hide recipes, and `ExpandTradeSkillSubClass(0)` expands all.
 
 ## C3: Subclass / slot filters hide recipes and can be reset
 In the window's dropdowns, pick **one subclass** (e.g. "Cloth") and/or **one slot**, then:
@@ -36,7 +36,7 @@ In the window's dropdowns, pick **one subclass** (e.g. "Cloth") and/or **one slo
 - **Expect:** first number smaller than the second, and the dropdowns show "All" again.
 - **Confirms:** the filter reset calls and their `(0, 1, 1)` arguments work on this client.
 - **Also tell me:** does the native window have a search box or a "have materials" checkbox **with Atlas-CFM disabled**? If it does, it's another filter to clear.
-- **Result:** _pending_
+- **Result:** **Inconclusive:** `73 73`. Probably no filter was active, so this is retested programmatically in C11. Search box / have-materials question still open.
 
 ## C4: Craft API (Enchanting) returns the spell ID
 Open **Enchanting**, then:
@@ -45,12 +45,12 @@ Open **Enchanting**, then:
 ```
 - **Expect:** `Enchanting <rows> ||cff...||Henchant:<spellId>||h[Enchant ...]...`
 - **Confirms:** the Craft frame link carries the craft spell ID, which matches `recipes.spell` in `web/public/data/recipes.json`.
-- **Result:** _pending_
+- **Result:** **Confirmed:** `Enchanting 42 [Enchant Bracer - Vampirism]`. Craft API works for Enchanting. Link format is still open (see C10).
 
 ## C5: Which window Jewelcrafting uses
 Open **Jewelcrafting** and run **C1**. If C1 prints `nil 0 ...`, run **C4** instead.
 - **Confirms:** whether the Turtle profession uses TradeSkill (crafted item IDs) or Craft (spell IDs). Repeat for Survival if you have it; it's not in the site yet.
-- **Result:** _pending_
+- **Result:** **Confirmed:** `Jewelcrafting 18 5 13 [Copper Staff]`. Jewelcrafting uses the **TradeSkill** API (crafted item IDs).
 
 ## C6: Events fire when the windows open and update
 ```
@@ -60,7 +60,7 @@ Then open and close Tailoring and Enchanting, and craft one item if you can.
 - **Expect:** `TRADE_SKILL_SHOW`, then one or more `TRADE_SKILL_UPDATE`; `CRAFT_SHOW` / `CRAFT_UPDATE` for Enchanting.
 - **Confirms:** which events the addon should scan on.
 - **Stop it with:** `/run RSD:UnregisterAllEvents()`
-- **Result:** _pending_
+- **Result:** **Confirmed:** `TRADE_SKILL_UPDATE` fires *before* `TRADE_SKILL_SHOW`, and `CRAFT_UPDATE` before `CRAFT_SHOW`. Each craft fires `TRADE_SKILL_UPDATE` 1–2 times. `arg1` is stale (`LeftButton`/`nil`), so these events have no args. `CHAT_MSG_SKILL` didn't fire (no skill-up). Plan: scan on `*_SHOW`, then rescan on `*_UPDATE` with a debounce (`C_Timer.After`).
 
 ## C7: Skill ranks for the "learnable now" filter
 ```
@@ -68,7 +68,7 @@ Then open and close Tailoring and Enchanting, and craft one item if you can.
 ```
 - **Expect:** one line per skill, e.g. `12 Tailoring 245 300`.
 - **Confirms:** the return order of `GetSkillLineInfo` (name, isHeader, isExpanded, rank, numTempPoints, modifier, maxRank).
-- **Result:** _pending_
+- **Result:** **Confirmed:** returns `name, isHeader, isExpanded, rank, temp, modifier, maxRank` (e.g. `7 Tailoring 251 300`). Turtle's Survival shows up as a skill line. Jewelcrafting was **not** in this list; was C5 run on another character? (see C12)
 
 ## C8: SuperWoW file export
 ```
@@ -76,6 +76,59 @@ Then open and close Tailoring and Enchanting, and craft one item if you can.
 ```
 - If the first value is `function`, also run `/run ExportFile("recipescan_test","hello")`, then search the WoW folder for `recipescan_test` and tell me the path.
 - **Confirms:** whether the addon can write the export file directly, instead of the user copying text or uploading SavedVariables.
+- **Result:** **Confirmed:** `function function 1.5`. SuperWoW 1.5 `ExportFile("recipescan_test", ...)` wrote `F:\Octo_WoW\Imports\recipescan_test.txt`. The addon can write the export file itself when SuperWoW is present; it still needs a fallback for players without SuperWoW. Overwrite/append, newlines and size are open (C13, C14).
+
+---
+
+# Follow-up checks (round 2)
+
+## C9: TradeSkill link type and ID
+Open Tailoring:
+```
+/run for i=1,GetNumTradeSkills() do local l=GetTradeSkillItemLink(i) if l then local _,_,t,id=string.find(l,"H(%a+):(%d+)") print(i,t,id,GetTradeSkillInfo(i)) return end end
+```
+- **Expect:** `<row> item <craftedItemId> <name> <type> ...` (e.g. `item 4245` for Small Silk Pack).
+- **Result:** _pending_
+
+## C10: Craft link type and ID
+Open Enchanting:
+```
+/run for i=1,GetNumCrafts() do local l=GetCraftItemLink(i) if l then local _,_,t,id=string.find(l,"H(%a+):(%d+)") print(i,t,id,GetCraftInfo(i)) return end end
+```
+- **Expect:** `<row> enchant <spellId> <name> ...`, e.g. `enchant 57146` for Enchant Bracer - Vampirism (recipe `s57146` in recipes.json).
+- **Result:** _pending_
+
+## C11: Subclass filter set and reset in code
+Open Tailoring with the dropdowns on "All":
+```
+/run local G,S=GetTradeSkillInfo,SetTradeSkillSubClassFilter local function c()local k=0 for i=1,GetNumTradeSkills() do local _,t=G(i) if t~="header" then k=k+1 end end return k end S(1,1,1)local a=c()S(0,1,1)print(a,c(),GetTradeSkillSubClasses())
+```
+- **Expect:** a smaller first number (only subclass 1), then `73`, then the subclass names.
+- **Confirms:** filters hide recipes and `(0,1,1)` resets them.
+- **Also tell me:** does the native window have a search box or a "have materials" checkbox with Atlas-CFM disabled?
+- **Result:** _pending_
+
+## C12: Jewelcrafting skill line
+On the character with Jewelcrafting, run C7 again.
+- **Confirms:** whether Jewelcrafting appears in `GetSkillLineInfo`, which the "learnable now" filter needs.
+- **Result:** _pending_
+
+## C13: ExportFile overwrite or append, ImportFile return
+```
+/run ExportFile("recipescan_test","a\nb") ExportFile("recipescan_test","c") local s=ImportFile("recipescan_test") print(type(s),s and string.len(s),s)
+```
+- **Expect:** `string 1 c` means overwrite. `string 4 a b c`-ish means append.
+- **Result:** _pending_
+
+## C14: Newlines and size
+```
+/run ExportFile("recipescan_test","a\nb") local s=ImportFile("recipescan_test") print(string.len(s or ""),s)
+```
+- **Expect:** `3` and two lines, a and b. Also open `Imports\recipescan_test.txt` and say whether it shows two lines.
+```
+/run ExportFile("recipescan_test",string.rep("x",60000)) print(string.len(ImportFile("recipescan_test") or ""))
+```
+- **Expect:** `60000`. A full multi-character export is about 5–20 KB.
 - **Result:** _pending_
 
 ---

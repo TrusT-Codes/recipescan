@@ -52,7 +52,21 @@ Optional keys are omitted when empty. `id` is `s<craftSpellId>`, or `i<recipeIte
 - **Do not write scan code until the results are recorded in that file.**
 - Copy confirmed facts into the skill's `references/client-facts.md` section 4.
 
+**Round 1 results (2026-10-09), recorded in that file:**
+- TradeSkill covers every profession except Enchanting, Turtle's Jewelcrafting included. Enchanting uses Craft.
+- Collapsed headers hide recipes; `ExpandTradeSkillSubClass(0)` expands all.
+- `*_UPDATE` fires before `*_SHOW`, and `UPDATE` repeats while crafting.
+- `GetSkillLineInfo` return order confirmed.
+- **SuperWoW 1.5 `ExportFile(name, text)` writes `<WoW>\Imports\<name>.txt`.**
+
+Still open (round 2, C9–C14):
+- the link format (`item:`/`enchant:` IDs);
+- whether the filter reset works;
+- whether Jewelcrafting shows in `GetSkillLineInfo`;
+- `ExportFile` overwrite, newline and size behaviour.
+
 Planned design (adjust it to the check results):
+- **Export route:** when `ExportFile` exists, write `Imports\RecipeScan.txt` on every scan and on `/recipescan export`, and the site imports that file. Without SuperWoW, fall back to the copy box plus the SavedVariables file. Feature-detect with `type(ExportFile) == "function"`, because not every OctoWow player runs SuperWoW.
 - Folder `addon/RecipeScan/`. Use `RecipeScan.toc` with `## Interface: 11200` and `## SavedVariables: RecipeScanDB` (account-wide, all alts).
 - Global `RecipeScan`, local alias `RS`. Login gate `RS.loginDone`.
 - Scan when TRADE_SKILL_SHOW/UPDATE or CRAFT_SHOW/UPDATE fire (debounce with ClassicAPI `C_Timer.After`, no OnUpdate polling). The scan:
