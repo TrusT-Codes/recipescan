@@ -130,7 +130,7 @@ for vid, v in vendors.items():
         'A': allowed_a(a, h), 'H': allowed_h(a, h),
     }
 
-PROFS = ['tailoring', 'leatherworking', 'enchanting', 'alchemy', 'blacksmithing', 'engineering', 'cooking', 'firstaid']
+PROFS = ['tailoring', 'leatherworking', 'enchanting', 'alchemy', 'blacksmithing', 'engineering', 'cooking', 'firstaid', 'jewelcrafting']
 DE_PROFS = ('tailoring', 'leatherworking', 'blacksmithing', 'engineering')
 ROWS = dict((p, []) for p in PROFS)
 for (prof, rid), r in recipes.items():

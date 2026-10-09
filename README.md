@@ -1,7 +1,7 @@
 # recipescan
 Website to scan all available Recipes on Octowow
 
-Single-page report of vendor-sold recipes for Tailoring, Leatherworking, Enchanting, Alchemy, Blacksmithing, Engineering, Cooking and First Aid (OctoWow + Wowhead Classic), with faction filters, recipe/vendor links, likely disenchant mats and a route planner.
+Single-page report of vendor-sold recipes for Tailoring, Leatherworking, Enchanting, Alchemy, Blacksmithing, Engineering, Cooking, First Aid and Jewelcrafting (OctoWow + Wowhead Classic; Jewelcrafting is OctoWow only), with faction filters, recipe/vendor links, likely disenchant mats and a route planner.
 
 - `index.html` - generated page (open directly or serve via GitHub Pages)
 - `template.html` - page UI and route planner
