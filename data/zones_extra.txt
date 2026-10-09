@@ -1,0 +1,14 @@
+# zone id|name for OctoWow area ids that Wowhead's zone index does not have (read by build.py after zones.txt)
+90|Gnomeregan
+229|Blackrock Spire
+289|Scholomance
+309|Zul'Gurub
+349|Maraudon
+532|Lower Karazhan Halls
+616|Mount Hyjal
+807|Emerald Sanctum
+815|Gilneas City
+816|Dragonmaw Retreat
+818|Stormwrought Ruins
+820|Windhorn Canyon
+3457|Lower Karazhan Halls

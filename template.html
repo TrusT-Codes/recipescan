@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Classic vendor recipes: all crafting professions</title>
+<title>Classic profession recipes: all crafting professions</title>
 <style>
 *{box-sizing:border-box}
 body{font-family:Segoe UI,Arial,sans-serif;margin:0;padding:24px 24px 90px;background:#16161a;color:#e6e6e6}
@@ -39,7 +39,12 @@ td.vn{width:230px;max-width:230px}td.vloc{width:300px;max-width:300px}td.vf{widt
 .vl a.ow{color:#d6a8ff}
 .vl.loc{color:#b6b6c2}
 td.il{width:50px}
-.rar.Uncommon{color:#1eff00}.rar.Rare{color:#4a90ff}.rar.Epic{color:#c77dff}
+.rar.Poor{color:#9d9d9d}.rar.Common{color:#fff}.rar.Uncommon{color:#1eff00}.rar.Rare{color:#4a90ff}.rar.Epic{color:#c77dff}.rar.Legendary{color:#ff8000}
+td.vsrc{width:110px}td.rep{width:170px}
+.src{font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid #3a3a44;background:#26262e}
+.src.V{background:#1f3a2a;border-color:#2e8b47}.src.R{background:#3d2f12;border-color:#b8860b}.src.T{background:#12365f;border-color:#1c6fd1}
+.src.Q{background:#3a2a4d;border-color:#8a5ac7}.src.D{background:#4d1717;border-color:#b32727}
+.vl.more a{color:#9a9aa5;cursor:pointer;font-size:12px}
 .rc a{color:#8ab4ff;text-decoration:none}.rc a.ow{color:#d6a8ff}.rc a:hover{text-decoration:underline}
 td.dc{width:260px}.de .pr{display:inline-block;min-width:44px;color:#9be3a5}
 .fac{font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid #3a3a44}
@@ -65,8 +70,8 @@ td.dc{width:260px}.de .pr{display:inline-block;min-width:44px;color:#9be3a5}
 #route a{color:#8ab4ff}
 .mode{font-size:11px;padding:1px 6px;border-radius:4px;background:#33333b;margin-right:6px}
 </style></head><body>
-<h1>Vendor-sold recipes, Classic</h1>
-<div class="sub">Sources: OctoWow DB + Wowhead Classic. One row per recipe. All vendors that sell it listed one per line.</div>
+<h1>Profession recipes and where to get them, Classic</h1>
+<div class="sub">Sources: OctoWow DB + Wowhead Classic. One row per recipe. Every way to get it (vendor, reputation vendor, trainer, quest reward, drop) is listed one per line.</div>
 
 <div class="filters" id="filters"></div>
 <div class="tabs" id="tabs"></div>
@@ -74,7 +79,9 @@ td.dc{width:260px}.de .pr{display:inline-block;min-width:44px;color:#9be3a5}
 
 <div class="notes">
 Vendor and recipe links go to Wowhead Classic. Purple links = only exists on OctoWow, so it links there.<br>
-Faction: Alliance / Horde = friendly to that side. Neutral = neither side hostile. Reputation requirements are not included in either source.<br>
+Faction: Alliance / Horde = friendly to that side. Neutral = neither side hostile. Quests show the side that can take them; drops are open to both.<br>
+Source: <b>Vendor</b> = sold for gold, <b>Reputation</b> = sold by a vendor but the recipe needs faction standing (shown in the Reputation column), <b>Trainer</b> = learned from a profession trainer, <b>Quest</b> = quest reward, <b>Drop</b> = looted from creatures or containers. Recipes that need reputation only appear while the Reputation source is ticked. A recipe with many sources shows the first few; click &quot;+N more&quot; to expand. Routes only use sources with a known map position (vendors, trainers), never drops.<br>
+Rarity = quality of the crafted item (enchants have none).<br>
 Disenchant columns (Tailoring, Leatherworking, Blacksmithing, Engineering): iLvl and rarity of the crafted item; mats derived from the crafted item's quality and item level (the ilvl stat, not the required level) using the WoWWiki disenchanting tables. Percentages are the chance per disenchant; "&times;" is the quantity range. Soulbound or special items that cannot be disenchanted in-game are not flagged. "-" = crafted item unknown.<br>
 Routes are estimates. The map positions, flight paths, boat and zeppelin times in this page are a hand-built model, not game data.
 </div>
@@ -98,13 +105,18 @@ let activeTab='tailoring';
 const selected=new Set();
 const sortState={};
 const rowIndex={};
-const RARITY={Uncommon:2,Rare:3,Epic:4};
+const RARITY_NAMES=['Poor','Common','Uncommon','Rare','Epic','Legendary'];
+// source types: V vendor, R reputation vendor (recipe needs standing), T trainer, Q quest reward, D drop
+const SOURCES=[['V','Vendor'],['R','Reputation'],['T','Trainer'],['Q','Quest'],['D','Drop']];
+const SRC_NAME=Object.fromEntries(SOURCES);
+const SRC_RANK=Object.fromEntries(SOURCES.map((s,i)=>[s[0],i]));
+const REP_RANK={Friendly:1,Honored:2,Revered:3,Exalted:4};
 const zoneOf=l=>l.replace(/\s+[\d.]+,\s*[\d.]+$/,'');
 Object.keys(DATA.vendors).forEach(id=>{const v=DATA.vendors[id];v.z=v.loc==='No location listed'?[]:v.loc.split('; ').map(zoneOf);});
 PROFS.forEach(([p])=>DATA.rows[p].forEach(r=>{
   rowIndex[p+':'+r.id]=r;r.p=p;
-  const m=r.d&&/^ilvl (\d+) (\w+)/.exec(r.d.l);
-  r.il=m?+m[1]:null;r.rar=m?m[2]:null;
+  r.il=r.i===undefined?null:r.i;
+  r.rar=r.q===undefined||r.q===null?null:RARITY_NAMES[r.q];
 }));
 const ZONE_LIST=(()=>{const z={};Object.keys(DATA.vendors).forEach(id=>DATA.vendors[id].z.forEach(n=>z[n]=1));return Object.keys(z).sort();})();
 const MAT_LIST=(()=>{const z={};PROFS.forEach(([p])=>DATA.rows[p].forEach(r=>r.d&&r.d.m.forEach(m=>z[m[0]]=1)));return Object.keys(z).sort();})();
@@ -113,19 +125,22 @@ const MAT_LIST=(()=>{const z={};PROFS.forEach(([p])=>DATA.rows[p].forEach(r=>r.d
    To add a filter, append one entry:
      id        key in filterState
      label     text shown before the control
-     type      'pills' or 'select'
+     type      'pills', 'select' or 'checks' (multiple choice; the value is a string of the ticked option values)
      def       default (cleared) value
      options   () => [[value,label],...]   (select: the "all" option is added from allLabel)
-     vendor    (vendor,val) => bool   optional, hides non-matching vendors (rows with none left are hidden)
+     vendor    (vendor,val,sourceType) => bool   optional, hides non-matching source entries (rows with none left are hidden)
      row       (row,val) => bool      optional, hides non-matching recipes
      appliesTo (profession) => bool   optional, limits the row test to some tabs
      onChange  (val) => void          optional side effect
    "Clear all filters" resets every registered filter to its default, so new entries are covered automatically. */
 const FILTERS=[
-  {id:'faction',label:'Show vendors for:',type:'pills',def:'all',
-   options:()=>[['all','All'],['A','Alliance'],['H','Horde']],hint:'Neutral vendors show under both.',
+  {id:'faction',label:'Show sources for:',type:'pills',def:'all',
+   options:()=>[['all','All'],['A','Alliance'],['H','Horde']],hint:'Neutral NPCs show under both.',
    vendor:(v,val)=>val==='all'||(val==='A'?v.A:v.H),
    onChange:val=>{if(val!=='all')document.getElementById('rfac').value=val;fillStarts();}},
+  {id:'source',label:'Source:',type:'checks',def:SOURCES.map(s=>s[0]).join(''),
+   options:()=>SOURCES,hint:'Reputation = vendor recipes that need faction standing.',
+   vendor:(v,val,t)=>val.indexOf(t)>=0},
   {id:'zone',label:'Zone:',type:'select',def:'',allLabel:'All zones',
    options:()=>ZONE_LIST.map(z=>[z,z]),
    vendor:(v,val)=>!val||v.z.indexOf(val)>=0},
@@ -140,15 +155,16 @@ const filtersActive=()=>FILTERS.some(f=>filterState[f.id]!==f.def);
 
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function facClass(f){return f==='Both friendly'?'Both':f==='Hostile to both'?'Hostile':f;}
-function vendorOk(v){return FILTERS.every(f=>!f.vendor||f.vendor(v,filterState[f.id]));}
+function vendorOk(v,t){return FILTERS.every(f=>!f.vendor||f.vendor(v,filterState[f.id],t));}
 function rowOk(r){return FILTERS.every(f=>!f.row||(f.appliesTo&&!f.appliesTo(r.p))||f.row(r,filterState[f.id]));}
-function visibleVendors(r){return r.v.filter(id=>vendorOk(DATA.vendors[id]));}
+function visibleVendors(r){return r.v.filter(id=>vendorOk(DATA.vendors[id],r.st[id]));}
 function visibleRows(p){return DATA.rows[p].filter(rowOk).map(r=>[r,visibleVendors(r)]).filter(x=>x[1].length);}
 
 function renderFilters(){
   document.getElementById('filters').innerHTML=FILTERS.map(f=>{
     let c;
     if(f.type==='pills')c=f.options().map(o=>'<label class="pill '+esc(o[0])+'" data-f="'+f.id+'" data-v="'+esc(o[0])+'">'+esc(o[1])+'</label>').join('');
+    else if(f.type==='checks')c=f.options().map(o=>'<label class="pill chk" data-f="'+f.id+'" data-v="'+esc(o[0])+'">'+esc(o[1])+'</label>').join('');
     else c='<select data-f="'+f.id+'"><option value="'+esc(f.def)+'">'+esc(f.allLabel)+'</option>'+f.options().map(o=>'<option value="'+esc(o[0])+'">'+esc(o[1])+'</option>').join('')+'</select>';
     return '<div class="fgroup"><span class="lbl">'+esc(f.label)+'</span>'+c+(f.hint?'<span class="lbl">'+esc(f.hint)+'</span>':'')+'</div>';
   }).join('')+'<button id="clrf">Clear all filters</button>';
@@ -158,6 +174,7 @@ function syncFilters(){
   FILTERS.forEach(f=>{
     document.querySelectorAll('#filters [data-f="'+f.id+'"]').forEach(el=>{
       if(el.tagName==='SELECT')el.value=filterState[f.id];
+      else if(f.type==='checks')el.classList.toggle('on',filterState[f.id].indexOf(el.dataset.v)>=0);
       else el.classList.toggle('on',el.dataset.v===filterState[f.id]);
     });
   });
@@ -189,11 +206,13 @@ const matRank=n=>{const i=MAT_ORDER.indexOf(n);return i<0?MAT_ORDER.length:i;};
 const COLS=[
   {k:'s',t:'Skill',get:r=>r.s||0},
   {k:'n',t:'Recipe',get:r=>r.n},
-  {k:'vn',t:'Vendor',get:(r,vs)=>vfirst(vs,'n'),vs:vcmp('n')},
+  {k:'vn',t:'Obtained from',get:(r,vs)=>vfirst(vs,'n'),vs:vcmp('n')},
   {k:'vl',t:'Location',get:(r,vs)=>vfirst(vs,'loc'),vs:vcmp('loc')},
   {k:'vf',t:'Faction',get:(r,vs)=>vfirst(vs,'fac'),vs:vcmp('fac')},
+  {k:'src',t:'Source',get:(r,vs)=>vs.length?Math.min.apply(null,vs.map(id=>SRC_RANK[r.st[id]])):null,vs:(a,b,r)=>SRC_RANK[r.st[a]]-SRC_RANK[r.st[b]]},
+  {k:'rep',t:'Reputation',get:r=>r.rep?r.rep[0]+' '+REP_RANK[r.rep[1]]:null},
   {k:'il',t:'iLvl',de:1,get:r=>r.il},
-  {k:'rar',t:'Rarity',de:1,get:r=>r.rar?RARITY[r.rar]:null},
+  {k:'rar',t:'Rarity',get:r=>r.q==null?null:r.q},
   {k:'dm',t:'Likely disenchant mats (chance per disenchant)',de:1,get:r=>r.d&&r.d.m.length?Math.max.apply(null,r.d.m.filter(m=>+m[1]>=5).map(m=>matRank(m[0]))):null}
 ];
 const colsFor=p=>COLS.filter(c=>!c.de||DE_PROFS.indexOf(p)>=0);
@@ -204,14 +223,23 @@ function deCell(r){
   if(!d.m.length)return '<span class="t">'+esc(r.il===null?d.l:'Not in disenchant table')+'</span>';
   return d.m.map(m=>'<div class="de"><span class="pr">'+esc(m[1])+'%</span> '+esc(m[0])+' <span class="t">&times;'+esc(m[2])+'</span></div>').join('');
 }
-function vcol(vs,fn){return vs.map(id=>fn(DATA.vendors[id])).join('');}
+// Rows with many source entries (e.g. 20+ trainers) show the first few; "+N more" expands that row.
+const COLLAPSE_AT=5, SHOW_WHEN_COLLAPSED=4;
+const expanded=new Set();
+function vcol(vs,fn,key,first){
+  const cut=vs.length>COLLAPSE_AT&&!expanded.has(key);
+  const shown=cut?vs.slice(0,SHOW_WHEN_COLLAPSED):vs;
+  return shown.map(id=>fn(DATA.vendors[id],id)).join('')+
+    (cut?'<div class="vl more">'+(first?'<a data-more="'+esc(key)+'">+'+(vs.length-SHOW_WHEN_COLLAPSED)+' more</a>':'')+'</div>':
+     (first&&vs.length>COLLAPSE_AT?'<div class="vl more"><a data-more="'+esc(key)+'">show less</a></div>':''));
+}
 
 function renderPanel(p){
   const st=sortState[p]||{k:'s',asc:true};
   const cols=colsFor(p), col=COLS.filter(c=>c.k===st.k)[0]||COLS[0];
   const rows=visibleRows(p);
   rows.forEach(x=>{
-    if(col.vs)x[1].sort((a,b)=>st.asc?col.vs(a,b):col.vs(b,a));
+    if(col.vs)x[1].sort((a,b)=>st.asc?col.vs(a,b,x[0]):col.vs(b,a,x[0]));
     x.push(col.get(x[0],x[1]));
   });
   rows.sort((a,b)=>{
@@ -226,10 +254,14 @@ function renderPanel(p){
     h+='<tr class="'+(selected.has(key)?'sel':'')+'"><td class="chk"><input type="checkbox" data-k="'+key+'"'+(selected.has(key)?' checked':'')+'></td>'+
       '<td class="sk">'+(r.s||'?')+'</td>'+
       '<td class="rc"><a href="'+esc(r.u)+'" target="_blank" rel="noopener" class="'+r.w+'">'+esc(r.n)+'</a></td>'+
-      '<td class="vn">'+vcol(vs,v=>'<div class="vl"><a href="'+esc(v.u)+'" target="_blank" rel="noopener" class="'+v.src+'">'+esc(v.n)+'</a></div>')+'</td>'+
-      '<td class="vloc">'+vcol(vs,v=>'<div class="vl loc" title="'+esc(v.loc)+'">'+esc(v.loc)+'</div>')+'</td>'+
-      '<td class="vf">'+vcol(vs,v=>'<div class="vl"><span class="fac '+facClass(v.fac)+'">'+esc(v.fac)+'</span></div>')+'</td>'+
-      (DE_PROFS.indexOf(p)>=0?'<td class="il">'+(r.il===null?'<span class="t">-</span>':r.il)+'</td><td>'+(r.rar?'<span class="rar '+r.rar+'">'+r.rar+'</span>':'<span class="t">-</span>')+'</td><td class="dc">'+deCell(r)+'</td>':'')+'</tr>';
+      '<td class="vn">'+vcol(vs,v=>'<div class="vl">'+(v.u?'<a href="'+esc(v.u)+'" target="_blank" rel="noopener" class="'+v.src+'">'+esc(v.n)+'</a>':esc(v.n))+'</div>',key,1)+'</td>'+
+      '<td class="vloc">'+vcol(vs,v=>'<div class="vl loc" title="'+esc(v.loc)+'">'+esc(v.loc)+'</div>',key)+'</td>'+
+      '<td class="vf">'+vcol(vs,v=>'<div class="vl"><span class="fac '+facClass(v.fac)+'">'+esc(v.fac)+'</span></div>',key)+'</td>'+
+      '<td class="vsrc">'+vcol(vs,(v,id)=>'<div class="vl"><span class="src '+r.st[id]+'">'+esc(SRC_NAME[r.st[id]])+'</span></div>',key)+'</td>'+
+      '<td class="rep">'+(r.rep?esc(r.rep[0])+' <span class="t">'+esc(r.rep[1])+'</span>':'<span class="t">-</span>')+'</td>'+
+      (DE_PROFS.indexOf(p)>=0?'<td class="il">'+(r.il===null?'<span class="t">-</span>':r.il)+'</td>':'')+
+      '<td>'+(r.rar?'<span class="rar '+r.rar+'">'+r.rar+'</span>':'<span class="t">-</span>')+'</td>'+
+      (DE_PROFS.indexOf(p)>=0?'<td class="dc">'+deCell(r)+'</td>':'')+'</tr>';
   });
   h+='</tbody></table>';
   document.getElementById('panel-'+p).innerHTML=h;
@@ -252,6 +284,8 @@ function initUI(){
   document.getElementById('panels').addEventListener('click',e=>{
     const th=e.target.closest('th.sortable');
     if(th){const p=activeTab,k=th.dataset.k,st=sortState[p]||{k:'s',asc:true};sortState[p]={k:k,asc:st.k===k?!st.asc:true};renderPanel(p);return;}
+    const more=e.target.closest('a[data-more]');
+    if(more){const k=more.dataset.more;if(expanded.has(k))expanded.delete(k);else expanded.add(k);renderPanel(activeTab);}
   });
   document.getElementById('panels').addEventListener('change',e=>{
     const c=e.target.closest('input[type=checkbox]');if(!c)return;
@@ -260,7 +294,12 @@ function initUI(){
     updateBar();
   });
   document.getElementById('filters').addEventListener('click',e=>{
-    const l=e.target.closest('.pill');if(l){setFilter(l.dataset.f,l.dataset.v);return;}
+    const l=e.target.closest('.pill');
+    if(l&&l.classList.contains('chk')){ // toggle one option, keep the original option order
+      const f=FILTERS.filter(x=>x.id===l.dataset.f)[0], cur=filterState[f.id], v=l.dataset.v;
+      setFilter(f.id,f.options().map(o=>o[0]).filter(o=>o===v?cur.indexOf(o)<0:cur.indexOf(o)>=0).join(''));return;
+    }
+    if(l){setFilter(l.dataset.f,l.dataset.v);return;}
     if(e.target.id==='clrf')clearFilters();
   });
   document.getElementById('filters').addEventListener('change',e=>{
@@ -392,7 +431,7 @@ function createRoute(){
     if(cands.length)recs.push({r:r,cands:cands});else skipped.push(r);
   });
   panel.style.display='block';
-  if(!recs.length){body.innerHTML='<h2>No route</h2><p class="warn">None of the selected recipes has a vendor with a known map position for '+(f==='A'?'Alliance':'Horde')+'.</p>'+skippedHtml(skipped,f);return;}
+  if(!recs.length){body.innerHTML='<h2>No route</h2><p class="warn">None of the selected recipes has a source NPC with a known map position for '+(f==='A'?'Alliance':'Horde')+'.</p>'+skippedHtml(skipped,f);return;}
   const vset=[];recs.forEach(x=>x.cands.forEach(id=>{if(vset.indexOf(id)<0)vset.push(id);}));
   const extra=vset.map(id=>{const p=vendorPos(id);return {id:'v'+id,name:DATA.vendors[id].n,lm:p.lm,x:p.x,y:p.y,fp:false,vendor:id};});
   const G=buildGraph(f,extra);
@@ -405,7 +444,7 @@ function createRoute(){
   const coverable=new Set();usable.forEach(i=>cover[i].forEach(ri=>coverable.add(ri)));
   recs.forEach((x,ri)=>{if(!coverable.has(ri))skipped.push(x.r);});
   const need=coverable.size;
-  if(!need){body.innerHTML='<h2>No route</h2><p class="warn">No selected vendor is reachable from the chosen start with the modeled transport.</p>'+skippedHtml(skipped,f);return;}
+  if(!need){body.innerHTML='<h2>No route</h2><p class="warn">No selected NPC is reachable from the chosen start with the modeled transport.</p>'+skippedHtml(skipped,f);return;}
   const cost=order=>{let c=0,cur=0;order.forEach(v=>{c+=D[cur][v];cur=v;});return c;};
   const covers=order=>{const s=new Set();order.forEach(v=>cover[v].forEach(r=>s.add(r)));return s.size;};
   function greedy(first){
@@ -435,12 +474,12 @@ function createRoute(){
   let bestOrder=null,bestCost=Infinity;
   usable.forEach(first=>{const o=improve(greedy(first));if(covers(o)===need){const c=cost(o);if(c<bestCost){bestCost=c;bestOrder=o;}}});
   if(!bestOrder){body.innerHTML='<h2>No route</h2><p class="warn">Could not cover the selected recipes.</p>'+skippedHtml(skipped,f);return;}
-  // assign each recipe to the first stop that sells it
+  // assign each recipe to the first stop that offers it
   const buys={};const assigned=new Set();
   bestOrder.forEach(v=>{buys[v]=[];cover[v].forEach(ri=>{if(!assigned.has(ri)){assigned.add(ri);buys[v].push(recs[ri].r);}});});
   // build step list
   const startName=FPS.filter(p=>p[0]===startId)[0][1];
-  let html='<h2>Route ('+(f==='A'?'Alliance':'Horde')+')</h2><div class="t">Estimated total: ~'+Math.round(bestCost)+' min &middot; '+bestOrder.length+' vendor stop'+(bestOrder.length===1?'':'s')+'</div><ol>';
+  let html='<h2>Route ('+(f==='A'?'Alliance':'Horde')+')</h2><div class="t">Estimated total: ~'+Math.round(bestCost)+' min &middot; '+bestOrder.length+' stop'+(bestOrder.length===1?'':'s')+'</div><ol>';
   html+='<li class="stop">Start at <b>'+esc(startName)+'</b></li>';
   let cur=0,total=0;
   bestOrder.forEach(v=>{
@@ -448,7 +487,7 @@ function createRoute(){
     legs.forEach(s=>{html+='<li>'+s+'</li>';});
     total+=D[cur][v];
     const vd=DATA.vendors[vset[v-1]];
-    html+='<li class="stop">Buy at <a href="'+esc(vd.u)+'" target="_blank" rel="noopener"><b>'+esc(vd.n)+'</b></a> &middot; '+esc(vd.loc)+'<div>'+buys[v].map(r=>esc(r.n)+' <span class="t">('+(r.s||'?')+')</span>').join('<br>')+'</div><div class="t">elapsed ~'+Math.round(total)+' min</div></li>';
+    html+='<li class="stop">Visit <a href="'+esc(vd.u)+'" target="_blank" rel="noopener"><b>'+esc(vd.n)+'</b></a> &middot; '+esc(vd.loc)+'<div>'+buys[v].map(r=>esc(r.n)+' <span class="t">('+(r.s||'?')+')</span>').join('<br>')+'</div><div class="t">elapsed ~'+Math.round(total)+' min</div></li>';
     cur=v;
   });
   html+='</ol>'+skippedHtml(skipped,f)+'<div class="t">Model assumptions: 160% mount, all flight paths already known, no hearthstone or portals, no reputation checks.</div>';
@@ -456,7 +495,7 @@ function createRoute(){
 }
 function skippedHtml(list,f){
   if(!list.length)return '';
-  return '<p class="warn">Skipped (no vendor with a known map position or reachable for '+(f==='A'?'Alliance':'Horde')+'): '+list.map(r=>esc(r.n)).join(', ')+'</p>';
+  return '<p class="warn">Skipped (no vendor, trainer or quest giver with a known map position, or not reachable for '+(f==='A'?'Alliance':'Horde')+'): '+list.map(r=>esc(r.n)).join(', ')+'</p>';
 }
 function legSteps(G,sp,src,dst){
   const path=[];let n=dst;
