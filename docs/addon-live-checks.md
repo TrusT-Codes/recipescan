@@ -88,7 +88,7 @@ Open Tailoring:
 /run for i=1,GetNumTradeSkills() do local l=GetTradeSkillItemLink(i) if l then local _,_,t,id=string.find(l,"H(%a+):(%d+)") print(i,t,id,GetTradeSkillInfo(i)) return end end
 ```
 - **Expect:** `<row> item <craftedItemId> <name> <type> ...` (e.g. `item 4245` for Small Silk Pack).
-- **Result:** _pending_
+- **Result:** **Confirmed:** `2 item 10050 Mageweave Bag medium 0 nil`. The TradeSkill link is `item:<craftedItemId>`. `GetTradeSkillInfo` returns `name, type ("header"/"optimal"/"medium"/"easy"/"trivial"), numAvailable, isExpanded` (nil on recipe rows).
 
 ## C10: Craft link type and ID
 Open Enchanting:
@@ -96,7 +96,7 @@ Open Enchanting:
 /run for i=1,GetNumCrafts() do local l=GetCraftItemLink(i) if l then local _,_,t,id=string.find(l,"H(%a+):(%d+)") print(i,t,id,GetCraftInfo(i)) return end end
 ```
 - **Expect:** `<row> enchant <spellId> <name> ...`, e.g. `enchant 57146` for Enchant Bracer - Vampirism (recipe `s57146` in recipes.json).
-- **Result:** _pending_
+- **Result:** **Confirmed:** `1 enchant 57146 Enchant Bracer - Vampirism  optimal 0 nil 0 0`. The Craft link is `enchant:<craftSpellId>`, which is the same id as recipe `s57146`. `GetCraftInfo` returns `name, subName, type, numAvailable, isExpanded, trainingPointCost, requiredLevel`.
 
 ## C11: Subclass filter set and reset in code
 Open Tailoring with the dropdowns on "All":
@@ -106,19 +106,19 @@ Open Tailoring with the dropdowns on "All":
 - **Expect:** a smaller first number (only subclass 1), then `73`, then the subclass names.
 - **Confirms:** filters hide recipes and `(0,1,1)` resets them.
 - **Also tell me:** does the native window have a search box or a "have materials" checkbox with Atlas-CFM disabled?
-- **Result:** _pending_
+- **Result:** **Confirmed:** `S(1,1,1)` limits the list to subclass 1 (Bag): 8 recipes. `S(0,1,1)` resets it: 73 with all headers expanded. Filters and collapsed headers are **independent**: with all headers collapsed both counts were `0 0`, and with only Bags expanded `8 8`. The scan must reset the filters **and** expand all headers. Subclasses: `Bag, Enchanting Bag, Cloth, Miscellaneous, Trade Goods`. Not answered: whether the native window has a search box or a have-materials checkbox without Atlas-CFM.
 
 ## C12: Jewelcrafting skill line
 On the character with Jewelcrafting, run C7 again.
 - **Confirms:** whether Jewelcrafting appears in `GetSkillLineInfo`, which the "learnable now" filter needs.
-- **Result:** _pending_
+- **Result:** **No result given.** Still open whether Jewelcrafting appears in `GetSkillLineInfo`. Fallback to check: `GetTradeSkillLine()` may return `name, rank, maxRank` while the window is open (C15).
 
 ## C13: ExportFile overwrite or append, ImportFile return
 ```
 /run ExportFile("recipescan_test","a\nb") ExportFile("recipescan_test","c") local s=ImportFile("recipescan_test") print(type(s),s and string.len(s),s)
 ```
 - **Expect:** `string 1 c` means overwrite. `string 4 a b c`-ish means append.
-- **Result:** _pending_
+- **Result:** **Confirmed:** `string 1 c`. `ExportFile` **overwrites**, and `ImportFile(name)` returns the file content as a string.
 
 ## C14: Newlines and size
 ```
@@ -129,6 +129,18 @@ On the character with Jewelcrafting, run C7 again.
 /run ExportFile("recipescan_test",string.rep("x",60000)) print(string.len(ImportFile("recipescan_test") or ""))
 ```
 - **Expect:** `60000`. A full multi-character export is about 5–20 KB.
+- **Result:** **Confirmed:** `3` and two lines a and b, and the `.txt` file also shows two lines, so `\n` is written as a line break. 60,000 characters round-trip intact.
+
+## C15: Profession rank from the open window (for the next session)
+Open Jewelcrafting:
+```
+/run print(GetTradeSkillLine())
+```
+Open Enchanting:
+```
+/run print(GetCraftDisplaySkillLine())
+```
+- **Expect:** `Jewelcrafting <rank> <maxRank>` and `Enchanting <rank> <maxRank>`. If only the name prints, rank has to come from `GetSkillLineInfo` (and C12 must be answered).
 - **Result:** _pending_
 
 ---

@@ -1,6 +1,11 @@
 # Handoff: export addon (phase 2) and website (phase 3)
 
-Read this first, then `docs/roadmap.md` (decisions and plan) and `pipeline/README.md` (data rules).
+Read this first, then `docs/roadmap.md` (decisions and plan), `pipeline/README.md` (data rules) and `docs/addon-live-checks.md` (live client results).
+
+**Where things stand (2026-10-09):**
+- Branch `feature/find-learned-ingame-recipes`, PR https://github.com/TrusT-Codes/recipescan/pull/5 (open; pipeline + docs).
+- Phase 1 is done. The phase 2 live checks are answered except C12/C15 (profession rank source for Jewelcrafting).
+- **Next:** build `addon/RecipeScan/` (phase 2), then scaffold `web/` (phase 3). Ask the user whether to continue on this branch after PR #5 merges or to start a new branch from `main`.
 
 ## Goal
 Players on **OctoWow** (vanilla 1.12.1, Turtle WoW-derived custom server) see which profession recipes their characters are **missing** and where to get them. Flow:
@@ -42,47 +47,56 @@ A full in-game addon is a later option. Keep data and code reusable for it: the 
 Optional keys are omitted when empty. `id` is `s<craftSpellId>`, or `i<recipeItemId>` for 22 OctoWow recipes without a known craft spell.
 
 ## Matching learned recipes (addon → site)
-- **TradeSkill professions** (all but Enchanting): the addon reports **crafted item IDs** from `GetTradeSkillItemLink(i)`. Match on `recipes.craftedItem` within the profession. A few crafted items are made by more than one spell; fall back to the name if needed.
-- **Enchanting** (Craft API): the addon reports **craft spell IDs** from `GetCraftItemLink(i)` (`enchant:<id>`). Match on `recipes.spell`.
+- **TradeSkill professions** (every profession except Enchanting, Jewelcrafting included): the addon reports **crafted item IDs** from `GetTradeSkillItemLink(i)` → `item:<id>`. Live example: 10050 Mageweave Bag. Match on `recipes.craftedItem` within the profession. A few crafted items are made by more than one spell; fall back to the name if needed.
+- **Enchanting** (Craft API): the addon reports **craft spell IDs** from `GetCraftItemLink(i)` → `enchant:<id>`. Live example: 57146 = recipe `s57146` Enchant Bracer - Vampirism. Match on `recipes.spell`.
 - `i<item>` recipes without a spell: match on the crafted item where it is known, otherwise by name.
-- Also export skill rank and max rank per profession (`GetSkillLineInfo`) for a "learnable now" filter (`recipes.skill`).
+- Export the skill rank and max rank per profession too, for a "learnable now" filter against `recipes.skill`.
 
-## Phase 2: export addon. First step: live checks
-`docs/addon-live-checks.md` holds checks C1 to C8 (TradeSkill item links, expanding headers, filter reset, Craft spell links, the Jewelcrafting window type, events, skill ranks, SuperWoW `ExportFile`). The user runs them in game.
-- **Do not write scan code until the results are recorded in that file.**
-- Copy confirmed facts into the skill's `references/client-facts.md` section 4.
+## Phase 2: export addon. All design-critical checks are done
+`docs/addon-live-checks.md` has every check (C1–C15) with its live result. Confirmed facts are also in the skill's `references/client-facts.md` section 4.15. Don't re-derive them.
 
-**Round 1 results (2026-10-09), recorded in that file:**
-- TradeSkill covers every profession except Enchanting, Turtle's Jewelcrafting included. Enchanting uses Craft.
-- Collapsed headers hide recipes; `ExpandTradeSkillSubClass(0)` expands all.
-- `*_UPDATE` fires before `*_SHOW`, and `UPDATE` repeats while crafting.
-- `GetSkillLineInfo` return order confirmed.
-- **SuperWoW 1.5 `ExportFile(name, text)` writes `<WoW>\Imports\<name>.txt`.**
+**Confirmed on the user's client (2026-10-09):**
+| Topic | Fact |
+| --- | --- |
+| APIs | TradeSkill API for every profession except Enchanting (Turtle Jewelcrafting included). Craft API for Enchanting. `GetTradeSkillLine()` / `GetCraftDisplaySkillLine()` return the English name. |
+| Link parse | `string.find(link, "H(%a+):(%d+)")` → `"item", id` (TradeSkill) or `"enchant", spellId` (Craft). |
+| Row info | `GetTradeSkillInfo(i)` → `name, type, numAvailable, isExpanded`; type is `header` or a difficulty (`optimal`/`medium`/`easy`/`trivial`). `GetCraftInfo(i)` → `name, subName, type, numAvailable, isExpanded, trainingPointCost, requiredLevel`. |
+| Hidden rows | Collapsed headers **and** the subclass filter both hide recipes, independently: with all headers collapsed the count was `0`. A full scan needs `SetTradeSkillSubClassFilter(0,1,1)`, `SetTradeSkillInvSlotFilter(0,1,1)` and `ExpandTradeSkillSubClass(0)`. `GetTradeSkillSubClasses()` lists the subclass names. |
+| Events | `TRADE_SKILL_UPDATE` fires **before** `TRADE_SKILL_SHOW` (same for `CRAFT_*`). `*_UPDATE` repeats 1–2× per craft. These events carry no args; `arg1` is stale. |
+| Skill ranks | `GetSkillLineInfo(i)` → `name, isHeader, isExpanded, rank, temp, modifier, maxRank`. |
+| File export | SuperWoW 1.5: `ExportFile(name, text)` writes `<WoW>\Imports\<name>.txt` (user: `F:\Octo_WoW\Imports\`). It **overwrites**, keeps `\n` as line breaks and handled 60,000 characters. `ImportFile(name)` returns the content as a string. |
 
-Still open (round 2, C9–C14):
-- the link format (`item:`/`enchant:` IDs);
-- whether the filter reset works;
-- whether Jewelcrafting shows in `GetSkillLineInfo`;
-- `ExportFile` overwrite, newline and size behaviour.
+**Still open (ask the user; not blocking):**
+- **C12/C15:** does Jewelcrafting appear in `GetSkillLineInfo`? It was missing from the user's list. Does `GetTradeSkillLine()` return `name, rank, maxRank`? C15 in the checks doc has the two `/run` lines. Until answered, take rank from `GetTradeSkillLine()` / `GetCraftDisplaySkillLine()` if they return it, otherwise from `GetSkillLineInfo`; Jewelcrafting rank may then be unknown.
+- Does the native window have its own search box or a have-materials filter with Atlas-CFM disabled? Atlas-CFM's filters only change its own display (`TSF.BuildList`).
 
-Planned design (adjust it to the check results):
-- **Export route:** when `ExportFile` exists, write `Imports\RecipeScan.txt` on every scan and on `/recipescan export`, and the site imports that file. Without SuperWoW, fall back to the copy box plus the SavedVariables file. Feature-detect with `type(ExportFile) == "function"`, because not every OctoWow player runs SuperWoW.
-- Folder `addon/RecipeScan/`. Use `RecipeScan.toc` with `## Interface: 11200` and `## SavedVariables: RecipeScanDB` (account-wide, all alts).
-- Global `RecipeScan`, local alias `RS`. Login gate `RS.loginDone`.
-- Scan when TRADE_SKILL_SHOW/UPDATE or CRAFT_SHOW/UPDATE fire (debounce with ClassicAPI `C_Timer.After`, no OnUpdate polling). The scan:
-  1. remembers the collapsed headers and filters;
-  2. expands all and clears the filters;
-  3. reads the IDs;
-  4. restores the headers and filters.
-- Store `RecipeScanDB.chars["Realm-Name"] = {class, race, faction, scannedAt, professions = {[name] = {rank, max, ids = {...}, kind = "item"|"spell"}}}`.
-- `/recipescan export` opens a copyable multi-line EditBox with a versioned string, e.g. `RS1;realm;name;faction;class;prof:rank:max:kind:id,id,...;...`. Plain text so the site can parse it; no base64 needed.
-- The site also accepts a dropped `WTF/Account/<ACC>/SavedVariables/RecipeScan.lua`. It needs a tiny Lua-table parser in TS; the Python one in `pipeline/recipescan/lua.py` shows the subset.
-- Use the template `~/.claude/skills/vanilla-wow-addon/templates/CLAUDE.md` for `addon/RecipeScan/CLAUDE.md`.
+**Design (follows from the facts above):**
+- **Folder** `addon/RecipeScan/`:
+  - `RecipeScan.toc` with `## Interface: 11200` and `## SavedVariables: RecipeScanDB` (account-wide, all alts).
+  - Global `RecipeScan`, local alias `RS`, login gate `RS.loginDone`.
+  - Copy `~/.claude/skills/vanilla-wow-addon/templates/CLAUDE.md` to `addon/RecipeScan/CLAUDE.md` and fill it in.
+- **When to scan:** on `TRADE_SKILL_SHOW` / `CRAFT_SHOW`. Then rescan after `*_UPDATE` with a debounce (ClassicAPI `C_Timer.After(0.5, ...)`, cancel and restart on every update; no OnUpdate polling). That catches newly learned recipes while the window is open.
+- **Scan steps (TradeSkill):**
+  1. Save state: `GetTradeSkillSubClassFilter`/`GetTradeSkillInvSlotFilter` per index, and the names of the collapsed headers.
+  2. Reset the filters `(0,1,1)` and call `ExpandTradeSkillSubClass(0)`.
+  3. Read every non-header row's link ID.
+  4. Restore: collapse the saved headers by name, walking indices **from the end** because collapsing shifts the rows below. Then restore the filters.
+  - **Reentrancy guard:** expand/collapse/filter calls fire `TRADE_SKILL_UPDATE` themselves. Set `RS.scanning = true` around the scan and ignore updates while it's set, or the debounce loops forever. Atlas-CFM hooks `TradeSkillFrame_Update`, which these calls also run.
+  - Craft (Enchanting) has headers too: use `ExpandCraftSkillLine(0)` / `CollapseCraftSkillLine`. Those two are **not live-checked yet**; verify with a `/run` before relying on them.
+- **Storage:** `RecipeScanDB.chars["Realm-Name"] = {class, race, faction, scannedAt, professions = {[name] = {rank, max, kind = "item"|"spell", ids = {...}}}}`. Realm comes from `GetRealmName()`.
+- **Export**, one versioned plain-text format:
+  ```
+  RS1
+  char;<realm>;<name>;<faction>;<class>;<race>;<scannedAt>
+  prof;<name>;<rank>;<max>;<item|spell>;<id>,<id>,...
+  ```
+  One `char` line per character, followed by its `prof` lines. With SuperWoW (`type(ExportFile) == "function"`), write `ExportFile("RecipeScan", text)` after each scan and on `/recipescan export`. That gives `Imports\RecipeScan.txt`; one file covers every character because it's built from the account-wide DB. Without SuperWoW, `/recipescan export` opens a copyable multi-line EditBox with the same text. The site also accepts the dropped `WTF/Account/<ACC>/SavedVariables/RecipeScan.lua`; the TS parser only needs the Lua table subset that `pipeline/recipescan/lua.py` handles.
+- **Checks before shipping:** `luac -p` on every file, `bash ~/.claude/skills/vanilla-wow-addon/scripts/verify.sh addon/RecipeScan <outDir> RecipeScan`, a Lua 5.0 syntax review (no `#`, `%`, `...` expressions, `gmatch`), then a live test in the user's client.
 
 ## Phase 3: website
 - Scaffold `web/` (Vite React TS, Tailwind + shadcn/ui dark, TanStack Table + Virtual, cmdk). Leaflet comes in phase 4. Keep `web/public/data/` as is; the pipeline owns it.
 - First screens:
-  1. **Import** (paste the export string or drop the SavedVariables file → IndexedDB).
+  1. **Import**: drop `Imports\RecipeScan.txt` (SuperWoW route), paste the copy-box text, or drop the SavedVariables `RecipeScan.lua`. All three carry the same `RS1` data and are stored in IndexedDB. Show the user where each file lives (e.g. `<WoW folder>\Imports\RecipeScan.txt`).
   2. **Character → profession missing-recipes table**: filters for source type, faction (`npcs.faction`), learnable-now, zone; sort by skill.
   3. **Recipe detail drawer**: sources, reagents, skill colours.
 - Generate TS types from the data contract above. Load data lazily and cache it by `dataVersion`.
