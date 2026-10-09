@@ -1,0 +1,314 @@
+# Trainers and vendors that are not in wh.txt/ow.txt: V|npcId|name|[allianceReact,hordeReact]|Zone x,y; ...
+V|223|Dan Golthas|[0,1]|Undercity 70.4,58.4
+V|340|Kendor Kabonka|[1,0]|Stormwind City 74.4,36.4
+V|514|Smith Argus|[1,0]|Elwynn Forest 41.6,65.6
+V|734|Corporal Bluth|[1,-1]|Stranglethorn Vale 38,3
+V|957|Dane Lindgren|[1,0]|Stormwind City 57.2,16.4
+V|1103|Eldrin|[1,0]|Elwynn Forest 79.2,69
+V|1146|Vharr|[0,1]|Stranglethorn Vale 32.2,28
+V|1148|Nerrist|[-1,1]|Stranglethorn Vale 32.6,29.2
+V|1149|Uthok|[0,1]|Stranglethorn Vale 31.4,28
+V|1215|Alchemist Mallory|[1,0]|Elwynn Forest 39.8,48.4
+V|1241|Tognus Flintfire|[1,0]|Dun Morogh 45.2,52
+V|1246|Vosur Brakthel|[1,0]|Ironforge 66.4,55.2
+V|1300|Lawrence Schneider|[1,0]|Stormwind City 43.4,73.8
+V|1304|Darian Singh|[1,0]|Stormwind City 29.6,67.8
+V|1313|Maria Lumere|[1,0]|Stormwind City 46.4,78.8
+V|1317|Lucan Cordell|[1,0]|Stormwind City 43,64.4
+V|1346|Georgio Bolero|[1,0]|Stormwind City 43.2,73.4
+V|1355|Cook Ghilm|[1,0]|Dun Morogh 68.4,54.4
+V|1382|Mudduk|[0,1]|Stranglethorn Vale 31.4,28
+V|1383|Snarl|[0,1]|Orgrimmar 79.2,22.4
+V|1385|Brawn|[0,1]|Stranglethorn Vale 31.6,28.8
+V|1386|Rogvar|[0,1]|Swamp of Sorrows 48.2,55.4
+V|1430|Tomas|[1,0]|Elwynn Forest 44.2,66
+V|1465|Drac Roughcut|[1,0]|Loch Modan 35.6,49
+V|1466|Gretta Finespindle|[1,0]|Ironforge 39,32.4
+V|1470|Ghak Healtouch|[1,0]|Loch Modan 37,49.2
+V|1471|Jannos Ironwill|[1,-1]|Arathi Highlands 46,47.4
+V|1632|Adele Fielder|[1,0]|Elwynn Forest 46.4,62.2
+V|1676|Finbus Geargrind|[1,0]|Duskwood 77.4,48.4
+V|1681|Brock Stoneseeker|[1,0]|Loch Modan 37,47.8
+V|1684|Khara Deepwater|[1,0]|Loch Modan 39.4,39.2
+V|1685|Xandar Goodbeard|[1,0]|Loch Modan 82.4,63.4
+V|1699|Gremlock Pilsnor|[1,0]|Dun Morogh 47.6,52.4
+V|1701|Dank Drizzlecut|[1,0]|Dun Morogh 69.2,55.4
+V|1702|Bronk Guzzlegear|[1,0]|Dun Morogh 50.2,50.4
+V|1703|Uthrar Threx|[1,0]|Ironforge 43.4,28.2
+V|2118|Abigail Shiel|[0,1]|Tirisfal Glades 61,52.4
+V|2132|Carolai Anise|[0,1]|Tirisfal Glades 59.4,52.2
+V|2326|Thamner Pol|[1,0]|Dun Morogh 47.2,52.4
+V|2327|Shaina Fuller|[1,0]|Stormwind City 42.4,26.8
+V|2329|Michelle Belle|[1,0]|Elwynn Forest 43.4,65.6
+V|2380|Nandar Branson|[1,-1]|Hillsbrad Foothills 50.8,57
+V|2383|Lindea Rabonne|[1,-1]|Hillsbrad Foothills 50.4,61
+V|2391|Serge Hinott|[0,1]|Hillsbrad Foothills 61.4,19.2
+V|2397|Derak Nightfall|[-1,1]|Hillsbrad Foothills 63,19.4
+V|2399|Daryl Stack|[0,1]|Hillsbrad Foothills 63.4,20.8
+V|2480|Bro'kin|[1,1]|Alterac Mountains 38.4,38.8
+V|2481|Bliztik|[1,1]|Duskwood 18,54.4
+V|2482|Zarena Cromwind|[1,1]|Stranglethorn Vale 28.4,75.4
+V|2483|Jaquilina Dramet|[1,1]|Stranglethorn Vale 35.6,10.6
+V|2627|Grarnik Goodstitch|[1,1]|Stranglethorn Vale 28.6,76.8
+V|2664|Kelsey Yance|[1,1]|Stranglethorn Vale 28.2,74.4
+V|2682|Fradd Swiftgear|[1,-1]|Wetlands 26.4,25.8
+V|2683|Namdo Bizzfizzle|[1,-1]|
+V|2684|Rizz Loosebolt|[1,1]|Alterac Mountains 47.2,35.2
+V|2685|Mazk Snipeshot|[1,1]|Stranglethorn Vale 28.4,75
+V|2687|Gnaz Blunderflame|[1,1]|Stranglethorn Vale 51,35.2
+V|2688|Ruppo Zipcoil|[1,1]|The Hinterlands 34.2,37.8
+V|2798|Pand Stonebinder|[0,1]|Thunder Bluff 29.4,21.4
+V|2803|Malygen|[1,-1]|Felwood 62.2,25.4
+V|2805|Deneb Walker|[1,-1]|Arathi Highlands 27,58.8
+V|2806|Bale|[-1,1]|Felwood 34.8,53.2
+V|2812|Drovnar Strongbrew|[1,-1]|Arathi Highlands 46.4,47
+V|2814|Narj Deepslice|[1,-1]|Arathi Highlands 45.4,47.4
+V|2818|Slagg|[-1,1]|Arathi Highlands 74,33.8
+V|2836|Brikk Keencraft|[1,1]|Stranglethorn Vale 29,75.4
+V|2837|Jaxin Chong|[1,1]|Stranglethorn Vale 28,78
+V|2838|Crazk Sparks|[1,1]|Stranglethorn Vale 28.2,76.6
+V|2843|Jutak|[1,1]|Stranglethorn Vale 27.4,77.4
+V|2848|Glyx Brewright|[1,1]|Stranglethorn Vale 28,78
+V|2855|Snang|[0,1]|Orgrimmar 62.8,49.4
+V|2857|Thund|[0,1]|Orgrimmar 75.4,24.6
+V|2998|Karn Stonehoof|[0,1]|Thunder Bluff 38.8,54
+V|3001|Brek Stonehoof|[0,1]|Thunder Bluff 34.4,57.4
+V|3004|Tepa|[0,1]|Thunder Bluff 43.8,44.4
+V|3007|Una|[0,1]|Thunder Bluff 41.6,42.4
+V|3008|Mak|[0,1]|Thunder Bluff 42.2,43.2
+V|3009|Bena Winterhoof|[0,1]|Thunder Bluff 46.8,33.4
+V|3011|Teg Dawnstrider|[0,1]|Thunder Bluff 45,38
+V|3026|Aska Mistrunner|[0,1]|Thunder Bluff 51,52.8
+V|3027|Naal Mistrunner|[0,1]|Thunder Bluff 50.2,51.6
+V|3029|Sewa Mistrunner|[0,1]|Thunder Bluff 55.2,48
+V|3067|Pyall Silentstride|[0,1]|Mulgore 45.4,58
+V|3069|Chaw Stronghide|[0,1]|Mulgore 45.4,57.8
+V|3081|Wunna Darkmane|[0,1]|Mulgore 46.2,58.2
+V|3085|Gloria Femmel|[1,0]|Redridge Mountains 26.6,43.4
+V|3087|Crystal Boughman|[1,0]|Redridge Mountains 22.8,43.4
+V|3134|Kzixx|[1,1]|Duskwood 81.8,19.8
+V|3136|Clarise Gnarltree|[1,0]|Duskwood 73.8,48.6
+V|3137|Matt Johnson|[1,-1]|Duskwood 74,49.4
+V|3174|Dwukk|[0,1]|Durotar 52,40.6
+V|3175|Krunn|[0,1]|Durotar 51.8,40.8
+V|3178|Stuart Fleming|[1,-1]|Wetlands 8,58.2
+V|3181|Fremal Doohickey|[1,0]|Wetlands 10.8,61.2
+V|3184|Miao'zan|[0,1]|Durotar 55.4,74
+V|3290|Deek Fizzlebizz|[1,-1]|Loch Modan 45.8,13.4
+V|3333|Shankys|[0,1]|Orgrimmar 69.8,29.6
+V|3335|Hagrus|[0,1]|Orgrimmar 46,46
+V|3345|Godan|[0,1]|Orgrimmar 53.8,38.4
+V|3347|Yelmak|[0,1]|Orgrimmar 56.4,33.2
+V|3348|Kor'geld|[0,1]|Orgrimmar 56.2,34.2
+V|3355|Saru Steelfury|[0,1]|Orgrimmar 82.2,23
+V|3356|Sumi|[0,1]|Orgrimmar 82.4,23.4
+V|3357|Makaru|[0,1]|Orgrimmar 73,26.4
+V|3363|Magar|[0,1]|Orgrimmar 63.4,50
+V|3365|Karolek|[0,1]|Orgrimmar 62.8,44.4
+V|3373|Arnok|[0,1]|Orgrimmar 34,84.4
+V|3399|Zamja|[0,1]|Orgrimmar 57.4,53.4
+V|3400|Xen'to|[0,1]|Orgrimmar 57.4,53.2
+V|3412|Nogg|[0,1]|Orgrimmar 75.8,25.2
+V|3413|Sovik|[0,1]|Orgrimmar 75,24.4
+V|3478|Traugh|[-1,1]|The Barrens 51.2,28.8
+V|3482|Tari'qa|[-1,1]|The Barrens 51.6,30
+V|3484|Kil'hala|[-1,1]|The Barrens 52.2,31.6
+V|3489|Zargh|[0,1]|The Barrens 52.4,29.8
+V|3490|Hula'mahi|[-1,1]|The Barrens 51.4,30.2
+V|3494|Tinkerwiz|[1,1]|The Barrens 62.6,36.2
+V|3495|Gagsprocket|[1,1]|The Barrens 62.6,36.2
+V|3497|Kilxx|[1,1]|The Barrens 62.8,38.2
+V|3523|Bowen Brisboise|[0,1]|Tirisfal Glades 52.4,55.6
+V|3549|Shelene Rhobart|[-1,1]|Tirisfal Glades 65.4,60
+V|3550|Martine Tramblay|[-1,1]|Tirisfal Glades 65.8,59.6
+V|3555|Johan Focht|[0,1]|Silverpine Forest 43.4,40.4
+V|3557|Guillaume Sorouy|[0,1]|Silverpine Forest 43.2,41
+V|3603|Cyndra Kindwhisper|[1,0]|Teldrassil 57.6,60.6
+V|3605|Nadyia Maneweaver|[1,0]|Teldrassil 41.8,49.4
+V|3606|Alanna Raveneye|[1,0]|Teldrassil 36.8,34.2
+V|3703|Krulmoo Fullmoon|[0,1]|The Barrens 44.8,59.4
+V|3704|Mahani|[0,1]|The Barrens 44.8,59.4
+V|3881|Grimtak|[0,1]|Durotar 51.2,42.4
+V|3955|Shandrina|[1,0]|Ashenvale 49.4,67
+V|3956|Harklan Moongrove|[1,0]|Ashenvale 50.8,67
+V|3960|Ulthaan|[1,-1]|Ashenvale 50,66.6
+V|3964|Kylanna|[1,-1]|Ashenvale 50.8,67
+V|3967|Aayndia Floralwind|[1,0]|Ashenvale 35.8,52
+V|4083|Jeeda|[0,1]|Stonetalon Mountains 47.4,61.8
+V|4086|Veenix|[1,1]|Stonetalon Mountains 58.2,51.6
+V|4159|Me'lynn|[1,0]|Darnassus 62.4,22.4
+V|4160|Ainethil|[1,0]|Darnassus 55,23.4
+V|4193|Grondal Moonbreeze|[1,0]|Darkshore 38.2,40.4
+V|4200|Laird|[1,-1]|Darkshore 36.8,44.2
+V|4210|Alegorn|[1,0]|Darnassus 49,21.2
+V|4211|Dannelor|[1,0]|Darnassus 51.4,12.6
+V|4212|Telonis|[1,0]|Darnassus 64.4,21.4
+V|4213|Taladan|[1,0]|Darnassus 58.4,13.2
+V|4223|Fyldan|[1,0]|Darnassus 48.4,21.4
+V|4226|Ulthir|[1,0]|Darnassus 55.4,23.2
+V|4254|Geofram Bouldertoe|[1,0]|Ironforge 50.2,26
+V|4258|Bengus Deepforge|[1,-1]|Ironforge 51.4,42.2
+V|4265|Nyoma|[1,0]|Teldrassil 57.2,61.2
+V|4305|Kriggon Talsone|[1,-1]|Westfall 36.2,90
+V|4307|Heldan Galesong|[1,-1]|Darkshore 37,56.2
+V|4552|Eunice Burch|[0,1]|Undercity 62.2,44.4
+V|4553|Ronald Burch|[0,1]|Undercity 62.4,43.4
+V|4574|Lizbeth Cromwell|[0,1]|Undercity 81,29.2
+V|4576|Josef Gregorian|[0,1]|Undercity 70.4,30.4
+V|4578|Josephine Lister|[0,1]|Undercity 85.8,22.6
+V|4586|Graham Van Talen|[0,1]|Undercity 75.2,72.4
+V|4588|Arthur Moore|[0,1]|Undercity 70.2,57.4
+V|4591|Mary Edras|[0,1]|Undercity 73.4,55.4
+V|4596|James Van Brunt|[0,1]|Undercity 61.2,29.2
+V|4598|Brom Killian|[0,1]|Undercity 55.8,36
+V|4605|Basil Frye|[0,1]|Undercity 60,28.4
+V|4609|Doctor Marsh|[0,1]|Undercity 51.2,75
+V|4610|Algernon|[0,1]|Undercity 51.4,74.4
+V|4611|Doctor Herbert Halsey|[0,1]|Undercity 47.4,73
+V|4616|Lavinia Crowe|[0,1]|Undercity 62.2,61.6
+V|4782|Truk Wildbeard|[1,0]|The Hinterlands 14.4,42.4
+V|4878|Montarr|[0,1]|Thousand Needles 45.2,50.6
+V|4879|Ogg'marr|[0,1]|Dustwallow Marsh 36.6,31
+V|4900|Alchemist Narett|[1,0]|Dustwallow Marsh 64,47.6
+V|5127|Fimble Finespindle|[1,0]|Ironforge 39.4,33.8
+V|5150|Nissa Firestone|[1,0]|Ironforge 54.8,58.4
+V|5153|Jormund Stonebrow|[1,0]|Ironforge 43.2,28.4
+V|5157|Gimble Thistlefuzz|[1,0]|Ironforge 60,45.4
+V|5159|Daryl Riknussun|[1,0]|Ironforge 60,36.8
+V|5160|Emrul Riknussun|[1,0]|Ironforge 58.8,37.2
+V|5162|Tansy Puddlefizz|[1,0]|Ironforge 47.8,6.4
+V|5164|Grumnus Steelshaper|[1,-1]|Ironforge 49.4,43
+V|5174|Springspindle Fizzlegear|[1,0]|Ironforge 68.2,43.4
+V|5175|Gearcutter Cogspinner|[1,0]|Ironforge 67.8,43
+V|5177|Tally Berryfizz|[1,0]|Ironforge 66.4,55.2
+V|5178|Soolie Berryfizz|[1,0]|Ironforge 66.4,54.4
+V|5392|Yarr Hammerstone|[1,0]|Dun Morogh 50,50.4
+V|5411|Krinkle Goodsteel|[1,1]|Tanaris 51.4,28.8
+V|5482|Stephen Ryback|[1,0]|Stormwind City 75.4,37.2
+V|5483|Erika Tate|[1,0]|Stormwind City 75.8,36.8
+V|5494|Catherine Leland|[1,-1]|Stormwind City 45.4,57.6
+V|5499|Lilyssia Nightbreeze|[1,0]|Stormwind City 46.4,79.4
+V|5500|Tel'Athir|[1,0]|Stormwind City 46.4,79
+V|5511|Therum Deepforge|[1,0]|Stormwind City 56.4,15.4
+V|5512|Kaita Deepforge|[1,0]|Stormwind City 56.4,16.2
+V|5513|Gelman Stonehand|[1,0]|Stormwind City 51,17.2
+V|5518|Lilliam Sparkspindle|[1,0]|Stormwind City 54.8,7.8
+V|5564|Simon Tanner|[1,0]|Stormwind City 67.2,49.4
+V|5567|Sellandus|[1,0]|Stormwind City 42,76.2
+V|5594|Alchemist Pestlezugg|[1,1]|Tanaris 50.8,27
+V|5695|Vance Undergloom|[0,1]|Tirisfal Glades 61.6,51.6
+V|5748|Killian Sanatha|[0,1]|Silverpine Forest 33,17.8
+V|5759|Nurse Neela|[0,1]|Tirisfal Glades 61.8,52.8
+V|5784|Waldor|[1,1]|
+V|5811|Kamari|[0,1]|Orgrimmar 63,45
+V|5939|Vira Younghoof|[0,1]|Mulgore 46.8,60.8
+V|5940|Harn Longcast|[0,1]|Mulgore 47.4,55
+V|5942|Zansoa|[0,1]|Durotar 56,73.4
+V|5943|Rawrk|[0,1]|Durotar 54,42
+V|6094|Byancie|[1,0]|Teldrassil 55.2,56.8
+V|6286|Zarrin|[1,0]|Teldrassil 57,61.2
+V|6297|Kurdram Stonehammer|[1,0]|Darkshore 38.2,41
+V|6299|Delfrum Flintbeard|[1,0]|Darkshore 38.2,41
+V|6730|Jinky Twizzlefixxit|[1,1]|Thousand Needles 77.6,77.8
+V|6777|Zan Shivsproket|[1,1]|Alterac Mountains 86,80
+V|6779|Smudge Thunderwood|[1,1]|Alterac Mountains 86,79.6
+V|7230|Shayis Steelfury|[0,1]|Orgrimmar 80.2,23.2
+V|7231|Kelgruk Bloodaxe|[0,1]|Orgrimmar 81.8,18.6
+V|7406|Oglethorpe Obnoticus|[1,1]|Stranglethorn Vale 28.2,76.2
+V|7733|Innkeeper Fizzgrimble|[1,1]|Tanaris 52.4,27.8
+V|7866|Peter Galen|[1,-1]|Azshara 37.4,65.4
+V|7867|Thorkaf Dragoneye|[-1,1]|Badlands 62.4,57.4
+V|7868|Sarah Tanner|[1,-1]|Searing Gorge 63.2,75.4
+V|7869|Brumn Winterhoof|[-1,1]|Arathi Highlands 28.2,45
+V|7870|Caryssia Moonhunter|[1,-1]|Feralas 89.4,46.4
+V|7871|Se'Jib|[-1,1]|Stranglethorn Vale 36.4,34
+V|7944|Tinkmaster Overspark|[1,-1]|Ironforge 69.4,50.4
+V|7947|Vivianna|[1,-1]|Feralas 31.2,43.4
+V|7948|Kylanna Windwhisper|[1,0]|Feralas 32.4,43.8
+V|7949|Xylinnia Starshine|[1,0]|Feralas 31.4,44.2
+V|8125|Dirge Quikcleave|[1,1]|Tanaris 52.6,28
+V|8126|Nixx Sprocketspring|[1,1]|Tanaris 52.4,27.2
+V|8128|Pikkle|[1,1]|Tanaris 51,28
+V|8131|Blizrik Buckshot|[1,1]|Tanaris 50.8,27.6
+V|8137|Gikkix|[1,1]|Tanaris 66.6,22
+V|8139|Jabbey|[1,1]|Tanaris 67,22
+V|8145|Sheendra Tallgrass|[0,1]|Feralas 74.4,42.8
+V|8150|Janet Hommers|[1,0]|Desolace 66.2,6.6
+V|8153|Narv Hidecrafter|[0,1]|Desolace 55.2,56.2
+V|8157|Logannas|[1,0]|Feralas 32.6,44
+V|8158|Bronk|[-1,1]|Feralas 76,43.4
+V|8161|Harggan|[1,0]|The Hinterlands 13.4,44
+V|8176|Gharash|[0,1]|Swamp of Sorrows 45.4,51.4
+V|8177|Rartar|[0,1]|Swamp of Sorrows 45.4,57
+V|8178|Nina Lightbrew|[1,0]|Blasted Lands 66.8,18.2
+V|8306|Duhng|[-1,1]|The Barrens 55.2,31.8
+V|8307|Tarban Hearthgrain|[-1,1]|The Barrens 55,32
+V|8508|Gretta Ganter|[1,0]|Dun Morogh 31.4,44.6
+V|8678|Jubie Gadgetspring|[1,1]|Azshara 45.2,90.8
+V|8679|Knaz Blunderflame|[1,1]|Stranglethorn Vale 51,35.2
+V|8736|Buzzek Bracketswing|[1,1]|Tanaris 52.2,27.6
+V|8738|Vazario Linkgrease|[1,1]|The Barrens 62.6,36.2
+V|8878|Muuran|[-1,1]|Desolace 55.6,56.4
+V|9179|Jazzrik|[1,1]|Badlands 42.4,52.4
+V|9544|Yuka Screwspigot|[1,1]|Burning Steppes 66,22
+V|9584|Jalane Ayrole|[1,0]|Stormwind City 26.4,77.4
+V|10118|Nessa Shadowsong|[1,-1]|Teldrassil 56.2,92.4
+V|10266|Ug'thok|[0,1]|Orgrimmar 80.4,23.4
+V|10276|Rotgath Stonebeard|[1,0]|Ironforge 51.2,43.2
+V|10277|Groum Stonebeard|[1,0]|Ironforge 51.2,42.8
+V|10278|Thrag Stonehoof|[0,1]|Thunder Bluff 39,57.8
+V|10993|Twizwick Sprocketgrind|[0,1]|Mulgore 61.8,31.4
+V|11017|Roxxik|[0,1]|Orgrimmar 76,25
+V|11025|Mukdrak|[0,1]|Durotar 52.2,40.8
+V|11026|Sprite Jumpsprocket|[1,0]|Stormwind City 54.6,8
+V|11028|Jemma Quikswitch|[1,0]|Ironforge 67.8,43.4
+V|11029|Trixie Quikswitch|[1,0]|Ironforge 67.4,43.2
+V|11031|Franklin Lloyd|[0,1]|Undercity 76,73.4
+V|11037|Jenna Lemkenilli|[1,0]|Darkshore 38.2,41
+V|11041|Milla Fairancora|[1,0]|Darnassus 55.2,22.4
+V|11042|Sylvanna Forestmoon|[1,0]|Darnassus 55.6,23.4
+V|11044|Doctor Martin Felben|[0,1]|Undercity 45.8,73.2
+V|11046|Whuut|[0,1]|Orgrimmar 55.8,33.2
+V|11047|Kray|[0,1]|Thunder Bluff 46.8,34.2
+V|11048|Victor Ward|[0,1]|Undercity 70.2,29.6
+V|11049|Rhiannon Davis|[0,1]|Undercity 70.2,30.2
+V|11050|Trianna|[1,0]|Darnassus 63.4,21.4
+V|11051|Vhan|[0,1]|Thunder Bluff 43.4,43.6
+V|11052|Timothy Worthington|[1,0]|Dustwallow Marsh 66.2,51.6
+V|11065|Thonys Pillarstone|[1,0]|Ironforge 60.4,44.4
+V|11066|Jhag|[0,1]|Orgrimmar 53.4,38.2
+V|11067|Malcomb Wynn|[0,1]|Undercity 62.2,60.4
+V|11068|Betty Quin|[1,0]|Stormwind City 43.2,63.8
+V|11070|Lalina Summermoon|[1,0]|Darnassus 58.6,14
+V|11071|Mot Dawnstrider|[0,1]|Thunder Bluff 44.4,38.8
+V|11072|Kitta Firewind|[1,0]|Elwynn Forest 64.8,70.4
+V|11073|Annora|[1,1]|
+V|11074|Hgarth|[0,1]|Stonetalon Mountains 49.2,57.2
+V|11081|Faldron|[1,0]|Darnassus 64.4,21.4
+V|11083|Darianna|[1,0]|Darnassus 64.2,21.6
+V|11084|Tarn|[0,1]|Thunder Bluff 42.4,43
+V|11096|Randal Worth|[1,0]|Stormwind City 67.4,49.4
+V|11097|Drakk Stonehand|[1,0]|The Hinterlands 13.4,43.4
+V|11098|Hahrana Ironhide|[0,1]|Feralas 74.4,43
+V|11146|Ironus Coldsteel|[1,-1]|Ironforge 49.4,44.8
+V|11177|Okothos Ironrager|[0,1]|Orgrimmar 79.8,23.4
+V|11178|Borgosh Corebender|[0,1]|Orgrimmar 79.4,23.4
+V|11185|Xizzer Fizzbolt|[1,1]|Winterspring 60.8,38.4
+V|11187|Himmik|[1,1]|Winterspring 61.2,39
+V|11188|Evie Whirlbrew|[1,1]|Winterspring 60.8,37.8
+V|11278|Magnus Frostwake|[1,1]|Western Plaguelands 68,77.4
+V|12033|Wulan|[0,1]|Desolace 26.2,69.8
+V|12962|Wik'Tar|[-1,1]|Ashenvale 11.8,34
+V|13420|Penney Copperpinch|[0,1]|Orgrimmar 53,66
+V|13429|Nardstrum Copperpinch|[0,1]|Undercity 67.2,38.4
+V|13432|Seersa Copperpinch|[0,1]|Thunder Bluff 43.4,57.8
+V|13433|Wulmort Jinglepocket|[1,0]|Ironforge 33.4,65.4
+V|13435|Khole Jinglepocket|[1,0]|Stormwind City 55,59.2
+V|13476|Balai Lok'Wein|[0,1]|Dustwallow Marsh 36.4,30.4
+V|14637|Zorbin Fandazzle|[1,1]|Feralas 44.8,43.4
+V|14738|Otho Moji'ko|[0,1]|The Hinterlands 79.2,79
+V|15176|Vargus|[1,1]|Silithus 51.2,38.8
+V|15471|Lieutenant General Andorov|[1,1]|
+V|216672|Namdo Bizzfizzle|[1,-1]|
+V|216902|Wulmort Jinglepocket|[1,0]|Ironforge 33.4,66.4
+V|240604|Carrie Hearthfire|[1,1]|Eastern Plaguelands 95.2,78.4

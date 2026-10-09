@@ -1,0 +1,664 @@
+# OctoWow DB recipes outside the vendor lists: R|profession|key|source|name|skill|teachSpellId|craftedItemId|craftedQuality|repFaction|repLevel
+# S|key|V|npcId|name|zoneIds|react   vendor      S|key|Q|questId|name|side|zoneId   quest reward
+# S|key|D|npcId|name|zoneIds|react|pct   drop      S|key|X|label   world drop
+# Skill = "Requires <profession> (N)" on the recipe item, else the lowest skill breakdown of the craft spell (profession spell list colors)
+# Generated in the browser pane from https://octowow.st/db/ (see docs/handover-all-sources.md)
+R|leatherworking|16|ow|Pattern: Harness of the High Thane|300||55043|2|Wildhammer Clan|Exalted
+S|16|V|80947|Alyssa Stormbolt|47|[1,-1]
+R|enchanting|24|ow|Formula: Enchant Bracer - Agility|185|||||
+S|24|D|62550|Deathlord Tidebane|818|[-1,-1]|6
+R|enchanting|31|ow|Formula: Enchant Boots - Lesser Intellect|170|||||
+S|31|D|62038|Elder Hollowblood|816|[-1,-1]|6
+R|leatherworking|69|ow|Pattern: Dragonmaw Armor Kit|175||65|3||
+S|69|D|62037|Zuluhed the Whacked|816|[-1,-1]|4.5
+R|blacksmithing|70|ow|Plans: Steel Belt Buckle|200||131|4||
+S|70|D|62550|Deathlord Tidebane|818|[-1,-1]|6
+R|blacksmithing|71|ow|Plans: Gold Belt Buckle|175||66|4||
+S|71|D|62037|Zuluhed the Whacked|816|[-1,-1]|4.5
+R|leatherworking|74|ow|Pattern: Dragonmaw Gloves|170||58112|3||
+S|74|D|62070|Overlord Blackheart|816|[-1,-1]|6
+R|tailoring|75|ow|Pattern: Stormreaver Gloves|185||58134|3||
+S|75|D|62551|Chieftain Stormsong|818|[-1,-1]|6
+R|jewelcrafting|76|ow|Plans: Refined Dwarven Necklace|0||156|3||
+S|76|D|62069|Halgan Redbrand|816|[-1,-1]|6
+R|jewelcrafting|77|ow|Plans: Ancient Dwarven Gemstone|0||56112|4||
+S|77|D|62069|Halgan Redbrand|816|[-1,-1]|6
+R|alchemy|83|ow|Recipe: Elixir of Rapid Growth|200||56113|5||
+S|83|D|62652|Subjugator Halthas Shadecrest|818|[-1,-1]|6
+R|blacksmithing|88|ow|Plans: Dragonscale Belt Buckle|235||67|4||
+S|88|D|9096|Rage Talon Dragonspawn|229|[-1,-1]|0.03
+S|88|D|10083|Rage Talon Flamescale|229|[-1,-1]|0.03
+S|88|D|10366|Rage Talon Dragon Guard|229|[-1,-1]|0.03
+S|88|D|10371|Rage Talon Captain|229|[-1,-1]|0.03
+S|88|D|10372|Rage Talon Fire Tongue|229|[-1,-1]|0.03
+R|blacksmithing|104|ow|Plans: Dark Iron Belt Buckle|275||82|4|Thorium Brotherhood|Revered
+S|104|V|62723|Quartermaster Barnaby Burnhammer|51|[0,0]
+R|blacksmithing|113|ow|Plans: Truesilver Belt Buckle|225||151|4||
+S|113|D|61423|Marshal Magnus Greystone|815|[-1,-1]|5
+R|leatherworking|15780|ow|Pattern: Onyxia Scale Breastplate|300|19224|15141|2||
+R|cooking|19670|ow|Recipe: Ambersap Glazed Boar Ribs|175|58043|41674|5||
+S|19670|V|62281|Jacqueline Marlowe|0|[1,-1]
+R|cooking|30819|ow|Recipe: Maritime Gumbo|35|45055|30818|5||
+S|30819|Q|41168|Maritime Gumbo|2|
+R|blacksmithing|33134|ow|Plans: Bulwark of Unshaken Earth|300||33135|2||
+S|33134|V|62798|Deechenu|406|[1,-1]
+R|enchanting|33144|ow|Formula: Rift Tear|300|||||
+R|engineering|33145|ow|Schematic: Facetted Crystal Scope|300|||||
+R|engineering|40082|ow|Schematic: Jewelry Lens|125|41072|41326|5||
+S|40082|V|61926|Yavon Sharplight|14|[0,0]
+S|40082|V|61922|Yath Ruzzblast|1497|[0,0]
+S|40082|V|61915|Panella Evercrest|0|[1,-1]
+S|40082|V|61905|Otto Fencer|1519|[1,-1]
+S|40082|V|61909|Dagred Flintbeard|1537|[1,-1]
+S|40082|V|61920|Anara|1637|[-1,1]
+R|engineering|40083|ow|Schematic: Jewelry Scope|225|41074|41327|5||
+S|40083|V|61914|Gonzo Snaphands|440|[0,0]
+S|40083|V|62862|Gallitrea|618|[1,1]
+S|40083|D|13601|Tinkerer Gizlock|349|[-1,-1]|8
+R|engineering|40084|ow|Schematic: Precision Jewelers Kit|175|41076||||
+S|40084|V|3537|Zixil|36|[0,0]
+S|40084|V|60965|Shali Nosewrench|406|[0,0]
+S|40084|V|3499|Ranik|17|[0,0]
+S|40084|V|1456|Kersok Prond|11|[1,-1]
+S|40084|D|7800|Mekgineer Thermaplugg|90|[-1,-1]|4
+R|alchemy|47411|ow|Recipe: Concoction of the Emerald Mongoose|300|||||
+S|47411|Q|41887|The Recipe of Concoction of the Emerald Mongoose|3|Winterspring
+R|alchemy|47413|ow|Recipe: Concoction of the Arcane Giant|300||47412|5||
+S|47413|D|9568|Overlord Wyrmthalak|229|[-1,-1]|10
+S|47413|D|10363|General Drakkisath|229|[-1,-1]|10
+S|47413|D|10440|Baron Rivendare|2017|[-1,-1]|10
+S|47413|D|11492|Alzzin the Wildshaper|2557|[-1,-1]|10
+S|47413|D|11496|Immol'thar|2557|[-1,-1]|10
+R|alchemy|47415|ow|Recipe: Concoction of the Dreamwater|300||47414|5||
+S|47415|D|9568|Overlord Wyrmthalak|229|[-1,-1]|10
+S|47415|D|10363|General Drakkisath|229|[-1,-1]|10
+S|47415|D|10440|Baron Rivendare|2017|[-1,-1]|10
+S|47415|D|11492|Alzzin the Wildshaper|2557|[-1,-1]|10
+S|47415|D|11496|Immol'thar|2557|[-1,-1]|10
+R|jewelcrafting|50298|ow|Plans: Minor Trollblood Ring|70|41230|55164|4||
+S|50298|X|World drop (314 creatures)
+R|alchemy|51263|ow|Recipe: Volatile Concoction|75|45062|51262|5||
+R|blacksmithing|51265|ow|Plans: Blast Shield|75|45064|51264|4||
+S|51265|D|61794|Vanessa Moneybutton|0|[0]|66
+S|51265|D|61670|Gelwex Goldfingers|0|[0]|3.96
+S|51265|D|61671|Supervisor Laggle|0|[0]|3.96
+S|51265|D|61672|Venture Co. Instigator|0|[0]|3.96
+S|51265|D|61673|Venture Co. Thug|0|[0]|3.96
+R|engineering|51269|ow|Schematic: Unstable Mining Dynamite|75|45058|51268|5||
+S|51269|D|61794|Vanessa Moneybutton|0|[0]|34
+S|51269|D|61670|Gelwex Goldfingers|0|[0]|
+S|51269|D|61671|Supervisor Laggle|0|[0]|
+S|51269|D|61672|Venture Co. Instigator|0|[0]|
+S|51269|D|61673|Venture Co. Thug|0|[0]|
+R|tailoring|51277|ow|Pattern: Gloves of Manathirst|75|45067|51256|4||
+S|51277|D|61791|Kal'mantir the Mad|28|[0]|33.33
+S|51277|D|61780|Blood Elf Ranger|0|[0]|2
+S|51277|D|61781|Blood Elf Darkcaster|0|[0]|2
+S|51277|D|61782|Blood Elf Marauder|28|[0]|2
+S|51277|D|61784|Gilaras Sunfury|0|[0]|2
+R|leatherworking|51285|ow|Pattern: Lynxstep Boots|75|45070|51284|4||
+S|51285|D|61791|Kal'mantir the Mad|28|[0]|33.33
+S|51285|D|61780|Blood Elf Ranger|0|[0]|2
+S|51285|D|61781|Blood Elf Darkcaster|0|[0]|2
+S|51285|D|61782|Blood Elf Marauder|28|[0]|2
+S|51285|D|61784|Gilaras Sunfury|0|[0]|2
+R|enchanting|51286|ow|Formula: Enchant 2H Weapon - Minor Intellect|75|45072||||
+S|51286|D|61791|Kal'mantir the Mad|28|[0]|33.33
+S|51286|D|61780|Blood Elf Ranger|0|[0]|2
+S|51286|D|61781|Blood Elf Darkcaster|0|[0]|2
+S|51286|D|61782|Blood Elf Marauder|28|[0]|2
+S|51286|D|61784|Gilaras Sunfury|0|[0]|2
+R|engineering|51801|ow|Schematic: Hypertech Battery Pack|250|46609|60098|3||
+R|engineering|51809|ow|Schematic: Hypertech Essentials|250|46611||||
+S|51809|D|13601|Tinkerer Gizlock|349|[-1,-1]|8
+R|cooking|53016|ow|Recipe: Gurubashi Gumbo|300|46088|53015|5||
+S|53016|Q|80738|Recipe: Gurubashi Gumbo|3|
+R|enchanting|53017|ow|Formula: Enchant Gloves - Major Strength|300|46087||||
+S|53017|Q|80739|Formula: Enchant Gloves - Major Strength|3|
+R|engineering|53018|ow|Schematic: Enchanted Thorium Shells|300||42202|3||
+S|53018|D|10997|Cannon Master Willey|2017|[-1,-1]|6
+R|cooking|53019|ow|Recipe: Squid Eel Skewer|275||42163|5||
+R|cooking|53038|ow|Recipe: Fried Strider with a Side of Berries|275||68513|5||
+S|53038|Q|41944|The Long Hunt|3|
+R|tailoring|55031|ow|Pattern: Royal Robes of the Alteraci Princess|300||55032|2|Syndicate|Exalted
+R|leatherworking|55042|ow|Pattern: Harness of the High Thanes|300||||Wildhammer Clan|Exalted
+R|enchanting|55044|ow|Formula: Enchant Boots - Major Intellect|300|56555|||Shen'dralar|Friendly
+S|55044|V|14371|Shen'dralar Provisioner|2557|[0,0]
+R|alchemy|55045|ow|Recipe: Elixir of Greater Frost Power|300||55046|5|Shen'dralar|Friendly
+S|55045|V|14371|Shen'dralar Provisioner|2557|[0,0]
+R|alchemy|55047|ow|Recipe: Elixir of Greater Arcane Power|300||55048|5|Shen'dralar|Honored
+S|55047|V|14371|Shen'dralar Provisioner|2557|[0,0]
+R|tailoring|55051|ow|Pattern: Astronomer Raiments|300||55052|3|Shen'dralar|Revered
+S|55051|V|14371|Shen'dralar Provisioner|2557|[0,0]
+R|leatherworking|55053|ow|Pattern: Prismatic Scale Barbute|300||55054|3|Shen'dralar|Revered
+S|55053|V|14371|Shen'dralar Provisioner|2557|[0,0]
+R|tailoring|55055|ow|Pattern: Spellwoven Nobility Drape|300||55056|2|Shen'dralar|Exalted
+S|55055|V|14371|Shen'dralar Provisioner|2557|[0,0]
+R|leatherworking|55069|ow|Pattern: Mantle of Falling Knives|250||55070|3|Ravenholdt|Revered
+R|blacksmithing|55074|ow|Plans: The Frigid Whisper|300||55075|2|Ravenholdt|Exalted
+R|jewelcrafting|55076|ow|Design: Carnelia's Sunset|0||55077|2|Ravenholdt|Exalted
+R|jewelcrafting|56021|ow|Plans: Small Pearl Ring|0|41246|55169|4||
+S|56021|X|World drop (319 creatures)
+R|jewelcrafting|56022|ow|Plans: Bulky Copper Ring|25|41248|81093|4||
+S|56022|X|World drop (314 creatures)
+R|jewelcrafting|56024|ow|Plans: Blue Starfire|265|41250|55258|4||
+S|56024|V|61914|Gonzo Snaphands|440|[0,0]
+S|56024|V|62862|Gallitrea|618|[1,1]
+R|jewelcrafting|56025|ow|Plans: Emerald Monarch's Glow|320|41252|55265|4||
+S|56025|X|World drop (302 creatures)
+R|jewelcrafting|56026|ow|Plans: Sapphire Luminescence|320|41254|55259|3||
+S|56026|X|World drop (37 creatures)
+R|jewelcrafting|56027|ow|Plans: Arcanum Baton|320|41258|55272|4||
+S|56027|X|World drop (302 creatures)
+R|jewelcrafting|56028|ow|Plans: Sunburst Tiara|250|41260|55266|4||
+S|56028|X|World drop (309 creatures)
+R|jewelcrafting|56029|ow|Plans: Ocean's Gaze|190|41262|56023|4||
+S|56029|X|World drop (308 creatures)
+R|jewelcrafting|56030|ow|Plans: Starry Thorium Band|260|41264|55260|4||
+R|engineering|58401|ow|Schematic: Giga-Charged Arcane Reflector|290|52750|58305|3||
+S|58401|X|World drop (27 creatures)
+R|leatherworking|60776|ow|Pattern: Flamewrath Leggings|300|57013|65025|2||
+R|leatherworking|60777|ow|Pattern: Earthguard Tunic|300|57011|65024|2||
+R|leatherworking|60778|ow|Pattern: Windwalker Boots|300|57017|65027|2||
+R|leatherworking|60779|ow|Pattern: Depthstalker Helm|300|57015||||
+R|leatherworking|60780|ow|Pattern: Breastplate of the Earth|265|57007|65022|3||
+S|60780|D|12237|Meshlok the Harvester|349|[-1,-1]|10
+S|60780|D|12225|Celebras the Cursed|349|[-1,-1]|2.5
+S|60780|D|12258|Razorlash|349|[-1,-1]|2.5
+S|60780|D|11793|Celebrian Dryad|349|[-1,-1]|0.5
+S|60780|D|11794|Sister of Celebrian|349|[-1,-1]|0.5
+R|leatherworking|60781|ow|Pattern: Boots of the Wind|255|57009|65023|3||
+S|60781|D|9397|Living Storm|440|[-1,-1]|5
+S|60781|D|8667|Gusting Vortex|440|[-1,-1]|3
+S|60781|D|5300|Frayfeather Hippogryph|357|[-1,-1]|0.5
+S|60781|D|5304|Frayfeather Stagwing|357|[-1,-1]|0.5
+S|60781|D|5305|Frayfeather Skystormer|357|[-1,-1]|0.5
+R|cooking|60979|ow|Recipe: Danonzo's Tel'Abim Surprise|300|57048|60976|5||
+S|60979|Q|40752|Danonzo's Tel'Abim Surprise|3|Tanaris
+R|cooking|60980|ow|Recipe: Danonzo's Tel'Abim Delight|300|57050|60977|5||
+S|60980|Q|40753|Danonzo's Tel'Abim Delight|3|Tanaris
+R|cooking|60981|ow|Recipe: Danonzo's Tel'Abim Medley|300|57052|60978|5||
+S|60981|Q|40754|Danonzo's Tel'Abim Medley|3|Tanaris
+R|alchemy|61177|ow|Recipe: Potion of Quickness|300|57110|61181|5||
+S|61177|X|World drop (29 creatures)
+R|blacksmithing|61178|ow|Plans: Thorium Spurs|300|57112|61182|4||
+S|61178|X|World drop (29 creatures)
+R|leatherworking|61179|ow|Pattern: Enchanted Armor Kit|300|57114|61183|3||
+S|61179|Q|40875|Pattern: Enchanted Armor Kit|3|Winterspring
+R|enchanting|61180|ow|Formula: Enchant Cloak - Greater Arcane Resistance|300|57116||||
+S|61180|X|World drop (29 creatures)
+R|blacksmithing|61189|ow|Plans: Dawnstone Hammer|300|45486|61185|2||
+S|61189|D|61225|Moroes|532|[1,1]|2.2
+S|61189|D|61226|Moroes|532|[1,1]|2.2
+S|61189|D|61221|Brood Queen Araxxna|532|[-1,-1]|0.9
+S|61189|D|61222|Lord Blackwald II|532|[-1,-1]|0.9
+S|61189|D|61223|Clawlord Howlfang|532|[-1,-1]|0.9
+R|tailoring|61190|ow|Pattern: Gloves of Unwinding Mystery|300|45484|61186|2||
+S|61190|D|61225|Moroes|532|[1,1]|2.2
+S|61190|D|61226|Moroes|532|[1,1]|2.2
+S|61190|D|61221|Brood Queen Araxxna|532|[-1,-1]|0.9
+S|61190|D|61222|Lord Blackwald II|532|[-1,-1]|0.9
+S|61190|D|61223|Clawlord Howlfang|532|[-1,-1]|0.9
+R|engineering|61191|ow|Schematic: Intricate Gyroscope Goggles|300|45480|61187|2||
+S|61191|D|61225|Moroes|532|[1,1]|2.2
+S|61191|D|61226|Moroes|532|[1,1]|2.2
+S|61191|D|61221|Brood Queen Araxxna|532|[-1,-1]|0.9
+S|61191|D|61222|Lord Blackwald II|532|[-1,-1]|0.9
+S|61191|D|61223|Clawlord Howlfang|532|[-1,-1]|0.9
+R|leatherworking|61192|ow|Pattern: Inscribed Runic Bracers|300|45482|61188|2||
+S|61192|D|61225|Moroes|532|[1,1]|2.2
+S|61192|D|61226|Moroes|532|[1,1]|2.2
+S|61192|D|61221|Brood Queen Araxxna|532|[-1,-1]|0.9
+S|61192|D|61222|Lord Blackwald II|532|[-1,-1]|0.9
+S|61192|D|61223|Clawlord Howlfang|532|[-1,-1]|0.9
+R|enchanting|61217|ow|Formula: Enchant Chest - Mighty Mana|300|57118||||
+S|61217|D|60748|Solnius|807|[1,1]|4
+R|alchemy|61218|ow|Recipe: Elixir of Greater Nature Power|300|45990|50237|5||
+S|61218|D|60748|Solnius|807|[1,1]|4
+R|enchanting|61219|ow|Formula: Enchant Boots - Superior Stamina|300|57126||||
+S|61219|D|61225|Moroes|532|[1,1]|2.2
+S|61219|D|61226|Moroes|532|[1,1]|2.2
+S|61219|D|61221|Brood Queen Araxxna|532|[-1,-1]|0.9
+S|61219|D|61222|Lord Blackwald II|532|[-1,-1]|0.9
+S|61219|D|61223|Clawlord Howlfang|532|[-1,-1]|0.9
+R|enchanting|61220|ow|Formula: Enchant Boots - Greater Spirit|300|57143||||
+S|61220|Q|40883|Enchant Boots: Greater Spirit|3|Winterspring
+R|enchanting|61221|ow|Formula: Enchant Bracer - Greater Deflection|300|57145||||
+S|61221|Q|40884|Enchant Bracer: Greater Deflection|3|Winterspring
+R|alchemy|61222|ow|Recipe: Dreamshard Elixir|300|57130|61224|5||
+S|61222|Q|40873|The Recipe of Dreamshard Elixir|3|Winterspring
+R|alchemy|61223|ow|Recipe: Lucidity Potion|300|57128|61225|5||
+S|61223|Q|40874|The Recipe of Lucidity Potion|3|Winterspring
+R|tailoring|61227|ow|Book: Craft Dreamthread|300|45452|61230|4||
+S|61227|Q|40900|Crafting Dreamthread|3|Winterspring
+R|leatherworking|61228|ow|Book: Craft Dreamhide|300|45454|61229|4||
+S|61228|Q|40895|Crafting Dreamhide|3|Winterspring
+R|cooking|61676|ow|Recipe: Gilneas Hot Stew|200|45630|84041|5||
+S|61676|V|61574|'Stickypaws'|0|[1,1]
+R|enchanting|61733|ow|Formula: Eternal Dreamstone Shard|300|57519||||
+S|61733|D|60748|Solnius|807|[1,1]|1.5
+R|enchanting|61738|ow|Formula: Enchant Bracer - Vampirism|185|57147||||
+S|61738|V|61574|'Stickypaws'|0|[1,1]
+S|61738|D|61418|Genn Greymane|815|[-1,-1]|5.7
+R|enchanting|61739|ow|Formula: Enchant Boots - Vampirism|300|57149||||
+S|61739|D|61221|Brood Queen Araxxna|532|[-1,-1]|1.3
+S|61739|D|61222|Lord Blackwald II|532|[-1,-1]|1.3
+S|61739|D|61223|Clawlord Howlfang|532|[-1,-1]|1.3
+S|61739|D|61224|Grizikil|532|[-1,-1]|1.3
+S|61739|D|61225|Moroes|532|[1,1]|1.3
+R|blacksmithing|61786|ow|Plans: Copper Belt Buckle|25|57162|61779|4||
+S|61786|V|61622|Tanovan Darkwell|1497|[-1,1]
+S|61786|V|61621|Gordon Hardfoot|1519|[1,-1]
+R|blacksmithing|61787|ow|Plans: Bronze Belt Buckle|90|57165|61780|4||
+S|61787|V|61622|Tanovan Darkwell|1497|[-1,1]
+S|61787|V|61621|Gordon Hardfoot|1519|[1,-1]
+R|blacksmithing|61788|ow|Plans: Iron Belt Buckle|140|57168|61781|4||
+S|61788|V|61622|Tanovan Darkwell|1497|[-1,1]
+S|61788|V|61621|Gordon Hardfoot|1519|[1,-1]
+R|blacksmithing|61789|ow|Plans: Mithril Belt Buckle|190|57171|61782|4||
+S|61789|V|61622|Tanovan Darkwell|1497|[-1,1]
+S|61789|V|61621|Gordon Hardfoot|1519|[1,-1]
+R|blacksmithing|61790|ow|Plans: Thorium Belt Buckle|240|57174|61783|4||
+S|61790|V|14624|Master Smith Burninate|51|[0,0]
+S|61790|V|5411|Krinkle Goodsteel|440|[0,0]
+S|61790|X|World drop (34 creatures)
+R|blacksmithing|61791|ow|Plans: Arcanite Belt Buckle|275|57177|61784|4||
+S|61791|X|World drop (26 creatures)
+R|blacksmithing|61792|ow|Plans: Dreamsteel Belt Buckle|300|57180|61785|3||
+S|61792|Q|41111|Plans: Dreamsteel Belt Buckle|3|Winterspring
+R|blacksmithing|61799|ow|Plans: Ornate Bloodstone Dagger|300|47236|65004|2||
+S|61799|Q|41119|Plans: Ornate Bloodstone Dagger|3|
+R|blacksmithing|61803|ow|Plans: Bloody Belt Buckle|300|57195|61810|3||
+S|61803|Q|41129|Plans: Bloody Belt Buckle|3|
+R|blacksmithing|61805|ow|Plans: Towerforge Demolisher|300|57194|60010|2||
+S|61805|D|61319|Master Blacksmith Rolfen|532|[-1,-1]|1.44
+R|blacksmithing|61806|ow|Plans: Towerforge Pauldrons|300|57192|60009|2||
+S|61806|D|61319|Master Blacksmith Rolfen|532|[-1,-1]|1.44
+R|blacksmithing|61807|ow|Plans: Towerforge Breastplate|300|57190|60008|2||
+S|61807|D|61319|Master Blacksmith Rolfen|532|[-1,-1]|1.44
+R|blacksmithing|61808|ow|Plans: Towerforge Crown|300|57188|60007|2||
+S|61808|D|61319|Master Blacksmith Rolfen|532|[-1,-1]|1.44
+R|blacksmithing|61809|ow|Plans: Towerforge Crown|300|57188|60007|2||
+R|leatherworking|62000|ow|Pattern: Blue Dragonscale Boots|290|54000|65015|3||
+S|62000|X|World drop (21 creatures)
+R|blacksmithing|62001|ow|Plans: Fury of the Timbermaw|290|54002|61648|3|Timbermaw Hold|Honored
+S|62001|V|11557|Meilosh|361|[-1,-1]
+R|blacksmithing|62002|ow|Plans: Pauldrons of the Timbermaw|300|54004|61649|3|Timbermaw Hold|Revered
+S|62002|V|11557|Meilosh|361|[-1,-1]
+R|leatherworking|62003|ow|Pattern: Corehound Gloves|300|54006|65038|2|Thorium Brotherhood|Exalted
+S|62003|V|12944|Lokhtos Darkbargainer|1584|[0,0]
+R|blacksmithing|62004|ow|Plans: Fiery Chain Breastplate|300|54008|65039|2|Thorium Brotherhood|Exalted
+S|62004|V|12944|Lokhtos Darkbargainer|1584|[0,0]
+R|tailoring|62005|ow|Pattern: Flarecore Boots|300|54010|65035|2|Thorium Brotherhood|Exalted
+S|62005|V|12944|Lokhtos Darkbargainer|1584|[0,0]
+R|leatherworking|62006|ow|Pattern: Chromatic Leggings|300|54012|65036|2|Thorium Brotherhood|Exalted
+S|62006|V|12944|Lokhtos Darkbargainer|1584|[0,0]
+R|leatherworking|62007|ow|Pattern: Molten Leggings|300|54014|65037|2|Thorium Brotherhood|Exalted
+S|62007|V|12944|Lokhtos Darkbargainer|1584|[0,0]
+R|enchanting|70000|ow|Formula: Enchant Gloves - Nature Power|300|46605||||
+S|70000|D|60748|Solnius|807|[1,1]|4
+R|enchanting|70001|ow|Formula: Enchant Gloves - Arcane Power|300|46604||||
+S|70001|D|61225|Moroes|532|[1,1]|2.2
+S|70001|D|61226|Moroes|532|[1,1]|2.2
+S|70001|D|61221|Brood Queen Araxxna|532|[-1,-1]|0.9
+S|70001|D|61222|Lord Blackwald II|532|[-1,-1]|0.9
+S|70001|D|61223|Clawlord Howlfang|532|[-1,-1]|0.9
+R|enchanting|70002|ow|Formula: Enchant Gloves - Holy Power|300|46606||||
+R|jewelcrafting|70101|ow|Plans: Ruby Ring of Ruin|330|41266|56032|2||
+S|70101|X|World drop (18 creatures)
+R|jewelcrafting|70102|ow|Plans: Encrusted Gemstone Ring|330|41268|56031|2||
+S|70102|D|61225|Moroes|532|[1,1]|2.2
+S|70102|D|61226|Moroes|532|[1,1]|2.2
+S|70102|D|61221|Brood Queen Araxxna|532|[-1,-1]|0.9
+S|70102|D|61222|Lord Blackwald II|532|[-1,-1]|0.9
+S|70102|D|61223|Clawlord Howlfang|532|[-1,-1]|0.9
+R|jewelcrafting|70103|ow|Plans: Prism Amulet|265|41272|55199|4||
+S|70103|X|World drop (306 creatures)
+R|jewelcrafting|70104|ow|Plans: Gemmed Citrine Pendant|160|41274|55202|3||
+S|70104|X|World drop (308 creatures)
+R|jewelcrafting|70105|ow|Plans: Starforge Amulet|220|41276|55197|4||
+S|70105|X|World drop (304 creatures)
+R|jewelcrafting|70106|ow|Plans: Voidheart Charm|280|41278|55200|4||
+S|70106|X|World drop (302 creatures)
+R|jewelcrafting|70107|ow|Plans: Runebound Amulet|230|41280|55204|3||
+S|70107|X|World drop (309 creatures)
+R|jewelcrafting|70108|ow|Plans: Shimmering Moonstone Tablet|195|41284|56034|4||
+S|70108|X|World drop (308 creatures)
+R|jewelcrafting|70109|ow|Plans: Stormcloud Sigil|310|41286|56035|4||
+S|70109|X|World drop (302 creatures)
+R|jewelcrafting|70110|ow|Plans: Gleaming Chain|100|41320|56037|4||
+S|70110|X|World drop (317 creatures)
+R|jewelcrafting|70111|ow|Plans: Talisman of Stone|125|41322|56038|4||
+S|70111|X|World drop (317 creatures)
+R|jewelcrafting|70112|ow|Plans: Medallion of Flame|130|41324|56039|4||
+S|70112|X|World drop (309 creatures)
+R|jewelcrafting|70113|ow|Plans: Gleaming Silver Necklace|155|41326|56040|4||
+S|70113|X|World drop (309 creatures)
+R|jewelcrafting|70114|ow|Plans: Ring of The Turtle|185|41328|56041|4||
+S|70114|X|World drop (308 creatures)
+R|jewelcrafting|70115|ow|Plans: Goldcrest Amulet|180|41332|56043|4||
+S|70115|V|61574|'Stickypaws'|0|[1,1]
+R|jewelcrafting|70116|ow|Plans: Gem Encrusted Choker|180|41330|56042|4||
+S|70116|X|World drop (308 creatures)
+R|jewelcrafting|70117|ow|Plans: Shining Copper Cuffs|0|41334|56044|4||
+S|70117|X|World drop (317 creatures)
+R|jewelcrafting|70118|ow|Plans: Dawnbright Cuffs|135|41336|56045|4||
+S|70118|X|World drop (309 creatures)
+R|jewelcrafting|70119|ow|Plans: Circlet of Dampening|155|41338|56046|4||
+S|70119|X|World drop (309 creatures)
+R|jewelcrafting|70120|ow|[DEPRECATED] Plans: Eternal Jade Crown|185|41340||||
+R|jewelcrafting|70125|ow|Plans: Crystalfire Armlets|275|41347|55180|4||
+S|70125|X|World drop (306 creatures)
+R|jewelcrafting|70126|ow|Plans: Cinderfall Band|280|41349|55228|4||
+S|70126|X|World drop (306 creatures)
+R|jewelcrafting|70127|ow|Plans: Opaline Illuminator|235|41351|55242|3||
+S|70127|X|World drop (308 creatures)
+R|jewelcrafting|70128|ow|Plans: Skyfire Jewel|280|41353|55255|4||
+S|70128|V|11189|Qia|618|[0,0]
+R|jewelcrafting|70129|ow|Plans: Gemstone Compendium|275|41355|55244|3||
+S|70129|X|World drop (27 creatures)
+R|jewelcrafting|70132|ow|Plans: Dazzling Aquamarine Loop|210|41540|56048|4||
+S|70132|Q|41284|You Should Put A Ring On It|3|Ironforge
+S|70132|Q|41288|Stones Of Radiance|3|Badlands
+R|jewelcrafting|70133|ow|Plans: Crystal Earring|205|41588|56047|4||
+S|70133|Q|41283|Trinkets Make The Heart Grow Fonder|3|Ironforge
+S|70133|Q|41287|Sand In The Cracks|3|Badlands
+R|jewelcrafting|70134|ow|Plans: Alluring Citrine Choker|220|41545|56049|4||
+S|70134|Q|41285|Left In Bad Faith|3|Ironforge
+S|70134|Q|41289|Foreign Knowledge|3|Badlands
+R|jewelcrafting|70135|ow|Plans: Elaborate Golden Bracelets|220|41547|56050|4||
+S|70135|Q|41293|Elaborate Golden Bracelets|3|Desolace
+R|jewelcrafting|70136|ow|Plans: Heart of the Sea|220|41549|56051|4||
+S|70136|Q|41294|Observations|3|Desolace
+R|jewelcrafting|70137|ow|Plans: Staff of Gallitrea|225|41551|56052|4||
+S|70137|Q|41295|Dearest Gallitrea|3|Desolace
+R|jewelcrafting|70138|ow|Plans: Golden Jade Ring|235|41553|56053|3||
+S|70138|X|World drop (312 creatures)
+R|jewelcrafting|70139|ow|Plans: Delicate Mithril Amulet|200|41555|56054|4||
+S|70139|Q|41302|Negotiated Truce|3|Ironforge
+S|70139|Q|41305|Gold Is The Goblin's Heart|3|796
+R|jewelcrafting|70140|ow|Plans: Draenethyst Baton|225|41557|56055|4||
+S|70140|Q|41299|Gratitude Of Kum'isha|3|Blasted Lands
+R|jewelcrafting|70141|ow|Plans: Ebon Ring|95|41559|55316|4||
+S|70141|X|World drop (319 creatures)
+R|jewelcrafting|70142|ow|Plans: The King's Conviction|105|41561|55317|4||
+S|70142|X|World drop (317 creatures)
+R|jewelcrafting|70143|ow|Plans: Shadowfall Jewel|120|41563|55318|4||
+S|70143|X|World drop (317 creatures)
+R|jewelcrafting|70144|ow|Plans: Ocean's Wrath|120|41565|55319|4||
+S|70144|V|3499|Ranik|17|[0,0]
+R|jewelcrafting|70145|ow|Plans: Dazzling Moonstone Band|150|41567|55320|4||
+S|70145|X|World drop (309 creatures)
+R|jewelcrafting|70146|ow|Plans: Harpy Talon Ring|165|41569|55321|4||
+S|70146|X|World drop (309 creatures)
+R|jewelcrafting|70147|ow|Plans: Centaur Hoof Circlet|180|41571|55322|4||
+S|70147|X|World drop (308 creatures)
+R|jewelcrafting|70148|ow|Plans: Ogre Bone Band|200|41573|55323|3||
+S|70148|X|World drop (308 creatures)
+R|jewelcrafting|70149|ow|Plans: Spectre Shade Ring|200|41590||||
+S|70149|X|World drop (308 creatures)
+R|jewelcrafting|70150|ow|Plans: Malachite Ring|60|41576|81030|4||
+R|jewelcrafting|70151|ow|Plans: Marine's Demise|210|41578|55325|4||
+S|70151|X|World drop (308 creatures)
+R|jewelcrafting|70152|ow|Plans: Serpent's Coil Staff|120|41580|55326|4||
+S|70152|X|World drop (317 creatures)
+R|jewelcrafting|70153|ow|Plans: Farraki Ceremony Totem|160|41582|55327|3||
+S|70153|X|World drop (304 creatures)
+R|jewelcrafting|70154|ow|Plans: Sphinx's Wisdom Staff|190|41584|55328|4||
+S|70154|X|World drop (308 creatures)
+R|jewelcrafting|70155|ow|Plans: Gloomweed Bindings|160|41586|55329|4||
+S|70155|X|World drop (317 creatures)
+R|jewelcrafting|70156|ow|Plans: Sharpened Citrine Gemstone|205|41600|56002|4||
+S|70156|Q|41279|The Lifeblood|3|Loch Modan
+R|jewelcrafting|70157|ow|Plans: Radiant Ember Gemstone|205|41602|56004|4||
+S|70157|Q|41279|The Lifeblood|3|Loch Modan
+R|jewelcrafting|70158|ow|Plans: Glowing Ruby Gemstone|205|41604|56006|4||
+S|70158|Q|41279|The Lifeblood|3|Loch Modan
+R|jewelcrafting|70159|ow|Plans: Shimmering Aqua Gemstone|155|41606|56003|4||
+S|70159|X|World drop (309 creatures)
+R|jewelcrafting|70160|ow|Plans: Azerothian Ruby Gemstone|280|41608|56015|3||
+S|70160|Q|41333|Advanced Gemology I|3|Loch Modan
+R|jewelcrafting|70161|ow|Plans: Gloomy Diamond Gemstone|265|41610|56012|4||
+S|70161|X|World drop (306 creatures)
+R|jewelcrafting|70162|ow|Plans: Flawless Black Gemstone|290|41612|56013|3||
+S|70162|X|World drop (28 creatures)
+R|jewelcrafting|70163|ow|Plans: Arcane Emerald Gemstone|300|41614|56016|3||
+S|70163|D|10425|Crimson Battle Mage|2017|[-1,-1]|3
+S|70163|D|9239|Smolderthorn Mystic|229|[-1,-1]|2.5
+S|70163|D|10422|Crimson Sorcerer|2017|[-1,-1]|2
+S|70163|D|10469|Scholomance Adept|289|[-1,-1]|1.5
+S|70163|D|10398|Thuzadin Shadowcaster|2017|[-1,-1]|1
+R|jewelcrafting|70164|ow|Plans: Tempered Azerothian Gemstone|280|41616|56017|4||
+S|70164|X|World drop (306 creatures)
+R|jewelcrafting|70166|ow|Plans: Stunning Imperial Gemstone|310|41618|56014|3||
+S|70166|Q|41334|Advanced Gemology II|3|Loch Modan
+R|jewelcrafting|70167|ow|Plans: Enchanted Emerald Gemstone|255|41620|56018|4||
+S|70167|X|World drop (309 creatures)
+R|jewelcrafting|70168|ow|Plans: Pure Shining Moonstone|180|41622|56058|4||
+S|70168|V|3537|Zixil|36|[0,0]
+R|jewelcrafting|70169|ow|Plans: Beautiful Diamond Gemstone|275|41624|56010|4||
+S|70169|X|World drop (306 creatures)
+R|jewelcrafting|70170|ow|Plans: Shimmering Diamond Band|320|41695|56059|2||
+S|70170|X|World drop (28 creatures)
+R|jewelcrafting|70171|ow|Plans: Crown of Molten Ascension|320|41697|56060|2||
+S|70171|D|11502|Ragnaros|0|[-1,-1]|100
+R|jewelcrafting|70172|ow|Plans: Embergem Cuffs|320|41699|56061|2||
+S|70172|X|World drop (317 creatures)
+R|jewelcrafting|70173|ow|Plans: Blackwing Signet of Command|320|41701|56062|2||
+S|70173|D|12457|Blackwing Spellbinder|2677|[-1,-1]|2
+S|70173|D|12459|Blackwing Warlock|2677|[-1,-1]|2
+S|70173|D|12461|Death Talon Overseer|2677|[-1,-1]|2
+R|jewelcrafting|70174|ow|Plans: Talisman of Hinderance|320|41703|56063|2||
+S|70174|X|World drop (18 creatures)
+R|jewelcrafting|70175|ow|Plans: Mastercrafted Diamond Crown|320|41705|56064|2||
+S|70175|Q|41318|Mastercrafted Diamond Crown|3|Tanaris
+R|jewelcrafting|70176|ow|Plans: Opalstone Circle|320|41707|56065|3||
+R|jewelcrafting|70177|ow|Plans: Deep Sapphire Circlet|320|41709|56066|3||
+S|70177|Q|41337|Advanced Goldsmithing II|3|Desolace
+R|jewelcrafting|70178|ow|Plans: Dark Iron Signet Ring|320|41711|56067|3||
+S|70178|V|12944|Lokhtos Darkbargainer|1584|[0,0]
+R|jewelcrafting|70179|ow|Plans: Opal Guided Bangles|280|41713|56068|3||
+S|70179|X|World drop (308 creatures)
+R|jewelcrafting|70180|ow|Plans: Crown of Elegance|260|41715|56069|3||
+S|70180|X|World drop (23 creatures)
+R|jewelcrafting|70181|ow|Plans: Ornate Mithril Bracelets|225|41717|56070|3||
+S|70181|Q|41309|Brittle Gnome More|3|Tanaris
+R|jewelcrafting|70182|ow|Plans: Regal Twilight Staff|260|41719|56071|3||
+S|70182|Q|41315|Unveiling The Mystery|3|Winterspring
+R|jewelcrafting|70183|ow|Plans: Pendant of Instability|300|41721|56072|2||
+S|70183|X|World drop (305 creatures)
+R|jewelcrafting|70184|ow|Plans: Ornament of Restraint|245|41723|56073|3||
+S|70184|X|World drop (308 creatures)
+R|jewelcrafting|70185|ow|Plans: Hydrathorn Bracers|125|41725|55330|4||
+S|70185|X|World drop (309 creatures)
+R|jewelcrafting|70186|ow|Plans: Blackrock Ironclamps|160|41727|55331|3||
+S|70186|X|World drop (304 creatures)
+R|jewelcrafting|70187|ow|Plans: Monastery Emberbrace|185|41729|55332|4||
+S|70187|X|World drop (308 creatures)
+R|jewelcrafting|70188|ow|Plans: Shadowmoon Orb|105|41731|55333|4||
+S|70188|X|World drop (317 creatures)
+R|jewelcrafting|70189|ow|Plans: Fangclaw Relic|140|41733|55334|3||
+S|70189|X|World drop (17 creatures)
+R|jewelcrafting|70190|ow|Plans: Netherbane Rod|180|41735|55335|4||
+S|70190|X|World drop (308 creatures)
+R|jewelcrafting|70191|ow|Plans: Marine Root|215|41737|55336|4||
+S|70191|X|World drop (308 creatures)
+R|jewelcrafting|70192|ow|Plans: Mistwood Tiara|135|41739|55337|4||
+S|70192|X|World drop (309 creatures)
+R|jewelcrafting|70193|ow|Plans: Venomspire Diadem|165|41741|55338|3||
+R|jewelcrafting|70194|ow|Plans: Facetted Moonstone Brooch|200|41749|55210|4||
+S|70194|X|World drop (308 creatures)
+R|jewelcrafting|70195|ow|Plans: Obsidian Brooch|190|41751|55211|4||
+S|70195|X|World drop (308 creatures)
+R|jewelcrafting|70196|ow|Plans: Smoldering Brooch|220|41753|55212|4||
+S|70196|X|World drop (308 creatures)
+R|jewelcrafting|70197|ow|Plans: Vitriol Brooch|220|41755|55213|4||
+S|70197|X|World drop (304 creatures)
+R|enchanting|70198|ow|Formula: Enchanted Gemstone Oil|275|41757|55248|5||
+S|70198|V|61926|Yavon Sharplight|14|[0,0]
+S|70198|V|61922|Yath Ruzzblast|1497|[0,0]
+S|70198|V|61915|Panella Evercrest|0|[1,-1]
+S|70198|V|61905|Otto Fencer|1519|[1,-1]
+S|70198|V|61914|Gonzo Snaphands|440|[0,0]
+S|70198|V|62862|Gallitrea|618|[1,1]
+S|70198|V|61909|Dagred Flintbeard|1537|[1,-1]
+S|70198|V|61920|Anara|1637|[-1,1]
+R|jewelcrafting|70199|ow|Plans: Graceful Agate Gemstone|135|41759|56074|4||
+S|70199|X|World drop (309 creatures)
+R|jewelcrafting|70200|ow|Plans: Dreary Opal Gemstone|270|41761|56075|4||
+S|70200|X|World drop (306 creatures)
+R|jewelcrafting|70201|ow|Plans: Resurged Topaz Gemstone|320|41763|56077|3||
+S|70201|X|World drop (308 creatures)
+R|jewelcrafting|70202|ow|Plans: Resilient Arcane Gemstone|320|41767|56076|3||
+S|70202|X|World drop (308 creatures)
+R|jewelcrafting|70203|ow|Plans: Bloodfire Circlet|220|41743|55339|4||
+R|jewelcrafting|70204|ow|Plans: Shadowforged Eye|105|41745|55340|4||
+S|70204|D|80205|Shadowforge Fire Priest|38|[-1,-1]|1
+S|70204|D|80207|Shadowforge Prowler|38|[-1,-1]|1
+R|jewelcrafting|70205|ow|Plans: Totem of Self Preservation|155|41747|55341|3||
+R|jewelcrafting|70206|ow|Plans: Ornate Mithril Crown|230|41785|56089|4||
+S|70206|X|World drop (304 creatures)
+R|jewelcrafting|70207|ow|Plans: Spellweaver Pendant|275|41773|56090|4||
+S|70207|X|World drop (306 creatures)
+R|jewelcrafting|70208|ow|Plans: Ring of Midnight|145|41775|56091|4||
+S|70208|X|World drop (309 creatures)
+R|jewelcrafting|70209|ow|Plans: Gorgeous Mountain Gemstone|330|41820|61818|3||
+S|70209|Q|41362|To Cut A Heart|3|BRD (Dungeon)
+R|jewelcrafting|70210|ow|Plans: Stormcloud Signet|310|41779|56093|3||
+R|jewelcrafting|70211|ow|Plans: Golden Runed Ring|310|41781|56094|2||
+S|70211|Q|41336|An Unseen Obstacle|3|Desolace
+R|jewelcrafting|70212|ow|Plans: Mana Binding Signet|260|41783|56095|2||
+S|70212|X|World drop (311 creatures)
+R|jewelcrafting|70213|ow|Plans: Blazefury Circlet|320|41787|55359|2||
+S|70213|X|World drop (28 creatures)
+R|jewelcrafting|70214|ow|Plans: Ring of Unleashed Potential|320|41789|55360|2||
+S|70214|X|World drop (317 creatures)
+R|jewelcrafting|70215|ow|Plans: Empowered Domination Rod|330|41791|55361|2||
+S|70215|X|World drop (28 creatures)
+R|jewelcrafting|70216|ow|Plans: Orb of Clairvoyance|320|41793|55362|3|Argent Dawn|Honored
+S|70216|V|11536|Quartermaster Miranda Breechlock|139|[0,0]
+S|70216|V|10857|Argent Quartermaster Lightspark|28|[0,0]
+S|70216|V|10856|Argent Quartermaster Hasana|28|[0,0]
+R|jewelcrafting|70217|ow|Plans: Grail of Forgotten Memories|330|41795|55363|2||
+S|70217|X|World drop (305 creatures)
+R|jewelcrafting|70218|ow|Plans: Guardbreaker Charm|320|41797|55364|3||
+S|70218|D|11339|Hakkari Shadow Hunter|309|[-1,-1]|0.08
+S|70218|D|11353|Gurubashi Blood Drinker|309|[-1,-1]|0.08
+S|70218|D|11338|Hakkari Shadowcaster|309|[-1,-1]|0.06
+S|70218|D|11350|Gurubashi Axe Thrower|309|[-1,-1]|0.04
+S|70218|D|11352|Gurubashi Berserker|309|[-1,-1]|0.04
+R|jewelcrafting|70219|ow|Plans: Rudeus' Focusing Cane|330|41799|55365|2||
+S|70219|X|World drop (201 creatures)
+R|jewelcrafting|70220|ow|Plans: Spire of Channeled Power|325|41801|55366|3||
+S|70220|X|World drop (29 creatures)
+R|jewelcrafting|70221|ow|Plans: Bindings of Luminance|320|41803|55367|3||
+S|70221|D|10319|Blackhand Iron Guard|229|[-1,-1]|3
+S|70221|D|9267|Smolderthorn Axe Thrower|229|[-1,-1]|2
+S|70221|D|9736|Quartermaster Zigris|229|[-1,-1]|1.5
+S|70221|D|9260|Firebrand Legionnaire|229|[-1,-1]|1.25
+S|70221|D|9716|Bloodaxe Warmonger|229|[-1,-1]|1.25
+R|jewelcrafting|70222|ow|Plans: Crown of the Illustrious Queen|320|41805|55368|3||
+S|70222|X|World drop (33 creatures)
+R|jewelcrafting|70223|ow|Plans: Mastercrafted Diamond Bangles|325|41807|56096|2||
+S|70223|Q|41319|Mastercrafted Diamond Bangles|3|Tanaris
+R|jewelcrafting|70242|ow|Plans: Kodoheart Necklace|0||42205|3||
+S|70242|D|62779|Pathun Duskhide|820|[-1,-1]|6
+R|leatherworking|70243|ow|Pattern: Grimtotem Bracers|125||42204|3||
+S|70243|D|62782|Chieftain Shalk Blackwind|820|[-1,-1]|6
+R|blacksmithing|70244|ow|Plans: Ceremonial Belt Buckle|125||42203|4||
+S|70244|D|62781|Prophet Stormhoof|820|[-1,-1]|6
+R|engineering|81196|ow|Schematic: Goblin Radio|225|||||
+S|81196|V|80961|Vanessa Clang|14|[0,0]
+R|blacksmithing|83501|ow|Plans: Rune-Etched Greaves|300|47254|60288|3||
+S|83501|D|10812|Grand Crusader Dathrohan|2017|[-1,-1]|16.6
+S|83501|D|10813|Balnazzar|2017|[-1,-1]|16.6
+R|blacksmithing|83502|ow|Plans: Rune-Etched Legplates|300|47255|60289|3||
+S|83502|D|10812|Grand Crusader Dathrohan|2017|[-1,-1]|16.6
+S|83502|D|10813|Balnazzar|2017|[-1,-1]|16.6
+R|blacksmithing|83503|ow|Plans: Rune-Etched Breastplate|300|47256|60290|3||
+S|83503|D|10812|Grand Crusader Dathrohan|2017|[-1,-1]|16.6
+S|83503|D|10813|Balnazzar|2017|[-1,-1]|16.6
+R|blacksmithing|83504|ow|Plans: Rune-Etched Crown|300|47257|60291|3||
+S|83504|D|10812|Grand Crusader Dathrohan|2017|[-1,-1]|16.6
+S|83504|D|10813|Balnazzar|2017|[-1,-1]|16.6
+R|blacksmithing|83505|ow|Plans: Rune-Etched Mantle|300|47258|60292|3||
+S|83505|D|10812|Grand Crusader Dathrohan|2017|[-1,-1]|16.6
+S|83505|D|10813|Balnazzar|2017|[-1,-1]|16.6
+R|blacksmithing|83506|ow|Plans: Rune-Etched Grips|300|47259|60287|3||
+S|83506|D|10812|Grand Crusader Dathrohan|2017|[-1,-1]|16.6
+S|83506|D|10813|Balnazzar|2017|[-1,-1]|16.6
+R|blacksmithing|83507|ow|Plans: Bloodstone Warblade|225|47230|60294|4||
+S|83507|V|62427|Tal'garr|0|[-1,1]
+S|83507|V|2821|Keena|45|[-1,1]
+S|83507|V|2810|Hammon Karwn|45|[1,-1]
+S|83507|V|62408|Gormand Belchbrew|0|[1,-1]
+R|engineering|83510|ow|Schematic: Portable Wormhole Generator: Stormwind|125|47260||||
+S|83510|V|5519|Billibub Cogspinner|1519|[1,-1]
+R|engineering|83511|ow|Schematic: Portable Wormhole Generator: Orgrimmar|125|47261||||
+S|83511|V|3413|Sovik|1637|[-1,1]
+R|blacksmithing|83518|ow|Plans: Imperial Plate Gauntlets|270|47239|65007|4||
+S|83518|Q|55300|Imperial Plate Gauntlets|3|Tanaris
+R|blacksmithing|83519|ow|Plans: Lordaeron Breastplate|100|46607|46600|4||
+S|83519|Q|70040|Reinforcing The Sepulcher|2|Undercity
+R|leatherworking|83533|ow|Pattern: Red Dragonscale Boots|295|47234|65002|3||
+R|leatherworking|83534|ow|Pattern: Dragonscale Leggings|245|47247|65019|3||
+S|83534|D|4328|Firemane Scalebane|15|[-1,-1]|3
+S|83534|D|4329|Firemane Scout|15|[-1,-1]|3
+S|83534|D|4331|Firemane Ash Tail|15|[-1,-1]|3
+S|83534|D|4334|Firemane Flamecaller|15|[-1,-1]|3
+R|leatherworking|83535|ow|Plans: Bloodletter Razor|250|47237|65005|3||
+R|leatherworking|83536|ow|Pattern: Shadowskin Boots|205|47241|65009|3||
+S|83536|D|595|Bloodscalp Hunter|0|[-1,-1]|5
+S|83536|D|669|Skullsplitter Hunter|33|[-1,-1]|5
+S|83536|D|699|Bloodscalp Beastmaster|33|[-1,-1]|5
+S|83536|D|784|Skullsplitter Beastmaster|33|[-1,-1]|5
+R|leatherworking|83537|ow|Pattern: Red Dragonscale Shoulders|300|47233|65001|3||
+S|83537|D|1045|Red Dragonspawn|11|[-1,-1]|5
+S|83537|D|1046|Red Wyrmkin|11|[-1,-1]|5
+S|83537|D|1047|Red Scalebane|11|[-1,-1]|5
+S|83537|D|61890|Ember Talon Whelp|11|[-1,-1]|5
+S|83537|D|61891|Ember Talon Drake|11|[-1,-1]|5
+R|leatherworking|83538|ow|Pattern: Red Dragonscale Leggings|295|47232|65000|3||
+S|83538|V|2679|Wenna Silkbeard|11|[1,-1]
+S|83538|V|4883|Krak|15|[-1,1]
+R|leatherworking|83544|ow|Pattern: Stormscale Leggings|300|47238|65006|2||
+S|83544|D|6109|Azuregos|16|[0,0]|40
+S|83544|D|63107|Azuregos|16|[0,0]|40
+R|tailoring|83545|ow|Pattern: Robe of Sacrifice|300|47235|65003|2||
+S|83545|D|12397|Lord Kazzak|4|[-1,-1]|40
+S|83545|D|63108|Lord Kazzak|4|[-1,-1]|40
+R|leatherworking|83546|ow|Pattern: Verdant Dreamer's Breastplate|300|47330|65021|2|Cenarion Circle|Exalted
+S|83546|V|15293|Aendel Windspear|1377|[0,0]
+R|blacksmithing|83547|ow|Plans: Pauldron of Deflection|300|47246|65014|2||
+S|83547|D|16184|Nerubian Overseer|28|[-1,-1]|5
+S|83547|D|12397|Lord Kazzak|4|[-1,-1]|0.14
+S|83547|D|63108|Lord Kazzak|4|[-1,-1]|0.14
+S|83547|D|11339|Hakkari Shadow Hunter|309|[-1,-1]|0.02
+S|83547|D|11352|Gurubashi Berserker|309|[-1,-1]|0.02
+R|blacksmithing|83548|ow|Plans: Dream's Herald|300|47240|65008|2|Cenarion Circle|Exalted
+S|83548|V|15293|Aendel Windspear|1377|[0,0]
+R|blacksmithing|83549|ow|Plans: Frostbound Slasher|180|47245|65013|3||
+S|83549|X|World drop (13 creatures)
+R|leatherworking|83558|ow|Pattern: Flamewrath Leggings|300|57013|65025|2||
+R|leatherworking|83559|ow|Pattern: Earthguard Tunic|300|57011|65024|2||
+R|leatherworking|83560|ow|Pattern: Windwalker Boots|300|57017|65027|2||
+R|leatherworking|83561|ow|Pattern: Depthstalker Helm|300|57015||||
+R|blacksmithing|84010|ow|Plans: Hateforge Belt|275|47334|60576|3||
+S|84010|X|World drop (13 creatures)
+R|blacksmithing|84011|ow|Plans: Hateforge Boots|275|47336|60578|3||
+S|84011|X|World drop (13 creatures)
+R|blacksmithing|84012|ow|Plans: Hateforge Grips|285|47335|60577|2||
+S|84012|X|World drop (13 creatures)
+R|blacksmithing|84013|ow|Plans: Hateforge Cuirass|290|47332|60574|3||
+S|84013|X|World drop (13 creatures)
+R|blacksmithing|84014|ow|Plans: Hateforge Helmet|290|47331|60573|3||
+S|84014|X|World drop (13 creatures)
+R|blacksmithing|84015|ow|Plans: Hateforge Leggings|290|47333|60575|3||
+S|84015|X|World drop (13 creatures)
+R|leatherworking|91763|ow|Pattern: Boots of the Wind|255|57009|65023|3||
+R|alchemy|91796|ow|Recipe: Transmute Elemental Earth|300|57554|||Timbermaw Hold|Friendly
+S|91796|V|11557|Meilosh|361|[-1,-1]
+R|alchemy|91797|ow|Recipe: Transmute Elemental Water|300|57556|||Hydraxian Waterlords|Honored
+S|91797|V|80962|Hydrolon|16|[0,0]
+R|cooking|92045|ow|Recipe: Empowering Herbal Salad|300|49550|83309|5||
+S|92045|Q|41374|No Honor Among Chefs|3|Lower Karazhan Halls

@@ -287,3 +287,649 @@
 65035|Flarecore Boots|4|70|4
 6243|Green Woolen Robe|2|18|4
 7027|Boots of Darkness|2|28|4
+2568|Brown Linen Vest|1|8|4
+2569|Linen Boots|1|13|4
+2572|Red Linen Robe|2|10|4
+2575|Red Linen Shirt|1|10|4
+2576|White Linen Shirt|1|7|4
+2577|Blue Linen Shirt|1|10|4
+2578|Barbaric Linen Vest|2|14|4
+2579|Green Linen Shirt|1|14|4
+2580|Reinforced Linen Cape|1|12|4
+2582|Green Woolen Vest|1|17|4
+2583|Woolen Boots|2|19|4
+2584|Woolen Cape|1|16|4
+2585|Gray Woolen Robe|2|21|4
+2587|Gray Woolen Shirt|1|20|4
+2997|Bolt of Woolen Cloth|1|25|7
+4238|Linen Bag|1|5|1
+4240|Woolen Bag|1|15|1
+4241|Green Woolen Bag|1|15|1
+4245|Small Silk Pack|1|25|1
+4305|Bolt of Silk Cloth|1|35|7
+4307|Heavy Linen Gloves|1|10|4
+4308|Green Linen Bracers|1|12|4
+4309|Handstitched Linen Britches|2|14|4
+4310|Heavy Woolen Gloves|2|17|4
+4311|Heavy Woolen Cloak|2|21|4
+4312|Soft-soled Linen Boots|2|16|4
+4313|Red Woolen Boots|2|20|4
+4314|Double-stitched Woolen Shoulders|1|22|4
+4315|Reinforced Woolen Shoulders|1|24|4
+4316|Heavy Woolen Pants|2|22|4
+4317|Phoenix Pants|2|25|4
+4318|Gloves of Meditation|2|26|4
+4320|Spidersilk Boots|3|25|4
+4321|Spider Silk Slippers|2|28|4
+4323|Shadow Hood|2|34|4
+4324|Azure Silk Vest|2|30|4
+4325|Boots of the Enchanter|2|35|4
+4326|Long Silken Cloak|2|37|4
+4328|Spider Belt|2|36|4
+4329|Star Belt|2|40|4
+4330|Stylish Red Shirt|1|22|4
+4331|Phoenix Gloves|2|25|4
+4334|Formal White Shirt|1|34|4
+4335|Rich Purple Silk Shirt|1|37|4
+4339|Bolt of Mageweave|1|45|7
+4343|Brown Linen Pants|1|10|4
+5542|Pearl-clasped Cloak|2|19|4
+5764|Green Silk Pack|1|25|1
+5765|Black Silk Pack|1|25|1
+5766|Lesser Wizard's Robe|2|27|4
+5770|Robes of Arcana|2|30|4
+6238|Brown Linen Robe|2|10|4
+6239|Red Linen Vest|2|12|4
+6241|White Linen Robe|2|10|4
+6384|Stylish Blue Shirt|1|25|4
+6385|Stylish Green Shirt|1|25|4
+6786|Simple Dress|1|10|4
+6787|White Woolen Dress|1|22|4
+6795|White Swashbuckler's Shirt|1|32|4
+6796|Red Swashbuckler's Shirt|1|35|4
+7026|Linen Belt|1|9|4
+7046|Azure Silk Pants|2|28|4
+7047|Hands of Darkness|2|29|4
+7048|Azure Silk Hood|1|29|4
+7049|Truefaith Gloves|2|30|4
+7050|Silk Headband|1|32|4
+7051|Earthen Vest|2|34|4
+7052|Azure Silk Belt|2|35|4
+7054|Robe of Power|3|38|4
+7055|Crimson Silk Belt|2|35|4
+7057|Green Silken Shoulders|2|36|4
+7058|Crimson Silk Vest|1|37|4
+7059|Crimson Silk Shoulders|2|38|4
+7060|Azure Shoulders|2|38|4
+7061|Earthen Silk Belt|2|39|4
+7062|Crimson Silk Pantaloons|1|39|4
+7064|Crimson Silk Gloves|2|42|4
+7065|Green Silk Armor|2|33|4
+9998|Black Mageweave Vest|2|41|4
+9999|Black Mageweave Leggings|2|41|4
+10001|Black Mageweave Robe|2|42|4
+10002|Shadoweave Pants|2|42|4
+10003|Black Mageweave Gloves|2|43|4
+10004|Shadoweave Robe|2|43|4
+10007|Red Mageweave Vest|2|43|4
+10008|White Bandit Mask|2|43|4
+10009|Red Mageweave Pants|2|43|4
+10018|Red Mageweave Gloves|2|45|4
+10019|Dreamweave Gloves|3|45|4
+10021|Dreamweave Vest|3|45|4
+10023|Shadoweave Gloves|2|45|4
+10024|Black Mageweave Headband|2|46|4
+10025|Shadoweave Mask|2|49|4
+10026|Black Mageweave Boots|2|46|4
+10027|Black Mageweave Shoulders|2|46|4
+10028|Shadoweave Shoulders|2|47|4
+10029|Red Mageweave Shoulders|2|47|4
+10031|Shadoweave Boots|2|48|4
+10033|Red Mageweave Headband|2|48|4
+10041|Dreamweave Circlet|3|50|4
+10042|Cindercloth Robe|2|45|4
+10044|Cindercloth Boots|2|49|4
+10046|Simple Linen Boots|1|9|4
+10047|Simple Kilt|1|15|4
+10048|Colorful Kilt|2|24|4
+10050|Mageweave Bag|1|35|1
+10051|Red Mageweave Bag|1|35|1
+10053|Simple Black Dress|1|47|4
+10056|Orange Mageweave Shirt|1|43|4
+13856|Runecloth Belt|2|51|4
+13857|Runecloth Tunic|2|52|4
+13865|Runecloth Pants|2|57|4
+13866|Runecloth Headband|2|59|4
+13867|Runecloth Shoulders|2|61|4
+13868|Frostweave Robe|2|51|4
+13869|Frostweave Tunic|2|51|4
+13870|Frostweave Gloves|2|53|4
+13871|Frostweave Pants|2|56|4
+14042|Cindercloth Vest|2|52|4
+14043|Cindercloth Gloves|2|54|4
+14044|Cindercloth Cloak|2|55|4
+14045|Cindercloth Pants|2|56|4
+14048|Bolt of Runecloth|1|55|7
+14100|Brightcloth Robe|2|54|4
+14101|Brightcloth Gloves|2|54|4
+14103|Brightcloth Cloak|2|55|4
+14104|Brightcloth Pants|2|58|4
+14106|Felcloth Robe|2|61|4
+14108|Felcloth Boots|2|57|4
+14111|Felcloth Hood|2|58|4
+14112|Felcloth Shoulders|2|62|4
+14128|Wizardweave Robe|2|60|4
+14130|Wizardweave Turban|2|61|4
+14132|Wizardweave Leggings|2|55|4
+14134|Cloak of Fire|3|55|4
+14136|Robe of Winter Night|3|57|4
+14137|Mooncloth Leggings|3|58|4
+14138|Mooncloth Vest|3|60|4
+14139|Mooncloth Shoulders|3|61|4
+14140|Mooncloth Circlet|3|62|4
+14141|Ghostweave Vest|2|55|4
+14142|Ghostweave Gloves|2|54|4
+14143|Ghostweave Belt|2|53|4
+14144|Ghostweave Pants|2|58|4
+14146|Gloves of Spell Mastery|4|62|4
+14152|Robe of the Archmage|4|62|4
+14153|Robe of the Void|4|62|4
+14154|Truefaith Vestments|4|62|4
+14155|Mooncloth Bag|2|60|1
+14156|Bottomless Bag|3|62|1
+17723|Green Holiday Shirt|1|40|4
+18263|Flarecore Wraps|4|64|4
+18405|Belt of the Archmage|4|62|4
+18407|Felcloth Gloves|3|62|4
+18408|Inferno Gloves|3|62|4
+18409|Mooncloth Gloves|3|62|4
+18413|Cloak of Warding|3|62|4
+20537|Runed Stygian Boots|3|63|4
+20538|Runed Stygian Leggings|3|63|4
+20539|Runed Stygian Belt|3|63|4
+21341|Felcloth Bag|3|57|1
+21342|Core Felcloth Bag|4|60|1
+21542|Festival Suit|1|1|4
+22249|Big Bag of Enchantment|2|65|1
+22652|Glacial Vest|4|80|4
+22654|Glacial Gloves|4|80|4
+22655|Glacial Wrists|4|80|4
+22658|Glacial Cloak|4|80|4
+217246|Black Mageweave Vest|2|41|4
+217247|Black Mageweave Leggings|2|41|4
+217252|Long Silken Cloak|2|37|4
+217255|Crimson Silk Belt|2|35|4
+217256|Earthen Vest|2|34|4
+2300|Embossed Leather Vest|2|12|4
+2303|Handstitched Leather Pants|1|10|4
+2307|Fine Leather Boots|1|18|4
+2308|Fine Leather Cloak|2|15|4
+2309|Embossed Leather Boots|2|15|4
+2310|Embossed Leather Cloak|1|13|4
+2311|White Leather Jerkin|1|13|4
+2312|Fine Leather Gloves|2|15|4
+2313|Medium Armor Kit|1|15|0
+2314|Toughened Leather Armor|1|24|4
+2315|Dark Leather Boots|1|20|4
+2316|Dark Leather Cloak|1|22|4
+2317|Dark Leather Tunic|2|20|4
+2319|Medium Leather|1|20|7
+3719|Hillman's Cloak|1|30|4
+4231|Cured Light Hide|1|10|7
+4233|Cured Medium Hide|1|20|7
+4234|Heavy Leather|1|30|7
+4236|Cured Heavy Hide|1|30|7
+4237|Handstitched Leather Belt|1|10|4
+4239|Embossed Leather Gloves|1|13|4
+4242|Embossed Leather Pants|2|15|4
+4243|Fine Leather Tunic|2|17|4
+4244|Hillman's Leather Vest|2|20|4
+4246|Fine Leather Belt|1|16|4
+4247|Hillman's Leather Gloves|2|29|4
+4248|Dark Leather Gloves|2|26|4
+4249|Dark Leather Belt|2|25|4
+4250|Hillman's Belt|2|25|4
+4251|Hillman's Shoulders|2|26|4
+4252|Dark Leather Shoulders|2|28|4
+4253|Toughened Leather Gloves|3|27|4
+4254|Barbaric Gloves|2|30|4
+4256|Guardian Armor|2|35|4
+4257|Green Leather Belt|2|32|4
+4258|Guardian Belt|2|34|4
+4259|Green Leather Bracers|2|36|4
+4260|Guardian Leather Bracers|2|39|4
+4264|Barbaric Belt|2|40|4
+4265|Heavy Armor Kit|1|30|0
+4304|Thick Leather|1|40|7
+5081|Kodo Hide Bag|1|5|1
+5739|Barbaric Harness|1|38|4
+5958|Fine Leather Pants|2|21|4
+5961|Dark Leather Pants|2|23|4
+5962|Guardian Pants|2|32|4
+5964|Barbaric Shoulders|2|35|4
+5965|Guardian Cloak|2|37|4
+5966|Guardian Gloves|1|38|4
+6468|Deviate Scale Belt|3|23|4
+6709|Moonglow Vest|2|18|4
+7278|Light Leather Quiver|1|5|11
+7279|Small Leather Ammo Pouch|1|5|11
+7280|Rugged Leather Pants|2|11|4
+7281|Light Leather Bracers|1|14|4
+7282|Light Leather Pants|2|19|4
+7285|Nimble Leather Gloves|2|24|4
+7348|Fletcher's Gloves|2|25|4
+7358|Pilferer's Gloves|2|28|4
+7359|Heavy Earthen Gloves|2|29|4
+7371|Heavy Quiver|2|35|11
+7372|Heavy Leather Ammo Pouch|2|35|11
+7373|Dusky Leather Leggings|2|33|4
+7374|Dusky Leather Armor|2|35|4
+7375|Green Whelp Armor|2|35|4
+7377|Frost Leather Cloak|2|36|4
+7378|Dusky Bracers|2|37|4
+7387|Dusky Belt|2|39|4
+7390|Dusky Boots|2|40|4
+7391|Swift Boots|2|40|4
+8170|Rugged Leather|1|50|7
+8172|Cured Thick Hide|1|40|7
+8173|Thick Armor Kit|1|40|0
+8175|Nightscape Tunic|2|41|4
+8176|Nightscape Headband|2|41|4
+8185|Turtle Scale Leggings|2|47|4
+8189|Turtle Scale Breastplate|2|42|4
+8191|Turtle Scale Helm|2|46|4
+8193|Nightscape Pants|2|46|4
+8197|Nightscape Boots|2|47|4
+8198|Turtle Scale Bracers|2|42|4
+8200|Big Voodoo Robe|2|43|4
+8201|Big Voodoo Mask|2|44|4
+8202|Big Voodoo Pants|2|47|4
+8203|Tough Scorpid Breastplate|2|44|4
+8204|Tough Scorpid Gloves|2|45|4
+8205|Tough Scorpid Bracers|2|44|4
+8206|Tough Scorpid Leggings|2|49|4
+8207|Tough Scorpid Shoulders|2|48|4
+8208|Tough Scorpid Helm|2|50|4
+8209|Tough Scorpid Boots|2|47|4
+8210|Wild Leather Shoulders|2|44|4
+8211|Wild Leather Vest|2|45|4
+8212|Wild Leather Leggings|2|50|4
+8213|Wild Leather Boots|2|49|4
+8214|Wild Leather Helmet|2|45|4
+8215|Wild Leather Cloak|2|50|4
+8216|Big Voodoo Cloak|2|48|4
+8217|Quickdraw Quiver|2|45|11
+8218|Thick Leather Ammo Pouch|2|45|11
+8345|Wolfshead Helm|3|45|4
+8346|Gauntlets of the Sea|3|46|4
+8347|Dragonscale Gauntlets|3|45|4
+8348|Helm of Fire|3|50|4
+8349|Feathered Breastplate|3|50|4
+8367|Dragonscale Breastplate|3|51|4
+15046|Green Dragonscale Leggings|3|54|4
+15047|Red Dragonscale Breastplate|3|61|4
+15049|Blue Dragonscale Shoulders|3|59|4
+15051|Black Dragonscale Shoulders|3|60|4
+15052|Black Dragonscale Leggings|3|62|4
+15053|Volcanic Breastplate|2|57|4
+15054|Volcanic Leggings|2|54|4
+15055|Volcanic Shoulders|2|61|4
+15056|Stormshroud Armor|3|57|4
+15058|Stormshroud Shoulders|3|59|4
+15059|Living Breastplate|3|60|4
+15060|Living Leggings|3|57|4
+15062|Devilsaur Leggings|3|60|4
+15066|Ironfeather Breastplate|3|58|4
+15068|Frostsaber Tunic|2|62|4
+15069|Frostsaber Leggings|2|57|4
+15070|Frostsaber Gloves|2|59|4
+15072|Chimeric Leggings|2|56|4
+15073|Chimeric Boots|2|55|4
+15075|Chimeric Vest|2|58|4
+15076|Heavy Scorpid Vest|2|53|4
+15078|Heavy Scorpid Gauntlet|2|55|4
+15079|Heavy Scorpid Leggings|2|57|4
+15081|Heavy Scorpid Shoulders|2|61|4
+15082|Heavy Scorpid Belt|2|56|4
+15084|Wicked Leather Bracers|2|53|4
+15085|Wicked Leather Armor|2|61|4
+15086|Wicked Leather Headband|2|56|4
+15087|Wicked Leather Pants|2|58|4
+15088|Wicked Leather Belt|2|60|4
+15090|Runic Leather Armor|2|62|4
+15091|Runic Leather Gauntlets|2|54|4
+15092|Runic Leather Bracers|2|55|4
+15093|Runic Leather Belt|2|56|4
+15095|Runic Leather Pants|2|60|4
+15096|Runic Leather Shoulders|2|62|4
+15138|Onyxia Scale Cloak|3|60|4
+15407|Cured Rugged Hide|1|50|7
+15564|Rugged Armor Kit|1|50|0
+17721|Gloves of the Greatfather|2|38|4
+18251|Core Armor Kit|3|60|0
+18504|Girdle of Insight|3|62|4
+18506|Mongoose Boots|3|62|4
+18508|Swift Flight Bracers|3|62|4
+18509|Chromatic Cloak|4|62|4
+18510|Hide of the Wild|4|62|4
+18511|Shifting Cloak|4|62|4
+20295|Blue Dragonscale Leggings|3|60|4
+20296|Green Dragonscale Gauntlets|3|56|4
+21278|Stormshroud Gloves|3|62|4
+22661|Polar Tunic|4|80|4
+22662|Polar Gloves|4|80|4
+22663|Polar Bracers|4|80|4
+22664|Icy Scale Breastplate|4|80|4
+22665|Icy Scale Bracers|4|80|4
+22666|Icy Scale Gauntlets|4|80|4
+217267|Guardian Pants|2|32|4
+217268|Turtle Scale Breastplate|2|42|4
+2844|Copper Mace|1|9|2
+2845|Copper Axe|1|9|2
+2847|Copper Shortsword|1|9|2
+2848|Bronze Mace|1|22|2
+2849|Bronze Axe|1|23|2
+2850|Bronze Shortsword|1|24|2
+2851|Copper Chain Belt|1|11|4
+2852|Copper Chain Pants|1|9|4
+2854|Runed Copper Bracers|1|19|4
+2857|Runed Copper Belt|1|18|4
+2863|Coarse Sharpening Stone|1|15|0
+2864|Runed Copper Breastplate|2|18|4
+2865|Rough Bronze Leggings|2|21|4
+2866|Rough Bronze Cuirass|1|23|4
+2868|Patterned Bronze Bracers|2|25|4
+2869|Silvered Bronze Breastplate|2|26|4
+2870|Shining Silver Breastplate|3|29|4
+2871|Heavy Sharpening Stone|1|25|0
+3240|Coarse Weightstone|1|15|0
+3241|Heavy Weightstone|1|25|0
+3469|Copper Chain Boots|1|9|4
+3470|Rough Grinding Stone|1|10|7
+3471|Copper Chain Vest|2|10|4
+3472|Runed Copper Gauntlets|1|12|4
+3473|Runed Copper Pants|2|13|4
+3474|Gemmed Copper Gauntlets|2|15|4
+3478|Coarse Grinding Stone|1|20|7
+3480|Rough Bronze Shoulders|1|22|4
+3481|Silvered Bronze Shoulders|2|25|4
+3482|Silvered Bronze Boots|2|26|4
+3483|Silvered Bronze Gauntlets|2|27|4
+3484|Green Iron Boots|2|29|4
+3485|Green Iron Gauntlets|2|30|4
+3486|Heavy Grinding Stone|1|25|7
+3487|Heavy Copper Broadsword|2|19|2
+3488|Copper Battle Axe|2|13|2
+3489|Thick War Axe|2|17|2
+3490|Deadly Bronze Poniard|2|25|2
+3491|Heavy Bronze Mace|2|25|2
+3492|Mighty Iron Hammer|2|30|2
+3835|Green Iron Bracers|1|33|4
+3836|Green Iron Helm|2|34|4
+3840|Green Iron Shoulders|2|32|4
+3841|Golden Scale Shoulders|2|35|4
+3842|Green Iron Leggings|2|31|4
+3843|Golden Scale Leggings|2|34|4
+3844|Green Iron Hauberk|3|36|4
+3845|Golden Scale Cuirass|2|40|4
+3846|Polished Steel Boots|2|37|4
+3847|Golden Scale Boots|2|40|4
+3848|Big Bronze Knife|2|20|2
+3850|Jade Serpentblade|2|35|2
+3852|Golden Iron Destroyer|2|34|2
+3854|Frost Tiger Blade|2|40|2
+3856|Shadow Crescent Axe|2|40|2
+5540|Pearl-handled Dagger|2|23|2
+5541|Iridescent Hammer|2|28|2
+6040|Golden Scale Bracers|1|37|4
+6041|Steel Weapon Chain|1|38|0
+6042|Iron Shield Spike|1|30|0
+6043|Iron Counterweight|1|33|0
+6214|Heavy Copper Maul|1|16|2
+6338|Silver Rod|1|20|7
+6350|Rough Bronze Boots|1|18|4
+6731|Ironforge Breastplate|2|20|4
+7071|Iron Buckle|1|30|15
+7166|Copper Dagger|1|11|2
+7913|Barbaric Iron Shoulders|2|32|4
+7914|Barbaric Iron Breastplate|2|32|4
+7915|Barbaric Iron Helm|2|35|4
+7916|Barbaric Iron Boots|2|36|4
+7917|Barbaric Iron Gloves|2|37|4
+7918|Heavy Mithril Shoulder|2|41|4
+7919|Heavy Mithril Gauntlet|2|41|4
+7920|Mithril Scale Pants|2|42|4
+7921|Heavy Mithril Pants|2|42|4
+7922|Steel Plate Helm|1|43|4
+7926|Ornate Mithril Pants|2|44|4
+7927|Ornate Mithril Gloves|2|44|4
+7928|Ornate Mithril Shoulder|2|45|4
+7929|Orcish War Leggings|2|42|4
+7930|Heavy Mithril Breastplate|2|46|4
+7931|Mithril Coif|2|46|4
+7932|Mithril Scale Shoulders|2|47|4
+7933|Heavy Mithril Boots|2|47|4
+7934|Heavy Mithril Helm|2|47|4
+7935|Ornate Mithril Breastplate|2|48|4
+7936|Ornate Mithril Boots|2|49|4
+7937|Ornate Mithril Helm|2|49|4
+7938|Truesilver Gauntlets|3|45|4
+7939|Truesilver Breastplate|3|49|4
+7941|Heavy Mithril Axe|2|42|2
+7942|Blue Glittering Axe|2|44|2
+7943|Wicked Mithril Blade|2|45|2
+7944|Dazzling Mithril Rapier|2|48|2
+7945|Big Black Mace|2|46|2
+7946|Runed Mithril Hammer|2|49|2
+7954|The Shatterer|3|47|2
+7955|Copper Claymore|1|11|2
+7956|Bronze Warhammer|1|25|2
+7957|Bronze Greatsword|1|26|2
+7958|Bronze Battle Axe|1|27|2
+7959|Blight|3|50|2
+7960|Truesilver Champion|3|52|2
+7961|Phantom Blade|3|49|2
+7963|Steel Breastplate|2|40|4
+7964|Solid Sharpening Stone|1|35|0
+7965|Solid Weightstone|1|35|0
+7966|Solid Grinding Stone|1|35|7
+7967|Mithril Shield Spike|2|43|0
+7969|Mithril Spurs|2|43|0
+9060|Inlaid Mithril Cylinder|1|42|15
+9366|Golden Scale Gauntlets|2|41|4
+10423|Silvered Bronze Leggings|2|31|4
+11128|Golden Rod|1|30|7
+11144|Truesilver Rod|1|40|7
+11604|Dark Iron Plate|3|59|4
+11605|Dark Iron Shoulders|2|58|4
+11606|Dark Iron Mail|2|56|4
+11607|Dark Iron Sunderer|3|57|2
+11608|Dark Iron Pulverizer|3|55|2
+12259|Glinting Steel Dagger|2|36|2
+12260|Searing Golden Blade|2|39|2
+12404|Dense Sharpening Stone|1|45|0
+12405|Thorium Armor|2|50|4
+12406|Thorium Belt|2|50|4
+12408|Thorium Bracers|2|51|4
+12409|Thorium Boots|2|56|4
+12410|Thorium Helm|2|56|4
+12414|Thorium Leggings|2|60|4
+12415|Radiant Breastplate|2|54|4
+12416|Radiant Belt|2|52|4
+12417|Radiant Circlet|2|59|4
+12418|Radiant Gloves|2|57|4
+12419|Radiant Boots|2|58|4
+12420|Radiant Leggings|2|61|4
+12422|Imperial Plate Chest|2|60|4
+12424|Imperial Plate Belt|2|53|4
+12425|Imperial Plate Bracers|2|54|4
+12426|Imperial Plate Boots|2|59|4
+12427|Imperial Plate Helm|2|59|4
+12428|Imperial Plate Shoulders|2|53|4
+12429|Imperial Plate Leggings|2|61|4
+12610|Runic Plate Shoulders|2|60|4
+12611|Runic Plate Boots|2|60|4
+12612|Runic Plate Helm|2|61|4
+12613|Runic Breastplate|2|62|4
+12614|Runic Plate Leggings|2|62|4
+12618|Enchanted Thorium Breastplate|3|63|4
+12619|Enchanted Thorium Leggings|3|63|4
+12620|Enchanted Thorium Helm|3|62|4
+12624|Wildthorn Mail|3|54|4
+12628|Demon Forged Breastplate|3|57|4
+12631|Fiery Plate Gauntlets|3|58|4
+12633|Whitesoul Helm|3|60|4
+12636|Helm of the Great Chief|3|61|4
+12639|Stronghold Gauntlets|4|62|4
+12640|Lionheart Helm|4|61|4
+12641|Invulnerable Mail|4|63|4
+12643|Dense Weightstone|1|45|0
+12644|Dense Grinding Stone|1|45|7
+12645|Thorium Shield Spike|2|55|0
+12774|Dawn's Edge|3|55|2
+12776|Enchanted Battlehammer|3|56|2
+12777|Blazing Rapier|3|56|2
+12781|Serenity|3|57|2
+12782|Corruption|3|58|2
+12783|Heartseeker|3|63|2
+12784|Arcanite Reaper|3|63|2
+12790|Arcanite Champion|3|63|2
+12792|Volcanic Hammer|2|58|2
+12794|Masterwork Stormhammer|3|63|2
+12796|Hammer of the Titans|3|63|2
+12797|Frostguard|3|63|2
+12798|Annihilator|3|63|2
+15869|Silver Skeleton Key|2|20|7
+15870|Golden Skeleton Key|2|30|7
+15871|Truesilver Skeleton Key|2|40|7
+15872|Arcanite Skeleton Key|2|55|7
+16206|Arcanite Rod|1|55|7
+17193|Sulfuron Hammer|4|67|2
+17704|Edge of Winter|2|38|2
+18262|Elemental Sharpening Stone|2|60|0
+20549|Darkrune Gauntlets|3|63|4
+20550|Darkrune Breastplate|3|63|4
+20551|Darkrune Helm|3|63|4
+22194|Black Grasp of the Destroyer|4|70|4
+22196|Thick Obsidian Breastplate|4|72|4
+22383|Sageblade|4|64|2
+22384|Persuader|4|63|2
+22385|Titanic Leggings|4|60|4
+22669|Icebane Breastplate|4|80|4
+22670|Icebane Gauntlets|4|80|4
+22671|Icebane Bracers|4|80|4
+4359|Handful of Copper Bolts|1|8|7
+4360|Rough Copper Bomb|1|14|7
+4361|Copper Tube|1|10|7
+4362|Rough Boomstick|2|10|2
+4363|Copper Modulator|1|13|7
+4364|Coarse Blasting Powder|1|15|7
+4365|Coarse Dynamite|1|20|7
+4366|Target Dummy|1|17|7
+4367|Small Seaforium Charge|1|20|7
+4368|Flying Tiger Goggles|2|20|4
+4369|Deadly Blunderbuss|2|21|2
+4370|Large Copper Bomb|1|26|7
+4371|Bronze Tube|1|21|7
+4373|Shadow Goggles|2|24|4
+4374|Small Bronze Bomb|1|29|7
+4375|Whirring Bronze Gizmo|1|25|7
+4376|Flame Deflector|1|25|7
+4377|Heavy Blasting Powder|1|25|7
+4378|Heavy Dynamite|1|30|7
+4379|Silver-plated Shotgun|2|26|2
+4380|Big Bronze Bomb|1|33|7
+4382|Bronze Framework|1|29|7
+4383|Moonsight Rifle|2|29|2
+4384|Explosive Sheep|1|30|7
+4385|Green Tinted Goggles|2|30|4
+4387|Iron Strut|1|32|7
+4388|Discombobulator Ray|1|32|7
+4389|Gyrochronatom|1|34|7
+4390|Iron Grenade|1|35|7
+4391|Compact Harvest Reaper Kit|1|35|7
+4392|Advanced Target Dummy|1|37|7
+4393|Craftsman's Monocle|2|37|4
+4394|Big Iron Bomb|1|43|7
+4395|Goblin Land Mine|1|39|7
+4398|Large Seaforium Charge|1|40|7
+4401|Mechanical Squirrel Box|1|15|7
+4403|Portable Bronze Mortar|1|33|7
+4404|Silver Contact|1|18|7
+4405|Crude Scope|1|12|0
+4406|Standard Scope|1|22|0
+4852|Flash Bomb|1|37|7
+5507|Ornate Spyglass|1|27|7
+6219|Arclight Spanner|1|10|2
+6533|Aquadynamic Fish Attractor|1|30|0
+6712|Practice Lock|1|20|15
+6714|Ez-Thro Dynamite|1|25|7
+8068|Crafted Heavy Shot|1|20|6
+8069|Crafted Solid Shot|1|35|6
+10498|Gyromatic Micro-Adjustor|1|35|7
+10499|Bright-Eye Goggles|2|35|4
+10500|Fire Goggles|2|41|4
+10501|Catseye Ultra Goggles|2|44|4
+10502|Spellpower Goggles Xtreme|2|43|4
+10503|Rose Colored Goggles|2|46|4
+10504|Green Lens|3|49|4
+10505|Solid Blasting Powder|1|35|7
+10507|Solid Dynamite|1|35|7
+10508|Mithril Blunderbuss|2|41|2
+10510|Mithril Heavy-bore Rifle|2|44|2
+10512|Hi-Impact Mithril Slugs|2|42|6
+10513|Mithril Gyro-Shot|2|49|6
+10514|Mithril Frag Bomb|1|43|7
+10518|Parachute Cloak|2|45|4
+10548|Sniper Scope|1|48|0
+10558|Gold Power Core|1|30|7
+10559|Mithril Tube|1|39|7
+10560|Unstable Trigger|1|40|7
+10561|Mithril Casing|1|43|7
+10562|Hi-Explosive Bomb|1|47|7
+10586|The Big One|1|45|7
+10644|Recipe: Goblin Rocket Fuel|1|42|9
+10713|Plans: Inlaid Mithril Cylinder|1|40|9
+11590|Mechanical Repair Kit|1|40|7
+11825|Pet Bombling|1|41|7
+11826|Lil' Smoky|1|41|7
+15846|Salt Shaker|1|50|7
+15992|Dense Blasting Powder|1|50|7
+15995|Thorium Rifle|2|52|2
+15996|Lifelike Mechanical Toad|1|53|7
+15997|Thorium Shells|2|57|6
+15999|Spellpower Goggles Xtreme Plus|2|54|4
+16004|Dark Iron Rifle|3|55|2
+16005|Dark Iron Bomb|1|57|7
+16007|Flawless Arcanite Rifle|3|61|2
+16008|Master Engineer's Goggles|2|58|4
+16009|Voice Amplification Modulator|2|58|4
+16022|Arcanite Dragonling|3|60|4
+16040|Arcane Bomb|1|60|7
+17716|SnowMaster 9000|1|38|7
+18168|Force Reactive Disk|4|65|4
+18232|Field Repair Bot 74A|1|60|7
+18282|Core Marksman Rifle|4|65|2
+18283|Biznicks 247x128 Accurascope|3|60|0
+18587|Goblin Jumper Cables XL|1|53|4
+18637|Major Recombobulator|2|55|4
+18638|Hyper-Radiant Flame Reflector|3|58|4
+18639|Ultra-Flash Shadow Reflector|3|60|4
+18641|Dense Dynamite|1|45|7
+18645|Gnomish Alarm-O-Bot|1|53|7
+18660|World Enlarger|2|50|7
+21557|Small Red Rocket|1|1|0
+21558|Small Blue Rocket|1|1|0
+21559|Small Green Rocket|1|1|0
+21569|Firework Launcher|1|1|0
+21570|Cluster Launcher|1|1|0
+21571|Blue Rocket Cluster|1|1|0
+21574|Green Rocket Cluster|1|1|0
+21576|Red Rocket Cluster|1|1|0
+21589|Large Blue Rocket|1|1|0
+21590|Large Green Rocket|1|1|0
+21592|Large Red Rocket|1|1|0
+21714|Large Blue Rocket Cluster|1|1|0
+21716|Large Green Rocket Cluster|1|1|0
+21718|Large Red Rocket Cluster|1|1|0
+22728|Steam Tonk Controller|1|55|7
