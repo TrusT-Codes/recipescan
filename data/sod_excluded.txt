@@ -1,0 +1,96 @@
+# recipeItemId|profession|name|patch  (Wowhead: Added in patch 1.15.x "Season of Discovery"; excluded from the report)
+210709|alchemy|Recipe: Elixir of Coalesced Regret|1.15.0
+215163|alchemy|Recipe: Mildly-Irradiated Rejuvenation Potion|1.15.1
+215433|alchemy|Recipe: Insulating Gniodine|1.15.1
+217399|alchemy|Recipe: Lesser Arcane Elixir|1.15.1
+234257|alchemy|Recipe: Elixir of the Honey Badger|1.15.5
+234258|alchemy|Recipe: Elixir of the Mage-Lord|1.15.5
+234259|alchemy|Recipe: Elixir of the Ironside|1.15.5
+234260|alchemy|Recipe: Elixir of Alacrity|1.15.5
+210779|blacksmithing|Plans: Mantle of the Second War|1.15.0
+215155|blacksmithing|Plans: Temepered Interference-Negating Helmet|1.15.1
+215383|blacksmithing|Plans: Reflective Truesilver Braincage|1.15.1
+215384|blacksmithing|Plans: Low-Background Truesilver Plates|1.15.1
+217280|blacksmithing|Plans: Golden Scale Coif|1.15.1
+217282|blacksmithing|Plans: Moonsteel Broadsword|1.15.1
+228313|blacksmithing|Plans: Tempest Gauntlets|1.15.3
+234279|blacksmithing|Plans: Obsidian Grinding Stone|1.15.5
+234289|blacksmithing|Plans: Ironvine Belt|1.15.4
+234291|blacksmithing|Plans: Ironvine Gloves|1.15.4
+234293|blacksmithing|Plans: Ironvine Breastplate|1.15.4
+234320|blacksmithing|Plans: Heavy Obsidian Belt|1.15.4
+234322|blacksmithing|Plans: Light Obsidian Belt|1.15.4
+234458|blacksmithing|Plans: Jagged Obsidian Shield|1.15.5
+234461|blacksmithing|Plans: Obsidian Mail Tunic|1.15.5
+232437|cooking|Recipe: Darkclaw Bisque|1.15.5
+232443|cooking|Recipe: Smoked Redgill|1.15.5
+215129|enchanting|Formula: Enchant Weapon - Dismantle|1.15.1
+215138|enchanting|Formula: Enchant Chest - Retricutioner|1.15.1
+215141|enchanting|Enchanted Sigil: Innovation|1.15.1
+228979|enchanting|Enchanted Sigil: Flowing Waters|1.15.3
+228981|enchanting|Formula: Conductive Shield Coating|1.15.3
+228982|enchanting|Formula: Enchant Shield - Law of Nature|1.15.3
+229008|enchanting|Formula: Enchant Cloak - Greater Fire Resistance|1.15.3
+229009|enchanting|Formula: Enchant Cloak - Greater Nature Resistance|1.15.3
+232610|enchanting|Formula: Magnificent Trollshine|1.15.4
+234271|enchanting|Formula: Scroll: Wrath of the Swarm|1.15.5
+234272|enchanting|Formula: Enchanted Repellent|1.15.5
+212230|engineering|Schematic: Soul Vessel|1.15.1
+215153|engineering|Schematic: Whirling Truesilver Gearwall|1.15.1
+215156|engineering|Schematic: Hyperconductive Goldwrap|1.15.1
+215429|engineering|Schematic: Polished Truesilver Gears|1.15.1
+215431|engineering|Schematic: High-Yield Radiation Bomb|1.15.1
+215432|engineering|Schematic: Ez-Thro Radiation Bomb|1.15.1
+221327|engineering|Schematic: Gnomish Shrink Ray|1.15.2
+221328|engineering|Schematic: Gnomish Goggles|1.15.2
+221329|engineering|Schematic: Gnomish Net-o-matic Projector|1.15.2
+221330|engineering|Schematic: Gnomish Harm Prevention Belt|1.15.2
+221331|engineering|Schematic: Gnomish Rocket Boots|1.15.2
+221332|engineering|Schematic: Gnomish Battle Chicken|1.15.2
+221333|engineering|Schematic: Gnomish Mind Control Cap|1.15.2
+221334|engineering|Schematic: Gnomish Death Ray|1.15.2
+221335|engineering|Schematic: Goblin Construction Helmet|1.15.2
+221336|engineering|Schematic: Goblin Mining Helmet|1.15.2
+221337|engineering|Schematic: Goblin Mortar|1.15.2
+221338|engineering|Schematic: Goblin Sapper Charge|1.15.2
+221339|engineering|Schematic: Goblin Rocket Boots|1.15.2
+221340|engineering|Schematic: Goblin Bomb Dispenser|1.15.2
+221342|engineering|Schematic: Goblin Dragon Gun|1.15.2
+221343|engineering|Schematic: Goblin Rocket Helmet|1.15.2
+234261|engineering|Schematic: Arcane Megabomb|1.15.5
+234262|engineering|Schematic: The Fumigator|1.15.5
+234263|engineering|Schematic: Obsidian Bomb|1.15.5
+234280|engineering|Schematic: Obsidian Blasting Powder|1.15.5
+232434|firstaid|Manual: Dense Runecloth Bandage|1.15.5
+215152|leatherworking|Pattern: Glowing Gneuro-Linked Cowl|1.15.1
+215367|leatherworking|Pattern: Faintly Glowing Leather|1.15.1
+215422|leatherworking|Pattern: Glowing Hyperconductive Scale Coif|1.15.1
+215423|leatherworking|Pattern: Gneuro-Conductive Channeler's Hood|1.15.1
+215424|leatherworking|Pattern: Rad-Resistant Scale Hood|1.15.1
+217271|leatherworking|Pattern: Turtle Scale Gloves|1.15.1
+227898|leatherworking|Pattern: Honed Blue Dragonscale Breastplate|1.15.3
+227902|leatherworking|Pattern: Hardened Black Dragonscale Breastplate|1.15.3
+228309|leatherworking|Pattern: Living Green Dragonscale Breastplate|1.15.3
+234295|leatherworking|Pattern: Sandstalker Bracers|1.15.4
+234297|leatherworking|Pattern: Sandstalker Gauntlets|1.15.4
+234299|leatherworking|Pattern: Sandstalker Breastplate|1.15.4
+234301|leatherworking|Pattern: Spitfire Bracers|1.15.4
+234303|leatherworking|Pattern: Spitfire Gauntlets|1.15.4
+234305|leatherworking|Pattern: Spitfire Breastplate|1.15.4
+234307|leatherworking|Pattern: Bramblewood Belt|1.15.4
+234309|leatherworking|Pattern: Bramblewood Boots|1.15.4
+234311|leatherworking|Pattern: Bramblewood Helm|1.15.4
+234325|leatherworking|Pattern: Dreamscale Breastplate|1.15.4
+211247|tailoring|Pattern: Phoenix Bindings|1.15.0
+215149|tailoring|Pattern: Gneuro-Linked Arcano-Filament Monocle|1.15.1
+215368|tailoring|Pattern: Hyperconductive Arcano-Filament|1.15.1
+215369|tailoring|Pattern: Invoker's Cord|1.15.0
+215370|tailoring|Pattern: Invoker's Mantle|1.15.0
+217244|tailoring|Pattern: Crimson Silk Robe|1.15.1
+217258|tailoring|Pattern: Enchanter's Cowl|1.15.1
+228121|tailoring|Pattern: Leather-Reinforced Runecloth Bag|1.15.3
+228303|tailoring|Pattern: Incandescent Mooncloth Robe|1.15.3
+234314|tailoring|Pattern: Sylvan Shoulders|1.15.4
+234316|tailoring|Pattern: Sylvan Crown|1.15.4
+234318|tailoring|Pattern: Sylvan Vest|1.15.4
+234445|tailoring|Pattern: Bolt of Qiraji Silk|1.15.5

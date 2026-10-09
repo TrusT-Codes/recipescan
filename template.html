@@ -89,7 +89,7 @@ Routes are estimates. The map positions, flight paths, boat and zeppelin times i
 const DATA=/*DATA*/null;
 
 /* ---------- table UI ---------- */
-const PROFS=[['tailoring','Tailoring'],['leatherworking','Leatherworking'],['enchanting','Enchanting'],['alchemy','Alchemy'],['blacksmithing','Blacksmithing'],['engineering','Engineering'],['cooking','Cooking'],['firstaid','First Aid']];
+const PROFS=[['tailoring','Tailoring'],['leatherworking','Leatherworking'],['enchanting','Enchanting'],['alchemy','Alchemy'],['blacksmithing','Blacksmithing'],['engineering','Engineering'],['cooking','Cooking'],['firstaid','First Aid'],['jewelcrafting','Jewelcrafting']];
 const DE_PROFS=['tailoring','leatherworking','blacksmithing','engineering'];
 let filter='all', activeTab='tailoring';
 const selected=new Set();
@@ -120,7 +120,7 @@ function renderPanel(p){
   let h='<table><thead><tr><th></th><th class="sortable" data-k="s">Skill</th><th class="sortable" data-k="n">Recipe</th><th>Vendors (name &middot; location &middot; faction)</th>'+(DE_PROFS.indexOf(p)>=0?'<th>Likely disenchant mats (chance per disenchant)</th>':'')+'</tr></thead><tbody>';
   rows.forEach(([r,vs])=>{
     const key=p+':'+r.id;
-    h+='<tr class="'+(selected.has(key)?'sel':'')+'"><td class="chk"><input type="checkbox" data-k="'+key+'"'+(selected.has(key)?' checked':'')+'></td><td class="sk">'+r.s+'</td><td class="rc"><a href="'+esc(r.u)+'" target="_blank" rel="noopener" class="'+r.w+'">'+esc(r.n)+'</a></td><td>'+vs.map(vendorLine).join('')+'</td>'+(DE_PROFS.indexOf(p)>=0?'<td class="dc">'+deCell(r.d)+'</td>':'')+'</tr>';
+    h+='<tr class="'+(selected.has(key)?'sel':'')+'"><td class="chk"><input type="checkbox" data-k="'+key+'"'+(selected.has(key)?' checked':'')+'></td><td class="sk">'+(r.s||'?')+'</td><td class="rc"><a href="'+esc(r.u)+'" target="_blank" rel="noopener" class="'+r.w+'">'+esc(r.n)+'</a></td><td>'+vs.map(vendorLine).join('')+'</td>'+(DE_PROFS.indexOf(p)>=0?'<td class="dc">'+deCell(r.d)+'</td>':'')+'</tr>';
   });
   h+='</tbody></table>';
   document.getElementById('panel-'+p).innerHTML=h;
@@ -339,7 +339,7 @@ function createRoute(){
     legs.forEach(s=>{html+='<li>'+s+'</li>';});
     total+=D[cur][v];
     const vd=DATA.vendors[vset[v-1]];
-    html+='<li class="stop">Buy at <a href="'+esc(vd.u)+'" target="_blank" rel="noopener"><b>'+esc(vd.n)+'</b></a> &middot; '+esc(vd.loc)+'<div>'+buys[v].map(r=>esc(r.n)+' <span class="t">('+r.s+')</span>').join('<br>')+'</div><div class="t">elapsed ~'+Math.round(total)+' min</div></li>';
+    html+='<li class="stop">Buy at <a href="'+esc(vd.u)+'" target="_blank" rel="noopener"><b>'+esc(vd.n)+'</b></a> &middot; '+esc(vd.loc)+'<div>'+buys[v].map(r=>esc(r.n)+' <span class="t">('+(r.s||'?')+')</span>').join('<br>')+'</div><div class="t">elapsed ~'+Math.round(total)+' min</div></li>';
     cur=v;
   });
   html+='</ol>'+skippedHtml(skipped,f)+'<div class="t">Model assumptions: 160% mount, all flight paths already known, no hearthstone or portals, no reputation checks.</div>';

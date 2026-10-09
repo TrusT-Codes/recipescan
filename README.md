@@ -1,7 +1,7 @@
 # recipescan
 Website to scan all available Recipes on Octowow
 
-Single-page report of vendor-sold recipes for Tailoring, Leatherworking, Enchanting, Alchemy, Blacksmithing, Engineering, Cooking and First Aid (OctoWow + Wowhead Classic), with faction filters, recipe/vendor links, likely disenchant mats and a route planner.
+Single-page report of vendor-sold recipes for Tailoring, Leatherworking, Enchanting, Alchemy, Blacksmithing, Engineering, Cooking, First Aid and Jewelcrafting (OctoWow + Wowhead Classic; Jewelcrafting is OctoWow only), with faction filters, recipe/vendor links, likely disenchant mats and a route planner.
 
 - `index.html` - generated page (open directly or serve via GitHub Pages)
 - `template.html` - page UI and route planner
@@ -9,5 +9,6 @@ Single-page report of vendor-sold recipes for Tailoring, Leatherworking, Enchant
 - `data/wh.txt`, `data/wh_crafting.txt` - Wowhead Classic vendor/recipe data
 - `data/items.txt`, `data/crafted.txt` - crafted item quality/item level and recipe -> crafted item links
 - `data/disen_table.txt` - disenchant table by quality + item level (WoWWiki "Disenchanting tables")
+- `data/sod_excluded.txt` - recipes added in Season of Discovery (Wowhead patch 1.15.x); build.py skips them
 - `build.py` - rebuilds `index.html` (Python 2.7: `python build.py`)
 - `docs/handover-add-professions.md` - how the data was scraped

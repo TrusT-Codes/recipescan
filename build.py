@@ -61,13 +61,13 @@ def add_vendor(src, vid, name, react_s, zones_s):
     elif not v['locs'] and locs:
         v['locs'] = locs   # OctoWow locations/reactions win; Wowhead only fills gaps
 
-def add_recipe(prof, rid, name, skill, vids):
+def add_recipe(prof, rid, name, skill, vids, authoritative=False):
     r = recipes.get((prof, rid))
     if r is None:
         r = {'rid': rid, 'prof': prof, 'name': clean_name(name), 'skill': int(skill), 'vendors': []}
         recipes[(prof, rid)] = r
-    elif r['skill'] <= 0 and int(skill) > 0:
-        r['skill'] = int(skill)   # OctoWow sometimes lacks the skill requirement; Wowhead fills it
+    elif int(skill) > 0 and (r['skill'] <= 0 or authoritative):
+        r['skill'] = int(skill)   # Wowhead 'learnedat' wins over OctoWow, which is sometimes missing or off
     for v in vids.split(','):
         if v and v not in r['vendors']:
             r['vendors'].append(v)
@@ -80,7 +80,7 @@ for line in read('wh.txt') + read('wh_crafting.txt'):
     p = line.split('|')
     if p[0] == 'V': add_vendor('wh', p[1], p[2], p[3], p[4])
     elif p[0] == 'I':
-        add_recipe(p[1], p[2], p[3], p[4], p[6])
+        add_recipe(p[1], p[2], p[3], p[4], p[6], True)
         wh_recipes.add((p[1], p[2]))
         if p[5] != 'None': crafted[p[2]] = p[5]
 
@@ -130,10 +130,14 @@ for vid, v in vendors.items():
         'A': allowed_a(a, h), 'H': allowed_h(a, h),
     }
 
-PROFS = ['tailoring', 'leatherworking', 'enchanting', 'alchemy', 'blacksmithing', 'engineering', 'cooking', 'firstaid']
+PROFS = ['tailoring', 'leatherworking', 'enchanting', 'alchemy', 'blacksmithing', 'engineering', 'cooking', 'firstaid', 'jewelcrafting']
 DE_PROFS = ('tailoring', 'leatherworking', 'blacksmithing', 'engineering')
 ROWS = dict((p, []) for p in PROFS)
+# recipes added in Season of Discovery (Wowhead "Added in patch 1.15.x"), not part of this report
+SOD = set(l.split('|')[0] for l in read('sod_excluded.txt') if l)
 for (prof, rid), r in recipes.items():
+    if rid in SOD:
+        continue
     vs = [v for v in r['vendors'] if v in VEND]
     if not vs or prof not in ROWS:
         continue

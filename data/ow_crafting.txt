@@ -415,3 +415,11 @@ V|81022|Innkeeper Gazz|[1,1]|
 V|81057|Eliana Firestorm|[1,1]|
 V|92019|Janet Hollowworth|[1,-1]|Deadwind Pass 56.3868,30.5605
 V|92020|Howard Gray|[1,-1]|Deadwind Pass 56.9868,31.1005
+I|jewelcrafting|70178|3Plans: Dark Iron Signet Ring|0|12944
+I|jewelcrafting|70216|3Plans: Orb of Clairvoyance|0|11536,10857,10856
+I|jewelcrafting|56024|4Plans: Blue Starfire|0|61914,62862
+I|jewelcrafting|70115|4Plans: Goldcrest Amulet|0|61574
+I|jewelcrafting|70144|4Plans: Ocean's Wrath|0|3499
+I|jewelcrafting|70168|4Plans: Pure Shining Moonstone|0|3537
+I|jewelcrafting|70128|4Plans: Skyfire Jewel|0|11189
+I|enchanting|70198|5Formula: Enchanted Gemstone Oil|275|61926,61922,61915,61905,61914,62862,61909,61920
