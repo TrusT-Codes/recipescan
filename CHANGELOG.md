@@ -3,6 +3,10 @@
 ## Unreleased
 
 ### Added
+- **Data pipeline** (`pipeline/`, Python 3, no dependencies): `extract` reads pfQuest + pfQuest-octo (OctoWow), Atlas-CFM and AtlasLoot into `data/extracted/`. `build` merges them with the scraped data into `build/recipescan.sqlite`, exports `web/public/data/*.json` for the new website and writes `build/report.md` (diff against this page, conflicts, unresolved data).
+  - Recipes are keyed by craft spell, so the planned export addon can match learned recipes: crafted item for TradeSkill professions, spell for Enchanting.
+  - New data: 1,451 listed recipes (prototype: 1,393). It adds 59 recipes, mostly Turtle/OctoWow content such as Timbermaw Hold, Emerald Sanctum, Centaur and Shen'dralar plans and belt buckles. No prototype recipe is lost; the two Warbear Harness patterns (drop and Timbermaw reputation) are now one recipe.
+  - Atlas-CFM skill difficulty colours, reagents, tools and crafting station for every recipe. pfQuest-octo vendor stock, drop chances and NPC spawn points. Zone hierarchy and map bounds for the planned maps.
 - Every recipe source, not only vendors: **Trainer**, **Quest** reward and **Drop** (single creatures, or one "World drop" line when many creatures drop it) join Vendor. All of Wowhead Classic's profession recipes are listed now, including trainer-taught ones, plus OctoWow-only recipes.
 - **Reputation** source: vendor recipes whose item says "Requires <faction> - <level>" are typed Reputation instead of Vendor and only show while that source is ticked. New sortable **Reputation** column (faction, level).
 - New sortable **Source** column between Faction and iLvl, and a multiple choice **Source** filter (Vendor, Reputation, Trainer, Quest, Drop). Rows with many sources show the first four with a "+N more" toggle.

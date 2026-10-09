@@ -12,6 +12,11 @@ Single-page report of every Classic profession recipe and where to get it, for T
 - `data/disen_table.txt` - disenchant table by quality + item level (WoWWiki "Disenchanting tables")
 - `data/sod_excluded.txt` - recipes added in Season of Discovery (Wowhead patch 1.15.x); build.py skips them
 - `build.py` - rebuilds `index.html` (Python 2.7: `python build.py`)
+- `pipeline/` - new data pipeline (Python 3): builds an SQLite database and the website data (`web/public/data/*.json`) from the scraped `data/*.txt` plus pfQuest-octo, Atlas-CFM and AtlasLoot data. See `pipeline/README.md`
+- `data/extracted/` - data pulled from the reference addons by `py -3 pipeline/run.py extract`
+- `docs/roadmap.md` - plan for the export addon and the new website
+- `docs/handoff-phase2-3.md` - handoff for the export addon and website work
+- `docs/addon-live-checks.md` - in-game `/run` checks the export addon depends on
 - `scripts/scrape_wowhead.py` - Wowhead Classic scraper for `data/recipes_wh.txt` (Python 3, see the docstring)
 - `docs/handover-add-professions.md` - how the vendor data was scraped
 - `docs/handover-all-sources.md` - how trainer/quest/drop/reputation data and skill levels were scraped
