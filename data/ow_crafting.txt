@@ -120,10 +120,10 @@ I|cooking|16111|5Recipe: Spiced Chili Crab|225|1149,4305,989
 I|firstaid|16112|5Manual: Heavy Silk Bandage|180|2805,13476
 I|firstaid|16113|5Manual: Mageweave Bandage|210|2805,13476
 I|cooking|16767|5Recipe: Undermine Clam Chowder|225|8139
-I|blacksmithing|17049|3Plans: Fiery Chain Girdle|0|12944
+I|blacksmithing|17049|3Plans: Fiery Chain Girdle|315|12944
 I|blacksmithing|17051|3Plans: Dark Iron Bracers|300|12944
 I|blacksmithing|17052|3Plans: Dark Iron Leggings|300|12944
-I|blacksmithing|17053|3Plans: Fiery Chain Shoulders|0|12944
+I|blacksmithing|17053|3Plans: Fiery Chain Shoulders|320|12944
 I|blacksmithing|17059|3Plans: Dark Iron Reaver|300|12944
 I|blacksmithing|17060|3Plans: Dark Iron Destroyer|300|12944
 I|cooking|17062|5Recipe: Mithril Head Trout|175|12033,12962,5162,3178,3333,4574,2383,2664,4307
@@ -415,10 +415,11 @@ V|81022|Innkeeper Gazz|[1,1]|
 V|81057|Eliana Firestorm|[1,1]|
 V|92019|Janet Hollowworth|[1,-1]|Deadwind Pass 56.3868,30.5605
 V|92020|Howard Gray|[1,-1]|Deadwind Pass 56.9868,31.1005
-I|jewelcrafting|70178|3Plans: Dark Iron Signet Ring|0|12944
-I|jewelcrafting|70216|3Plans: Orb of Clairvoyance|0|11536,10857,10856
-I|jewelcrafting|56024|4Plans: Blue Starfire|0|61914,62862
-I|jewelcrafting|70115|4Plans: Goldcrest Amulet|0|61574
-I|jewelcrafting|70144|4Plans: Ocean's Wrath|0|3499
-I|jewelcrafting|70168|4Plans: Pure Shining Moonstone|0|3537
-I|jewelcrafting|70128|4Plans: Skyfire Jewel|0|11189
+I|jewelcrafting|70178|3Plans: Dark Iron Signet Ring|320|12944
+I|jewelcrafting|70216|3Plans: Orb of Clairvoyance|320|11536,10857,10856
+I|jewelcrafting|56024|4Plans: Blue Starfire|265|61914,62862
+I|jewelcrafting|70115|4Plans: Goldcrest Amulet|180|61574
+I|jewelcrafting|70144|4Plans: Ocean's Wrath|120|3499
+I|jewelcrafting|70168|4Plans: Pure Shining Moonstone|180|3537
+I|jewelcrafting|70128|4Plans: Skyfire Jewel|280|11189
+I|enchanting|70198|5Formula: Enchanted Gemstone Oil|275|61926,61922,61915,61905,61914,62862,61909,61920

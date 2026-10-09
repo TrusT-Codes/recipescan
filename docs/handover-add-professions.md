@@ -58,3 +58,6 @@ Currently done: Tailoring, Leatherworking, Enchanting. Everything below was veri
 - The travel model (zone positions, flight points, boat/zeppelin times) is hand-made, not game data. Routes are estimates.
 - No reputation requirements in either source.
 - Visual layout of the page was never checked by screenshot (pane was hidden); logic was verified through the DOM only.
+
+## Required skill on OctoWow (no "Requires X" on item pages for some recipes)
+- Profession spell list `/db/?spells=11.<skillId>` (Jewelcrafting 755, Blacksmithing 164, Enchanting 333, ...) has a Listview with `colors:[,orange,yellow,green,gray]` per craft spell; `colors[1]` (orange) = required skill. Match by spell name (leading `@`). The craft spell id is the recipe's "teaches" spell id + 1.
