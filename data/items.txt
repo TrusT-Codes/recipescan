@@ -1,0 +1,289 @@
+# craftedItemId|name|quality|itemLevel|itemClass   (quality 0-5, class 2 weapon / 4 armor)
+# Wowhead Classic item pages: quality from item data, itemLevel from the tooltip "Item Level" line.
+3837|Golden Scale Coif|2|38|4
+4255|Green Leather Armor|2|31|4
+4262|Gem-studded Leather Belt|3|37|4
+4319|Azure Silk Gloves|2|29|4
+4322|Enchanter's Cowl|2|33|4
+4327|Icy Cloak|3|40|4
+4332|Bright Yellow Shirt|1|27|4
+4333|Dark Silk Shirt|1|31|4
+4336|Black Swashbuckler's Shirt|1|40|4
+4397|Gnomish Cloaking Device|1|40|4
+4455|Raptor Hide Harness|2|33|4
+4456|Raptor Hide Belt|2|33|4
+5762|Red Linen Bag|1|5|1
+5763|Red Woolen Bag|1|15|1
+5780|Murloc Scale Belt|2|18|4
+5781|Murloc Scale Breastplate|2|19|4
+5782|Thick Murloc Armor|2|34|4
+5783|Murloc Scale Bracers|2|38|4
+5963|Barbaric Leggings|2|34|4
+6240|Blue Linen Vest|2|12|4
+6242|Blue Linen Robe|2|14|4
+6263|Blue Overalls|2|20|4
+6264|Greater Adept's Robe|2|23|4
+6466|Deviate Scale Cloak|2|18|4
+6467|Deviate Scale Gloves|2|21|4
+7053|Azure Silk Cloak|2|35|4
+7056|Crimson Silk Cloak|2|36|4
+7063|Crimson Silk Robe|2|41|4
+7148|Goblin Jumper Cables|1|33|4
+7283|Black Whelp Cloak|2|20|4
+7284|Red Whelp Gloves|2|24|4
+7349|Herbalist's Gloves|2|27|4
+7352|Earthen Leather Shoulders|2|27|4
+7386|Green Whelp Bracers|2|38|4
+7506|Gnomish Universal Remote|2|25|4
+8187|Turtle Scale Gloves|2|41|4
+8192|Nightscape Shoulders|2|42|4
+10030|Admiral's Hat|2|48|4
+10034|Tuxedo Shirt|1|1|4
+10035|Tuxedo Pants|1|35|4
+10036|Tuxedo Jacket|1|35|4
+10040|White Wedding Dress|1|35|4
+10052|Orange Martial Shirt|1|40|4
+10054|Lavender Mageweave Shirt|1|46|4
+10055|Pink Mageweave Shirt|1|47|4
+13858|Runecloth Robe|2|52|4
+13860|Runecloth Cloak|2|53|4
+13863|Runecloth Gloves|2|55|4
+13864|Runecloth Boots|2|56|4
+14046|Runecloth Bag|1|52|1
+14107|Felcloth Pants|2|55|4
+14342|Mooncloth|1|55|7
+15045|Green Dragonscale Breastplate|3|52|4
+15048|Blue Dragonscale Breastplate|3|57|4
+15050|Black Dragonscale Breastplate|3|58|4
+15057|Stormshroud Pants|3|55|4
+15061|Living Shoulders|3|54|4
+15063|Devilsaur Gauntlets|3|58|4
+15064|Warbear Harness|3|55|4
+15065|Warbear Woolies|3|57|4
+15067|Ironfeather Shoulders|3|54|4
+15071|Frostsaber Boots|2|55|4
+15074|Chimeric Gloves|2|53|4
+15077|Heavy Scorpid Bracers|2|51|4
+15080|Heavy Scorpid Helm|2|59|4
+15083|Wicked Leather Gauntlets|2|52|4
+15094|Runic Leather Headband|2|58|4
+16979|Flarecore Gloves|4|62|4
+16980|Flarecore Mantle|4|61|4
+16982|Corehound Boots|4|59|4
+16983|Molten Helm|4|60|4
+16984|Black Dragonscale Boots|4|61|4
+18238|Shadowskin Gloves|3|40|4
+18486|Mooncloth Robe|3|61|4
+18662|Heavy Leather Ball|1|1|0
+18948|Barbaric Bracers|3|32|4
+19044|Might of the Timbermaw|3|58|4
+19047|Wisdom of the Timbermaw|3|58|4
+19049|Timbermaw Brawlers|3|64|4
+19050|Mantle of the Timbermaw|3|64|4
+19052|Dawn Treaders|3|58|4
+19056|Argent Boots|3|58|4
+19058|Golden Mantle of the Dawn|3|64|4
+19059|Argent Shoulders|3|64|4
+19149|Lava Belt|4|66|4
+19156|Flarecore Robe|4|66|4
+19157|Chromatic Gauntlets|4|70|4
+19162|Corehound Belt|4|70|4
+19163|Molten Belt|4|70|4
+19165|Flarecore Leggings|4|70|4
+19682|Bloodvine Vest|3|65|4
+19683|Bloodvine Leggings|3|65|4
+19684|Bloodvine Boots|3|65|4
+19685|Primal Batskin Jerkin|3|65|4
+19686|Primal Batskin Gloves|3|65|4
+19687|Primal Batskin Bracers|3|65|4
+19688|Blood Tiger Breastplate|3|65|4
+19689|Blood Tiger Shoulders|3|65|4
+20380|Dreamscale Breastplate|4|68|4
+20476|Sandstalker Bracers|3|62|4
+20477|Sandstalker Gauntlets|3|62|4
+20478|Sandstalker Breastplate|3|62|4
+20479|Spitfire Breastplate|3|62|4
+20480|Spitfire Gauntlets|3|62|4
+20481|Spitfire Bracers|3|62|4
+20575|Black Whelp Tunic|2|20|4
+21340|Soul Pouch|2|52|1
+22246|Enchanted Mageweave Pouch|2|45|1
+22248|Enchanted Runecloth Bag|2|55|1
+22251|Cenarion Herb Bag|2|55|1
+22252|Satchel of Cenarius|2|65|1
+22660|Gaea's Embrace|3|70|4
+22756|Sylvan Vest|3|70|4
+22757|Sylvan Crown|3|70|4
+22758|Sylvan Shoulders|3|70|4
+22759|Bramblewood Helm|3|70|4
+22760|Bramblewood Boots|3|70|4
+22761|Bramblewood Belt|3|70|4
+210781|Phoenix Bindings|3|30|4
+213369|Faintly Glowing Leather|3|40|7
+213379|Hyperconductive Arcano-Filament|3|40|7
+215111|Gneuro-Linked Arcano-Filament Monocle|4|45|4
+215114|Glowing Hyperconductive Scale Coif|4|45|4
+215166|Glowing Gneuro-Linked Cowl|4|45|4
+215365|Invoker's Mantle|2|30|4
+215366|Invoker's Cord|2|30|4
+215381|Gneuro-Conductive Channeler's Hood|4|45|4
+215382|Rad-Resistant Scale Hood|4|45|4
+217245|Crimson Silk Robe|2|41|4
+217257|Enchanter's Cowl|2|33|4
+217270|Turtle Scale Gloves|2|41|4
+227844|Leather-Reinforced Runecloth Bag|3|60|1
+227851|Hardened Black Dragonscale Breastplate|3|65|4
+227861|Incandescent Mooncloth Robe|3|63|4
+227875|Honed Blue Dragonscale Breastplate|3|57|4
+227879|Living Green Dragonscale Breastplate|3|52|4
+234009|Bolt of Qiraji Silk|1|60|7
+234294|Sandstalker Bracers|4|75|4
+234296|Sandstalker Gauntlets|4|75|4
+234298|Sandstalker Breastplate|4|75|4
+234300|Spitfire Bracers|4|75|4
+234302|Spitfire Gauntlets|4|75|4
+234304|Spitfire Breastplate|4|75|4
+234306|Bramblewood Belt|4|75|4
+234308|Bramblewood Boots|4|75|4
+234310|Bramblewood Helm|4|75|4
+234312|Sylvan Shoulders|4|75|4
+234315|Sylvan Crown|4|75|4
+234317|Sylvan Vest|4|75|4
+234324|Dreamscale Breastplate|4|80|4
+3849|Hardened Iron Shortsword|2|32|2
+3851|Solid Iron Maul|2|31|2
+3853|Moonsteel Broadsword|2|36|2
+3855|Massive Iron Axe|2|37|2
+4372|Lovingly Crafted Boomstick|2|24|2
+4381|Minor Recombobulator|2|28|4
+4386|Ice Deflector|1|31|7
+4396|Mechanical Dragonling|1|40|4
+4407|Accurate Scope|1|36|0
+7189|Goblin Rocket Boots|2|45|4
+7924|Mithril Scale Bracers|2|43|4
+7947|Ebon Shiv|2|51|2
+9312|Blue Firework|1|20|0
+9313|Green Firework|1|20|0
+9318|Red Firework|1|20|0
+10506|Deepdive Helmet|2|46|4
+10542|Goblin Mining Helmet|2|41|4
+10543|Goblin Construction Helmet|2|41|4
+10545|Gnomish Goggles|2|42|4
+10546|Deadly Scope|1|42|0
+10576|Mithril Mechanical Dragonling|1|50|4
+10577|Goblin Mortar|1|41|4
+10587|Goblin Bomb Dispenser|1|46|4
+10588|Goblin Rocket Helmet|2|47|4
+10645|Gnomish Death Ray|1|48|4
+10646|Goblin Sapper Charge|1|41|7
+10716|Gnomish Shrink Ray|1|41|4
+10720|Gnomish Net-o-Matic Projector|1|42|4
+10721|Gnomish Harm Prevention Belt|2|43|4
+10724|Gnomish Rocket Boots|2|45|4
+10725|Gnomish Battle Chicken|1|46|4
+10726|Gnomish Mind Control Cap|2|47|4
+10727|Goblin Dragon Gun|1|48|4
+12625|Dawnbringer Shoulders|3|58|4
+12632|Storm Gauntlets|3|59|4
+12773|Ornate Thorium Handaxe|2|55|2
+12775|Huge Thorium Battleaxe|2|56|2
+15993|Thorium Grenade|1|52|7
+15994|Thorium Widget|1|52|7
+16000|Thorium Tube|1|39|7
+16006|Delicate Arcanite Converter|1|58|7
+16023|Masterwork Target Dummy|1|55|7
+16988|Fiery Chain Shoulders|4|62|4
+16989|Fiery Chain Girdle|4|59|4
+17013|Dark Iron Leggings|4|60|4
+17014|Dark Iron Bracers|4|59|4
+17015|Dark Iron Reaver|3|65|2
+17016|Dark Iron Destroyer|3|65|2
+18588|Ez-Thro Dynamite II|1|40|7
+18594|Powerful Seaforium Charge|1|55|7
+18631|Truesilver Transformer|1|50|7
+18634|Gyrofreeze Ice Reflector|3|52|4
+19026|Snake Burst Firework|1|50|0
+19043|Heavy Timbermaw Belt|3|58|4
+19048|Heavy Timbermaw Boots|3|64|4
+19051|Girdle of the Dawn|3|58|4
+19057|Gloves of the Dawn|3|64|4
+19148|Dark Iron Helm|4|66|4
+19164|Dark Iron Gauntlets|4|70|4
+19166|Black Amnesty|4|66|2
+19167|Blackfury|4|66|2
+19168|Blackguard|4|70|2
+19169|Nightfall|4|70|2
+19170|Ebon Hand|4|70|2
+19690|Bloodsoul Breastplate|3|65|4
+19691|Bloodsoul Shoulders|3|65|4
+19692|Bloodsoul Gauntlets|3|65|4
+19693|Darksoul Breastplate|3|65|4
+19694|Darksoul Leggings|3|65|4
+19695|Darksoul Shoulders|3|65|4
+19998|Bloodvine Lens|3|65|4
+19999|Bloodvine Goggles|3|65|4
+20039|Dark Iron Boots|4|70|4
+22191|Obsidian Mail Tunic|4|72|4
+22195|Light Obsidian Belt|3|68|4
+22197|Heavy Obsidian Belt|3|68|4
+22198|Jagged Obsidian Shield|4|70|4
+22762|Ironvine Breastplate|3|70|4
+22763|Ironvine Gloves|3|70|4
+22764|Ironvine Belt|3|70|4
+210773|Mantle of the Second War|3|30|4
+211427|Soul Vessel|3|1|12
+213376|Low-Background Truesilver Plates|3|40|7
+213383|Polished Truesilver Gears|3|40|7
+213390|Whirling Truesilver Gearwall|4|45|4
+215115|Hyperconductive Goldwrap|4|45|4
+215127|High-Yield Radiation Bomb|2|40|7
+215161|Tempered Interference-Negating Helmet|4|45|4
+215167|Reflective Truesilver Braincage|4|45|4
+215168|Ez-Thro Radiation Bomb|2|40|7
+217279|Golden Scale Coif|2|38|4
+217281|Moonsteel Broadsword|2|36|2
+227870|Tempest Gauntlets|3|59|4
+233984|Arcane Megabomb|1|70|7
+233985|The Fumigator|1|70|7
+233986|Obsidian Bomb|1|70|7
+234004|Obsidian Grinding Stone|1|60|7
+234005|Obsidian Blasting Powder|1|60|7
+234288|Ironvine Belt|4|75|4
+234290|Ironvine Gloves|4|75|4
+234292|Ironvine Breastplate|4|75|4
+234319|Heavy Obsidian Belt|4|75|4
+234321|Light Obsidian Belt|4|75|4
+234459|Jagged Obsidian Shield|4|75|4
+234460|Obsidian Mail Tunic|4|75|4
+# OctoWow search results (quality = 6 - leading digit of the OctoWow name, level = item level)
+12764|Thorium Greatsword|2|52|2
+12769|Bleakwood Hew|3|54|2
+12772|Inlaid Thorium Hammer|2|54|2
+12779|Rune Edge|2|57|2
+12795|Blood Talon|3|60|2
+12802|Darkspear|3|60|2
+33135|Bulwark of Unshaken Earth|4|70|4
+2867|Rough Bronze Bracers|2|23|4
+61648|Fury of the Timbermaw|3|58|4
+61649|Pauldrons of the Timbermaw|3|64|4
+65039|Fiery Chain Breastplate|4|70|4
+6730|Ironforge Chain|2|16|4
+6733|Ironforge Gauntlets|2|28|4
+7925|Mithril Scale Gloves|2|44|4
+60294|Bloodstone Warblade|2|47|2
+65008|Dream's Herald|4|66|2
+55043|Harness of the High Thane|4|70|4
+55054|Prismatic Scale Barbute|3|66|4
+65038|Corehound Gloves|4|70|4
+65036|Chromatic Leggings|4|70|4
+65037|Molten Leggings|4|70|4
+65000|Red Dragonscale Leggings|3|59|4
+65021|Verdant Dreamer's Breastplate|4|68|4
+8174|Comfortable Leather Hat|3|40|4
+8195|Nightscape Cloak|2|46|4
+21154|Festival Dress|1|1|4
+55052|Astronomer Raiments|3|66|4
+55056|Spellwoven Nobility Drape|4|67|4
+65035|Flarecore Boots|4|70|4
+6243|Green Woolen Robe|2|18|4
+7027|Boots of Darkness|2|28|4

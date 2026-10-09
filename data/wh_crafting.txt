@@ -1,0 +1,383 @@
+I|cooking|728|Recipe: Westfall Stew|75|733|340
+I|cooking|2697|Recipe: Goretusk Liver Pie|50|724|340
+I|cooking|2698|Recipe: Cooked Crab Claw|85|2682|340
+I|cooking|2699|Recipe: Redridge Goulash|100|1082|340
+I|cooking|2700|Recipe: Succulent Pork Ribs|110|2685|340
+I|cooking|2701|Recipe: Seasoned Wolf Kabob|100|1017|340
+I|cooking|2889|Recipe: Beer Basted Boar Ribs|25|2888|340
+I|cooking|3678|Recipe: Crocolisk Steak|80|3662|340
+I|cooking|3679|Recipe: Blood Sausage|60|3220|340
+I|cooking|3680|Recipe: Murloc Fin Soup|90|3663|340
+I|cooking|3681|Recipe: Crocolisk Gumbo|120|3664|340
+I|cooking|3682|Recipe: Curiously Tasty Omelet|130|3665|340,1148,2821
+I|cooking|3683|Recipe: Gooey Spider Cake|110|3666|340
+I|cooking|3734|Recipe: Big Bear Steak|110|3726|3960,12246
+I|cooking|3735|Recipe: Hot Lion Chops|125|3727|3489,12245
+I|cooking|4609|Recipe: Barbecued Buzzard Wing|175|4457|2814,12246
+I|cooking|5483|Recipe: Scorpid Surprise|20|5473|3881
+I|cooking|5484|Recipe: Roasted Kodo Meat|35|5474|3081
+I|cooking|5485|Recipe: Fillet of Frenzy|50|5476|4200
+I|cooking|5486|Recipe: Strider Stew|50|5477|3482
+I|cooking|5488|Recipe: Crispy Lizard Tail|100|5479|3482
+I|cooking|5489|Recipe: Lean Venison|110|5480|3960,12245
+I|cooking|5528|Recipe: Clam Chowder|90|5526|4305,4307
+I|alchemy|5640|Recipe: Rage Potion|60|5631|1669,1685,3335,3499
+I|alchemy|5642|Recipe: Free Action Potion|150|5634|3348,4226,5178,12245
+I|alchemy|5643|Recipe: Great Rage Potion|175|5633|3335,4226,12245
+I|cooking|6039|Recipe: Giant Clam Scorcho|175|6038|2664
+I|blacksmithing|6047|Plans: Golden Scale Coif|190|3837|5411
+I|alchemy|6053|Recipe: Holy Protection Potion|100|6051|1685,3134,3490
+I|alchemy|6054|Recipe: Shadow Protection Potion|135|6048|2393,3956
+I|alchemy|6055|Recipe: Fire Protection Potion|165|6049|2380,4083
+I|alchemy|6056|Recipe: Frost Protection Potion|190|6050|2812,2848
+I|alchemy|6057|Recipe: Nature Protection Potion|190|6052|2848,5594,8157,8158
+I|alchemy|6068|Recipe: Shadow Oil|165|3824|2481,4878,12245
+I|cooking|6325|Recipe: Brilliant Smallfish|1|6290|66,1684,3029,3550,4265,4574,5494,5940,8508
+I|cooking|6326|Recipe: Slitherskin Mackerel|1|787|3550,4305,5162,5942,10118
+I|cooking|6328|Recipe: Longjaw Mud Snapper|50|4592|66,1684,3027,4265,4574,5162,5748,5940
+I|cooking|6329|Recipe: Loch Frenzy Delight|50|6316|1684
+I|cooking|6330|Recipe: Bristle Whisker Catfish|100|4593|2383,2397,3027,3029,3497,4553,5494
+I|cooking|6368|Recipe: Rainbow Fin Albacore|50|5095|3178,3333,3497,4305,4307,4553,5494,5748,5942,10118
+I|cooking|6369|Recipe: Rockscale Cod|175|4594|2383,2664,3178,3333,4307,4574,5162,12033,12962
+I|cooking|6892|Recipe: Smoked Bear Meat|40|6890|1465,3556
+I|engineering|7560|Schematic: Gnomish Universal Remote|125|7506|5175,6730
+I|engineering|7561|Schematic: Goblin Jumper Cables|165|7148|3134,3537,4086,12246
+I|engineering|7742|Schematic: Gnomish Cloaking Device|200|4397|6777
+I|blacksmithing|7995|Plans: Mithril Scale Bracers|215|7924|8161,8176
+I|blacksmithing|8030|Plans: Ebon Shiv|255|7947|11278
+I|alchemy|9300|Recipe: Elixir of Demonslaying|250|9224|8177,8178
+I|alchemy|9301|Recipe: Elixir of Shadow Power|250|9264|1313,4610
+I|alchemy|9302|Recipe: Ghost Dye|245|9210|8157,8158
+I|alchemy|9303|Recipe: Philosopher's Stone|225|9149|5594
+I|alchemy|9304|Recipe: Transmute Iron to Gold|225|3577|5594
+I|alchemy|9305|Recipe: Transmute Mithril to Truesilver|225|6037|5594
+I|engineering|10602|Schematic: Deadly Scope|210|10546|8679,9544
+I|engineering|10607|Schematic: Deepdive Helmet|230|10506|8678
+I|engineering|10609|Schematic: Mithril Mechanical Dragonling|250|10576|2688
+I|blacksmithing|10858|Plans: Solid Iron Maul|155|3851|1471,8878,9179
+I|blacksmithing|12162|Plans: Hardened Iron Shortsword|160|3849|2843,3356,5512
+I|blacksmithing|12163|Plans: Moonsteel Broadsword|180|3853|2482
+I|blacksmithing|12164|Plans: Massive Iron Axe|185|3855|1146,2483
+I|cooking|12226|Recipe: Crispy Bat Wing|1|12224|2118
+I|cooking|12227|Recipe: Lean Wolf Steak|125|12209|12246
+I|cooking|12228|Recipe: Roast Raptor|175|12210|734,1148,2810,2821,4879,4897,12245
+I|cooking|12229|Recipe: Hot Wolf Ribs|175|13851|7947,8145,12246
+I|cooking|12231|Recipe: Jungle Stew|175|12212|734,1148,12245
+I|cooking|12232|Recipe: Carrion Surprise|175|12213|989,4879,9636,12245
+I|cooking|12233|Recipe: Mystery Stew|175|12214|4897,8150,12246
+I|cooking|12239|Recipe: Dragonbreath Chili|200|12217|4879,4897,12246
+I|cooking|12240|Recipe: Heavy Kodo Stew|200|12215|8150,9636,12245
+I|blacksmithing|12698|Plans: Dawnbringer Shoulders|290|12625|10856,10857,11536
+I|blacksmithing|12703|Plans: Storm Gauntlets|295|12632|11278
+I|blacksmithing|12819|Plans: Ornate Thorium Handaxe|275|12773|11278
+I|blacksmithing|12823|Plans: Huge Thorium Battleaxe|280|12775|11278
+I|alchemy|12958|Recipe: Transmute Arcanite|275|12360|5594
+I|engineering|13308|Schematic: Ice Deflector|155|4386|2684
+I|engineering|13309|Schematic: Lovingly Crafted Boomstick|120|4372|2682,6730
+I|engineering|13310|Schematic: Accurate Scope|180|4407|2685,12246
+I|engineering|13311|Schematic: Mechanical Dragonling|200|4396|2687
+I|alchemy|13477|Recipe: Superior Mana Potion|260|13443|4226,4610
+I|alchemy|13478|Recipe: Elixir of Superior Defense|265|13445|3348,5178
+I|alchemy|13480|Recipe: Major Healing Potion|275|13446|11188
+I|alchemy|13482|Recipe: Transmute Air to Fire|275|7078|10856,10857,11536
+I|alchemy|13483|Recipe: Transmute Fire to Earth|275|7076|9499
+I|alchemy|13484|Recipe: Transmute Earth to Water|275|7080|11557
+I|alchemy|13485|Recipe: Transmute Water to Air|275|7082|11278
+I|alchemy|13501|Recipe: Major Mana Potion|295|13444|11278
+I|alchemy|13518|Recipe: Flask of Petrification|300|13506|227853
+I|alchemy|13519|Recipe: Flask of the Titans|300|13510|227853
+I|alchemy|13520|Recipe: Flask of Distilled Wisdom|300|13511|227853
+I|alchemy|13521|Recipe: Flask of Supreme Power|300|13512|227853
+I|alchemy|13522|Recipe: Flask of Chromatic Resistance|300|13513|227853
+I|cooking|13939|Recipe: Spotted Yellowtail|225|6887|8137
+I|cooking|13940|Recipe: Cooked Glossy Mightfish|225|13927|2664
+I|cooking|13941|Recipe: Filet of Redgill|225|13930|2664
+I|cooking|13942|Recipe: Grilled Squid|240|13928|8137
+I|cooking|13943|Recipe: Hot Smoked Bass|240|13929|2664
+I|cooking|13945|Recipe: Nightfin Soup|250|13931|8137
+I|cooking|13946|Recipe: Poached Sunscale Salmon|250|13932|8137
+I|cooking|13947|Recipe: Lobster Stew|275|13933|7947,8145
+I|cooking|13948|Recipe: Mightfish Steak|275|13934|7947,8145
+I|cooking|13949|Recipe: Baked Salmon|275|13935|7947,8145
+I|alchemy|14634|Recipe: Frost Oil|200|3829|2480
+I|engineering|14639|Schematic: Minor Recombobulator|140|4381|2682,2683,216672
+I|engineering|16041|Schematic: Thorium Grenade|260|15993|3413,5175
+I|engineering|16042|Schematic: Thorium Widget|260|15994|3413,5175
+I|engineering|16046|Schematic: Masterwork Target Dummy|275|16023|11185
+I|engineering|16047|Schematic: Thorium Tube|275|16000|11185
+I|engineering|16050|Schematic: Delicate Arcanite Converter|285|16006|11185
+I|cooking|16072|Expert Cookbook|125|None|3955,12033
+I|firstaid|16084|Expert First Aid - Under Wraps|125|None|2805,13476
+I|cooking|16110|Recipe: Monster Omelet|225|12218|2803,2806,11187
+I|cooking|16111|Recipe: Spiced Chili Crab|225|12216|989,1149,4305
+I|firstaid|16112|Manual: Heavy Silk Bandage|180|6451|2805,13476
+I|firstaid|16113|Manual: Mageweave Bandage|210|8544|2805,13476
+I|cooking|16767|Recipe: Undermine Clam Chowder|225|16766|8139
+I|blacksmithing|17049|Plans: Fiery Chain Girdle|295|16989|12944
+I|blacksmithing|17051|Plans: Dark Iron Bracers|295|17014|12944
+I|blacksmithing|17052|Plans: Dark Iron Leggings|300|17013|12944
+I|blacksmithing|17053|Plans: Fiery Chain Shoulders|300|16988|12944
+I|blacksmithing|17059|Plans: Dark Iron Reaver|300|17015|12944
+I|blacksmithing|17060|Plans: Dark Iron Destroyer|300|17016|12944
+I|cooking|17062|Recipe: Mithril Head Trout|175|8364|2383,2664,3178,3333,4307,4574,5162,12033,12962
+I|cooking|17200|Recipe: Gingerbread Cookie|1|17197|13420,13429,13432,13433,13435,216902
+I|cooking|17201|Recipe: Egg Nog|35|17198|13420,13429,13432,13433,13435,216902
+I|cooking|18046|Recipe: Tender Wolf Steak|225|18045|4782,7733,8125
+I|cooking|18160|Recipe: Thistle Tea|60|7676|6779
+I|engineering|18647|Schematic: Red Firework|150|9318|3413
+I|engineering|18648|Schematic: Green Firework|150|9313|2838,3495
+I|engineering|18649|Schematic: Blue Firework|150|9312|1304,5175
+I|engineering|18650|Schematic: EZ-Thro Dynamite II|200|18588|8131
+I|engineering|18651|Schematic: Truesilver Transformer|260|18631|2685
+I|engineering|18652|Schematic: Gyrofreeze Ice Reflector|260|18634|11185
+I|engineering|18656|Schematic: Powerful Seaforium Charge|275|18594|11185
+I|engineering|19027|Schematic: Snake Burst Firework|250|19026|14637
+I|blacksmithing|19202|Plans: Heavy Timbermaw Belt|290|19043|11557
+I|blacksmithing|19203|Plans: Girdle of the Dawn|290|19051|10856,10857,11536
+I|blacksmithing|19204|Plans: Heavy Timbermaw Boots|300|19048|11557
+I|blacksmithing|19205|Plans: Gloves of the Dawn|300|19057|10856,10857,11536
+I|blacksmithing|19206|Plans: Dark Iron Helm|300|19148|12944
+I|blacksmithing|19207|Plans: Dark Iron Gauntlets|300|19164|12944
+I|blacksmithing|19208|Plans: Black Amnesty|300|19166|12944
+I|blacksmithing|19209|Plans: Blackfury|300|19167|12944
+I|blacksmithing|19210|Plans: Ebon Hand|300|19170|12944
+I|blacksmithing|19211|Plans: Blackguard|300|19168|12944
+I|blacksmithing|19212|Plans: Nightfall|300|19169|12944
+I|firstaid|19442|Formula: Powerful Anti-Venom|300|19440|10856,10857,11536
+I|blacksmithing|19776|Plans: Bloodsoul Breastplate|300|19690|14921
+I|blacksmithing|19777|Plans: Bloodsoul Shoulders|300|19691|14921
+I|blacksmithing|19778|Plans: Bloodsoul Gauntlets|300|19692|14921
+I|blacksmithing|19779|Plans: Darksoul Breastplate|300|19693|14921
+I|blacksmithing|19780|Plans: Darksoul Leggings|300|19694|14921
+I|blacksmithing|19781|Plans: Darksoul Shoulders|300|19695|14921
+I|engineering|20000|Schematic: Bloodvine Goggles|300|19999|14921
+I|engineering|20001|Schematic: Bloodvine Lens|300|19998|14921
+I|alchemy|20011|Recipe: Mageblood Potion|275|20007|14921
+I|alchemy|20012|Recipe: Greater Dreamless Sleep|275|20002|14921
+I|alchemy|20013|Recipe: Living Action Potion|285|20008|14921
+I|alchemy|20014|Recipe: Major Troll's Blood Potion|290|20004|14921
+I|blacksmithing|20040|Plans: Dark Iron Boots|300|20039|12944
+I|cooking|20075|Recipe: Heavy Crocolisk Stew|150|20074|4879
+I|alchemy|20761|Recipe: Transmute Elemental Fire|300|7068|12944
+I|cooking|21099|Recipe: Smoked Sagefish|80|21072|2381,2397,2664,3027,3085,3400,4223,4265,4553,5160,5483,8307,12033,14738,240604
+I|cooking|21219|Recipe: Sagefish Delight|175|21217|2381,2397,2664,3027,3085,3400,4223,4265,4553,5160,5483,8307,12033,14738,240604
+I|blacksmithing|22209|Plans: Heavy Obsidian Belt|300|22197|15176
+I|blacksmithing|22214|Plans: Light Obsidian Belt|300|22195|15176
+I|blacksmithing|22219|Plans: Jagged Obsidian Shield|300|22198|15471
+I|blacksmithing|22221|Plans: Obsidian Mail Tunic|300|22191|15471
+I|blacksmithing|22766|Plans: Ironvine Breastplate|300|22762|15176
+I|blacksmithing|22767|Plans: Ironvine Gloves|300|22763|15176
+I|blacksmithing|22768|Plans: Ironvine Belt|300|22764|15176
+I|alchemy|210709|Recipe: Elixir of Coalesced Regret|90|210708|3134,3537
+I|blacksmithing|210779|Plans: Mantle of the Second War|140|210773|213077,214070,214096,214098,214099,214101
+I|engineering|212230|Schematic: Soul Vessel|205|211427|213077,214070,214096,214098,214099,214101
+I|engineering|215153|Schematic: Whirling Truesilver Gearwall|225|213390|217689
+I|blacksmithing|215155|Plans: Temepered Interference-Negating Helmet|225|215161|217689
+I|engineering|215156|Schematic: Hyperconductive Goldwrap|225|215115|217689
+I|alchemy|215163|Recipe: Mildly-Irradiated Rejuvenation Potion|225|215162|217689
+I|blacksmithing|215383|Plans: Reflective Truesilver Braincage|225|215167|217689
+I|blacksmithing|215384|Plans: Low-Background Truesilver Plates|200|213376|217689
+I|engineering|215429|Schematic: Polished Truesilver Gears|200|213383|217689
+I|engineering|215431|Schematic: High-Yield Radiation Bomb|225|215127|217689
+I|engineering|215432|Schematic: Ez-Thro Radiation Bomb|225|215168|217689
+I|alchemy|215433|Recipe: Insulating Gniodine|200|213372|217689
+I|blacksmithing|217280|Plans: Golden Scale Coif|215|217279|5411
+I|blacksmithing|217282|Plans: Moonsteel Broadsword|205|217281|2482
+I|alchemy|217399|Recipe: Lesser Arcane Elixir|210|217398|213077,214070,214096,214098,214099,214101
+I|engineering|221327|Schematic: Gnomish Shrink Ray|205|10716|222316
+I|engineering|221328|Schematic: Gnomish Goggles|210|10545|222316
+I|engineering|221329|Schematic: Gnomish Net-o-matic Projector|210|10720|222316
+I|engineering|221330|Schematic: Gnomish Harm Prevention Belt|215|10721|222316
+I|engineering|221331|Schematic: Gnomish Rocket Boots|225|10724|222316
+I|engineering|221332|Schematic: Gnomish Battle Chicken|230|10725|222316
+I|engineering|221333|Schematic: Gnomish Mind Control Cap|235|10726|222316
+I|engineering|221334|Schematic: Gnomish Death Ray|240|10645|222316
+I|engineering|221335|Schematic: Goblin Construction Helmet|205|10543|222261
+I|engineering|221336|Schematic: Goblin Mining Helmet|205|10542|222261
+I|engineering|221337|Schematic: Goblin Mortar|225|10577|222261
+I|engineering|221338|Schematic: Goblin Sapper Charge|205|10646|222261
+I|engineering|221339|Schematic: Goblin Rocket Boots|225|7189|222261
+I|engineering|221340|Schematic: Goblin Bomb Dispenser|230|10587|222261
+I|engineering|221342|Schematic: Goblin Dragon Gun|240|10727|222261
+I|engineering|221343|Schematic: Goblin Rocket Helmet|245|10588|222261
+I|blacksmithing|228313|Plans: Tempest Gauntlets|315|227870|11278
+I|firstaid|232434|Manual: Dense Runecloth Bandage|315|232433|17068,17070
+I|cooking|232437|Recipe: Darkclaw Bisque|325|232436|17068,17070
+I|cooking|232443|Recipe: Smoked Redgill|325|232438|17068,17070
+I|alchemy|234257|Recipe: Elixir of the Honey Badger|315|233967|15175
+I|alchemy|234258|Recipe: Elixir of the Mage-Lord|315|233968|15175
+I|alchemy|234259|Recipe: Elixir of the Ironside|315|233969|15175
+I|alchemy|234260|Recipe: Elixir of Alacrity|315|233977|15175
+I|engineering|234261|Schematic: Arcane Megabomb|315|233984|15179
+I|engineering|234262|Schematic: The Fumigator|315|233985|15179
+I|engineering|234263|Schematic: Obsidian Bomb|315|233986|15179
+I|blacksmithing|234279|Plans: Obsidian Grinding Stone|315|234004|15176
+I|engineering|234280|Schematic: Obsidian Blasting Powder|315|234005|15176
+I|blacksmithing|234289|Plans: Ironvine Belt|320|234288|15176
+I|blacksmithing|234291|Plans: Ironvine Gloves|320|234290|15176
+I|blacksmithing|234293|Plans: Ironvine Breastplate|320|234292|15176
+I|blacksmithing|234320|Plans: Heavy Obsidian Belt|320|234319|15176
+I|blacksmithing|234322|Plans: Light Obsidian Belt|320|234321|15176
+I|blacksmithing|234458|Plans: Jagged Obsidian Shield|320|234459|15471
+I|blacksmithing|234461|Plans: Obsidian Mail Tunic|320|234460|15471
+V|66|Tharynn Bouden|[1,-1]|Elwynn Forest 41.8,67
+V|340|Kendor Kabonka|[1,null]|Stormwind City 74.4,36.4
+V|734|Corporal Bluth|[1,-1]|Stranglethorn Vale 38,3
+V|989|Banalash|[null,1]|Swamp of Sorrows 44.6,56.8
+V|1146|Vharr|[null,1]|Stranglethorn Vale 32.2,28
+V|1148|Nerrist|[-1,1]|Stranglethorn Vale 32.6,29.2
+V|1149|Uthok|[null,1]|Stranglethorn Vale 31.4,28
+V|1304|Darian Singh|[1,null]|Stormwind City 29.6,67.8
+V|1313|Maria Lumere|[1,null]|Stormwind City 46.4,78.8
+V|1465|Drac Roughcut|[1,null]|Loch Modan 35.6,49
+V|1471|Jannos Ironwill|[1,-1]|Arathi Highlands 46,47.4
+V|1669|Defias Profiteer|[1,1]|Westfall 43.4,66.8
+V|1684|Khara Deepwater|[1,null]|Loch Modan 39.4,39.2
+V|1685|Xandar Goodbeard|[1,null]|Loch Modan 82.4,63.4
+V|2118|Abigail Shiel|[null,1]|Tirisfal Glades 61,52.4
+V|2380|Nandar Branson|[1,-1]|Hillsbrad Foothills 50.8,57
+V|2381|Micha Yance|[1,-1]|Hillsbrad Foothills 49,55
+V|2383|Lindea Rabonne|[1,-1]|Hillsbrad Foothills 50.4,61
+V|2393|Christoph Jeffcoat|[null,1]|Hillsbrad Foothills 62.2,19
+V|2397|Derak Nightfall|[-1,1]|Hillsbrad Foothills 63,19.4
+V|2480|Bro'kin|[1,1]|Alterac Mountains 38.4,38.8
+V|2481|Bliztik|[1,1]|Duskwood 18,54.4
+V|2482|Zarena Cromwind|[1,1]|Stranglethorn Vale 28.4,75.4
+V|2483|Jaquilina Dramet|[1,1]|Stranglethorn Vale 35.6,10.6
+V|2664|Kelsey Yance|[1,1]|Stranglethorn Vale 28.2,74.4
+V|2682|Fradd Swiftgear|[1,-1]|Wetlands 26.4,25.8
+V|2683|Namdo Bizzfizzle|[1,-1]|
+V|2684|Rizz Loosebolt|[1,1]|Alterac Mountains 47.2,35.2
+V|2685|Mazk Snipeshot|[1,1]|Stranglethorn Vale 28.4,75
+V|2687|Gnaz Blunderflame|[1,1]|Stranglethorn Vale 51,35.2
+V|2688|Ruppo Zipcoil|[1,1]|The Hinterlands 34.2,37.8
+V|2803|Malygen|[1,-1]|Felwood 62.2,25.4
+V|2805|Deneb Walker|[1,-1]|Arathi Highlands 27,58.8
+V|2806|Bale|[-1,1]|Felwood 34.8,53.2
+V|2810|Hammon Karwn|[1,-1]|Arathi Highlands 46.4,47.4
+V|2812|Drovnar Strongbrew|[1,-1]|Arathi Highlands 46.4,47
+V|2814|Narj Deepslice|[1,-1]|Arathi Highlands 45.4,47.4
+V|2821|Keena|[null,1]|Arathi Highlands 74,32.6
+V|2838|Crazk Sparks|[1,1]|Stranglethorn Vale 28.2,76.6
+V|2843|Jutak|[1,1]|Stranglethorn Vale 27.4,77.4
+V|2848|Glyx Brewright|[1,1]|Stranglethorn Vale 28,78
+V|3027|Naal Mistrunner|[null,1]|Thunder Bluff 50.2,51.6
+V|3029|Sewa Mistrunner|[null,1]|Thunder Bluff 55.2,48
+V|3081|Wunna Darkmane|[null,1]|Mulgore 46.2,58.2
+V|3085|Gloria Femmel|[1,null]|Redridge Mountains 26.6,43.4
+V|3134|Kzixx|[1,1]|Duskwood 81.8,19.8
+V|3178|Stuart Fleming|[1,-1]|Wetlands 8,58.2
+V|3333|Shankys|[null,1]|Orgrimmar 69.8,29.6
+V|3335|Hagrus|[null,1]|Orgrimmar 46,46
+V|3348|Kor'geld|[null,1]|Orgrimmar 56.2,34.2
+V|3356|Sumi|[null,1]|Orgrimmar 82.4,23.4
+V|3400|Xen'to|[null,1]|Orgrimmar 57.4,53.2
+V|3413|Sovik|[null,1]|Orgrimmar 75,24.4
+V|3482|Tari'qa|[-1,1]|The Barrens 51.6,30
+V|3489|Zargh|[null,1]|The Barrens 52.4,29.8
+V|3490|Hula'mahi|[-1,1]|The Barrens 51.4,30.2
+V|3495|Gagsprocket|[1,1]|The Barrens 62.6,36.2
+V|3497|Kilxx|[1,1]|The Barrens 62.8,38.2
+V|3499|Ranik|[1,1]|The Barrens 61.8,38.6
+V|3537|Zixil|[1,1]|Hillsbrad Foothills 50.4,50.8
+V|3550|Martine Tramblay|[-1,1]|Tirisfal Glades 65.8,59.6
+V|3556|Andrew Hilbert|[null,1]|Silverpine Forest 43.2,40.6
+V|3881|Grimtak|[null,1]|Durotar 51.2,42.4
+V|3955|Shandrina|[1,null]|Ashenvale 49.4,67
+V|3956|Harklan Moongrove|[1,null]|Ashenvale 50.8,67
+V|3960|Ulthaan|[1,-1]|Ashenvale 50,66.6
+V|4083|Jeeda|[null,1]|Stonetalon Mountains 47.4,61.8
+V|4086|Veenix|[1,1]|Stonetalon Mountains 58.2,51.6
+V|4200|Laird|[1,-1]|Darkshore 36.8,44.2
+V|4223|Fyldan|[1,null]|Darnassus 48.4,21.4
+V|4226|Ulthir|[1,null]|Darnassus 55.4,23.2
+V|4265|Nyoma|[1,null]|Teldrassil 57.2,61.2
+V|4305|Kriggon Talsone|[1,-1]|Westfall 36.2,90
+V|4307|Heldan Galesong|[1,-1]|Darkshore 37,56.2
+V|4553|Ronald Burch|[null,1]|Undercity 62.4,43.4
+V|4574|Lizbeth Cromwell|[null,1]|Undercity 81,29.2
+V|4610|Algernon|[null,1]|Undercity 51.4,74.4
+V|4782|Truk Wildbeard|[1,null]|The Hinterlands 14.4,42.4
+V|4878|Montarr|[null,1]|Thousand Needles 45.2,50.6
+V|4879|Ogg'marr|[null,1]|Dustwallow Marsh 36.6,31
+V|4897|Helenia Olden|[1,null]|Dustwallow Marsh 66.4,51.4
+V|5160|Emrul Riknussun|[1,null]|Ironforge 58.8,37.2
+V|5162|Tansy Puddlefizz|[1,null]|Ironforge 47.8,6.4
+V|5175|Gearcutter Cogspinner|[1,null]|Ironforge 67.8,43
+V|5178|Soolie Berryfizz|[1,null]|Ironforge 66.4,54.4
+V|5411|Krinkle Goodsteel|[1,1]|Tanaris 51.4,28.8
+V|5483|Erika Tate|[1,null]|Stormwind City 75.8,36.8
+V|5494|Catherine Leland|[1,-1]|Stormwind City 45.4,57.6
+V|5512|Kaita Deepforge|[1,null]|Stormwind City 56.4,16.2
+V|5594|Alchemist Pestlezugg|[1,1]|Tanaris 50.8,27
+V|5748|Killian Sanatha|[null,1]|Silverpine Forest 33,17.8
+V|5940|Harn Longcast|[null,1]|Mulgore 47.4,55
+V|5942|Zansoa|[null,1]|Durotar 56,73.4
+V|6730|Jinky Twizzlefixxit|[1,1]|Thousand Needles 77.6,77.8
+V|6777|Zan Shivsproket|[1,1]|Alterac Mountains 86,80
+V|6779|Smudge Thunderwood|[1,1]|Alterac Mountains 86,79.6
+V|7733|Innkeeper Fizzgrimble|[1,1]|Tanaris 52.4,27.8
+V|7947|Vivianna|[1,-1]|Feralas 31.2,43.4
+V|8125|Dirge Quikcleave|[1,1]|Tanaris 52.6,28
+V|8131|Blizrik Buckshot|[1,1]|Tanaris 50.8,27.6
+V|8137|Gikkix|[1,1]|Tanaris 66.6,22
+V|8139|Jabbey|[1,1]|Tanaris 67,22
+V|8145|Sheendra Tallgrass|[null,1]|Feralas 74.4,42.8
+V|8150|Janet Hommers|[1,null]|Desolace 66.2,6.6
+V|8157|Logannas|[1,null]|Feralas 32.6,44
+V|8158|Bronk|[-1,1]|Feralas 76,43.4
+V|8161|Harggan|[1,null]|The Hinterlands 13.4,44
+V|8176|Gharash|[null,1]|Swamp of Sorrows 45.4,51.4
+V|8177|Rartar|[null,1]|Swamp of Sorrows 45.4,57
+V|8178|Nina Lightbrew|[1,null]|Blasted Lands 66.8,18.2
+V|8307|Tarban Hearthgrain|[-1,1]|The Barrens 55,32
+V|8508|Gretta Ganter|[1,null]|Dun Morogh 31.4,44.6
+V|8678|Jubie Gadgetspring|[1,1]|Azshara 45.2,90.8
+V|8679|Knaz Blunderflame|[1,1]|Stranglethorn Vale 51,35.2
+V|8878|Muuran|[-1,1]|Desolace 55.6,56.4
+V|9179|Jazzrik|[1,1]|Badlands 42.4,52.4
+V|9499|Plugger Spazzring|[0,0]|
+V|9544|Yuka Screwspigot|[1,1]|Burning Steppes 66,22
+V|9636|Kireena|[null,1]|Desolace 51,53.4
+V|10118|Nessa Shadowsong|[1,-1]|Teldrassil 56.2,92.4
+V|10856|Argent Quartermaster Hasana|[1,1]|Tirisfal Glades 83.2,68.2
+V|10857|Argent Quartermaster Lightspark|[1,1]|Western Plaguelands 42.8,83.8
+V|11185|Xizzer Fizzbolt|[1,1]|Winterspring 60.8,38.4
+V|11187|Himmik|[1,1]|Winterspring 61.2,39
+V|11188|Evie Whirlbrew|[1,1]|Winterspring 60.8,37.8
+V|11278|Magnus Frostwake|[1,1]|Western Plaguelands 68,77.4
+V|11536|Quartermaster Miranda Breechlock|[1,1]|Eastern Plaguelands 81.4,60
+V|11557|Meilosh|[1,1]|Felwood 65.6,2.8
+V|12033|Wulan|[null,1]|Desolace 26.2,69.8
+V|12245|Vendor-Tron 1000|[1,1]|Desolace 60.2,38.2
+V|12246|Super-Seller 680|[1,1]|Desolace 40.4,79.2
+V|12944|Lokhtos Darkbargainer|[1,1]|
+V|12962|Wik'Tar|[-1,1]|Ashenvale 11.8,34
+V|13420|Penney Copperpinch|[null,1]|Orgrimmar 53,66
+V|13429|Nardstrum Copperpinch|[null,1]|Undercity 67.2,38.4
+V|13432|Seersa Copperpinch|[null,1]|Thunder Bluff 43.4,57.8
+V|13433|Wulmort Jinglepocket|[1,null]|Ironforge 33.4,65.4
+V|13435|Khole Jinglepocket|[1,null]|Stormwind City 55,59.2
+V|13476|Balai Lok'Wein|[null,1]|Dustwallow Marsh 36.4,30.4
+V|14637|Zorbin Fandazzle|[1,1]|Feralas 44.8,43.4
+V|14738|Otho Moji'ko|[null,1]|The Hinterlands 79.2,79
+V|14921|Rin'wosho the Trader|[1,1]|Stranglethorn Vale 15,16
+V|15175|Khur Hornstriker|[1,1]|Silithus 48.8,37
+V|15176|Vargus|[1,1]|Silithus 51.2,38.8
+V|15179|Mishta|[1,1]|Silithus 49.8,36.4
+V|15471|Lieutenant General Andorov|[1,1]|
+V|17068|Chief Expeditionary Requisitioner Enkles|[1,null]|Silithus 33.2,51
+V|17070|Apothecary Quinard|[null,1]|Silithus 50.8,69.4
+V|213077|Elaine Compton|[1,null]|Stormwind City 54.4,60.8
+V|214070|Jornah|[null,1]|Orgrimmar 51.4,63.8
+V|214096|Dokimi|[null,1]|Thunder Bluff 39.4,53.4
+V|214098|Gishah|[null,1]|Undercity 64.4,38.4
+V|214099|Tamelyn Aldridge|[1,null]|Ironforge 24.4,67.4
+V|214101|Marcy Baker|[1,null]|Darnassus 59.2,56.6
+V|216672|Namdo Bizzfizzle|[1,-1]|
+V|216902|Wulmort Jinglepocket|[1,null]|Ironforge 33.4,66.4
+V|217689|Ziri "The Wrench" Littlesprocket|[1,1]|
+V|222261|Maximillian "The Greaser"|[1,1]|Thousand Needles 79.8,77.2
+V|222316|Fizzbizz Coppercoil|[1,1]|Thousand Needles 77,77.2
+V|227853|Pix Xizzix|[1,1]|Stranglethorn Vale 28.4,75.8
+V|240604|Carrie Hearthfire|[1,1]|Eastern Plaguelands 95.2,78.4
