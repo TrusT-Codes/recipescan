@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Classic vendor recipes: Tailoring, Leatherworking, Enchanting</title>
+<title>Classic vendor recipes: all crafting professions</title>
 <style>
 *{box-sizing:border-box}
 body{font-family:Segoe UI,Arial,sans-serif;margin:0;padding:24px 24px 90px;background:#16161a;color:#e6e6e6}
@@ -13,7 +13,7 @@ h1{font-size:20px;margin:0 0 4px}
 .pill.on{background:#3b5bdb;border-color:#3b5bdb}
 .pill.A.on{background:#1c6fd1;border-color:#1c6fd1}
 .pill.H.on{background:#b32727;border-color:#b32727}
-.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
 .tab{background:#26262e;color:#e6e6e6;border:1px solid #3a3a44;padding:8px 14px;border-radius:6px;cursor:pointer;font-size:14px}
 .tab.active{background:#3b5bdb;border-color:#3b5bdb}
 .panel{display:none}.panel.active{display:block}
@@ -31,6 +31,8 @@ td.rc{width:300px}
 .vl a:hover{text-decoration:underline}
 .vl a.ow{color:#d6a8ff}
 .vl .loc{color:#b6b6c2}
+.rc a{color:#8ab4ff;text-decoration:none}.rc a.ow{color:#d6a8ff}.rc a:hover{text-decoration:underline}
+td.dc{width:260px}.de .pr{display:inline-block;min-width:44px;color:#9be3a5}
 .fac{font-size:12px;padding:1px 8px;border-radius:999px;justify-self:start;border:1px solid #3a3a44}
 .fac.Alliance{background:#12365f;border-color:#1c6fd1}
 .fac.Horde{background:#4d1717;border-color:#b32727}
@@ -68,9 +70,9 @@ td.rc{width:300px}
 <div id="panels"></div>
 
 <div class="notes">
-Vendor links go to Wowhead Classic. Purple links = vendor only exists on OctoWow, so it links there.<br>
+Vendor and recipe links go to Wowhead Classic. Purple links = only exists on OctoWow, so it links there.<br>
 Faction: Alliance / Horde = friendly to that side. Neutral = neither side hostile. Reputation requirements are not included in either source.<br>
-Disenchant column (tailoring only): mats the crafted item disenchants into, from Wowhead's disenchant lists. "-" = not listed.<br>
+Disenchant column (Tailoring, Leatherworking, Blacksmithing, Engineering): derived from the crafted item's quality and item level (the ilvl stat, not the required level) using the WoWWiki disenchanting tables. Percentages are the chance per disenchant; "&times;" is the quantity range. Soulbound or special items that cannot be disenchanted in-game are not flagged. "-" = crafted item unknown.<br>
 Routes are estimates. The map positions, flight paths, boat and zeppelin times in this page are a hand-built model, not game data.
 </div>
 
@@ -87,7 +89,8 @@ Routes are estimates. The map positions, flight paths, boat and zeppelin times i
 const DATA=/*DATA*/null;
 
 /* ---------- table UI ---------- */
-const PROFS=[['tailoring','Tailoring'],['leatherworking','Leatherworking'],['enchanting','Enchanting']];
+const PROFS=[['tailoring','Tailoring'],['leatherworking','Leatherworking'],['enchanting','Enchanting'],['alchemy','Alchemy'],['blacksmithing','Blacksmithing'],['engineering','Engineering'],['cooking','Cooking'],['firstaid','First Aid']];
+const DE_PROFS=['tailoring','leatherworking','blacksmithing','engineering'];
 let filter='all', activeTab='tailoring';
 const selected=new Set();
 const sortState={};
@@ -99,6 +102,11 @@ function facClass(f){return f==='Both friendly'?'Both':f==='Hostile to both'?'Ho
 function vendorOk(v,f){return f==='all'||(f==='A'?v.A:v.H);}
 function visibleVendors(r){return r.v.filter(id=>vendorOk(DATA.vendors[id],filter));}
 
+function deCell(d){
+  if(!d)return '<span class="t">-</span>';
+  if(!d.m.length)return '<span class="t">'+esc(d.l)+'</span>';
+  return '<div class="t">'+esc(d.l)+'</div>'+d.m.map(m=>'<div class="de"><span class="pr">'+esc(m[1])+'%</span> '+esc(m[0])+' <span class="t">&times;'+esc(m[2])+'</span></div>').join('');
+}
 function vendorLine(id){
   const v=DATA.vendors[id];
   return '<div class="vl"><a href="'+esc(v.u)+'" target="_blank" rel="noopener" class="'+v.src+'">'+esc(v.n)+'</a>'+
@@ -109,10 +117,10 @@ function renderPanel(p){
   const st=sortState[p]||{k:'s',asc:true};
   const rows=DATA.rows[p].map(r=>[r,visibleVendors(r)]).filter(x=>x[1].length);
   rows.sort((a,b)=>{const x=a[0][st.k],y=b[0][st.k];const c=(typeof x==='number')?x-y:String(x).localeCompare(String(y));return (st.asc?c:-c)||a[0].s-b[0].s;});
-  let h='<table><thead><tr><th></th><th class="sortable" data-k="s">Skill</th><th class="sortable" data-k="n">Recipe</th><th>Vendors (name &middot; location &middot; faction)</th>'+(p==='tailoring'?'<th>Likely disenchant mats</th>':'')+'</tr></thead><tbody>';
+  let h='<table><thead><tr><th></th><th class="sortable" data-k="s">Skill</th><th class="sortable" data-k="n">Recipe</th><th>Vendors (name &middot; location &middot; faction)</th>'+(DE_PROFS.indexOf(p)>=0?'<th>Likely disenchant mats (chance per disenchant)</th>':'')+'</tr></thead><tbody>';
   rows.forEach(([r,vs])=>{
     const key=p+':'+r.id;
-    h+='<tr class="'+(selected.has(key)?'sel':'')+'"><td class="chk"><input type="checkbox" data-k="'+key+'"'+(selected.has(key)?' checked':'')+'></td><td class="sk">'+r.s+'</td><td class="rc">'+esc(r.n)+'</td><td>'+vs.map(vendorLine).join('')+'</td>'+(p==='tailoring'?'<td>'+esc(r.d)+'</td>':'')+'</tr>';
+    h+='<tr class="'+(selected.has(key)?'sel':'')+'"><td class="chk"><input type="checkbox" data-k="'+key+'"'+(selected.has(key)?' checked':'')+'></td><td class="sk">'+r.s+'</td><td class="rc"><a href="'+esc(r.u)+'" target="_blank" rel="noopener" class="'+r.w+'">'+esc(r.n)+'</a></td><td>'+vs.map(vendorLine).join('')+'</td>'+(DE_PROFS.indexOf(p)>=0?'<td class="dc">'+deCell(r.d)+'</td>':'')+'</tr>';
   });
   h+='</tbody></table>';
   document.getElementById('panel-'+p).innerHTML=h;
@@ -175,7 +183,7 @@ const ZONES={
  'Tirisfal Glades':['E',36,10,16,16],'Undercity':['E',40,12,6,6],'Silverpine Forest':['E',30,26,18,22],
  'Hillsbrad Foothills':['E',46,38,18,18],'Alterac Mountains':['E',54,28,14,14],'Western Plaguelands':['E',56,10,18,16],
  'Eastern Plaguelands':['E',76,10,18,18],'Arathi Highlands':['E',62,40,18,18],'The Hinterlands':['E',76,38,16,18],
- 'Wetlands':['E',50,52,18,14],'Loch Modan':['E',62,60,12,12],'Ironforge':['E',50,62,6,6],'Badlands':['E',72,68,14,14],
+ 'Wetlands':['E',50,52,18,14],'Loch Modan':['E',62,60,12,12],'Ironforge':['E',50,62,6,6],'Dun Morogh':['E',44,69,18,16],'Badlands':['E',72,68,14,14],
  'Searing Gorge':['E',62,70,12,10],'Burning Steppes':['E',64,82,14,14],'BRD (Dungeon)':['E',63,76,4,4],
  'Elwynn Forest':['E',48,98,16,14],'Stormwind City':['E',44,94,7,7],'Redridge Mountains':['E',62,98,14,12],
  'Duskwood':['E',50,110,16,12],'Deadwind Pass':['E',68,108,10,10],'Swamp of Sorrows':['E',82,106,14,14],
