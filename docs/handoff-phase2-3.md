@@ -3,9 +3,9 @@
 Read this first, then `docs/roadmap.md` (decisions and plan), `pipeline/README.md` (data rules) and `docs/addon-live-checks.md` (live client results).
 
 **Where things stand (2026-10-09):**
-- Branch `feature/find-learned-ingame-recipes`, PR https://github.com/TrusT-Codes/recipescan/pull/5 (open; pipeline + docs).
-- Phase 1 is done. The phase 2 live checks are answered except C12/C15 (profession rank source for Jewelcrafting).
-- **Next:** build `addon/RecipeScan/` (phase 2), then scaffold `web/` (phase 3). Ask the user whether to continue on this branch after PR #5 merges or to start a new branch from `main`.
+- PR #5 (pipeline + docs) is merged. Phase 2 work is on branch `feature/export-addon`.
+- `addon/RecipeScan/` v0.1.0 passed its first live test (2026-10-17): Tailoring 73 and Enchanting 42 recipes scanned, filters and collapsed headers restored, one rescan per craft, `Imports\RecipeScan.txt` written. Some exported IDs (trainer recipes, e.g. 2996, 7421; OctoWow items 83288/83289) are not in `recipes.json`; the site must ignore unknown IDs. C12/C15 answered: rank comes from `GetTradeSkillLine()` / `GetCraftDisplaySkillLine()`. C16: the Enchanting list has no headers, so the Craft scan needs no expanding.
+- **Next:** live-test the addon, then scaffold `web/` (phase 3).
 
 ## Goal
 Players on **OctoWow** (vanilla 1.12.1, Turtle WoW-derived custom server) see which profession recipes their characters are **missing** and where to get them. Flow:
