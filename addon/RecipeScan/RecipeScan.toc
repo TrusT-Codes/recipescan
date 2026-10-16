@@ -1,0 +1,11 @@
+## Interface: 11200
+## Title: RecipeScan
+## Notes: Scans learned profession recipes and exports them for the RecipeScan website.
+## Author: TrusT
+## Version: 0.1.0
+## SavedVariables: RecipeScanDB
+
+Core.lua
+Scan.lua
+Export.lua
+Events.lua

@@ -111,7 +111,7 @@ Open Tailoring with the dropdowns on "All":
 ## C12: Jewelcrafting skill line
 On the character with Jewelcrafting, run C7 again.
 - **Confirms:** whether Jewelcrafting appears in `GetSkillLineInfo`, which the "learnable now" filter needs.
-- **Result:** **No result given.** Still open whether Jewelcrafting appears in `GetSkillLineInfo`. Fallback to check: `GetTradeSkillLine()` may return `name, rank, maxRank` while the window is open (C15).
+- **Result:** **Confirmed:** Jewelcrafting appears in `GetSkillLineInfo` (`6 Jewelcrafting 54 75`, next to Mining and Cooking). The addon still takes ranks from the open window (C15).
 
 ## C13: ExportFile overwrite or append, ImportFile return
 ```
@@ -141,7 +141,15 @@ Open Enchanting:
 /run print(GetCraftDisplaySkillLine())
 ```
 - **Expect:** `Jewelcrafting <rank> <maxRank>` and `Enchanting <rank> <maxRank>`. If only the name prints, rank has to come from `GetSkillLineInfo` (and C12 must be answered).
-- **Result:** _pending_
+- **Result:** **Confirmed:** `Jewelcrafting 54 75` and `Enchanting 201 225`. Both return `name, rank, maxRank`.
+
+## C16: Craft (Enchanting) headers
+Open Enchanting:
+```
+/run local E,C=ExpandCraftSkillLine,CollapseCraftSkillLine print(type(E),type(C)) local n,h=GetNumCrafts(),0 for i=1,n do local _,_,t=GetCraftInfo(i) if t=="header" then h=h+1 end end print(n,h)
+```
+- **Confirms:** whether the expand/collapse functions exist and whether Enchanting rows have headers at all.
+- **Result:** **Confirmed:** `function function`, `42 0`. Both functions exist, but Enchanting has **no header rows** (42 recipes), so the Craft scan reads every row without expanding.
 
 ---
 
